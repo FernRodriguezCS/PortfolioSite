@@ -1,6 +1,11 @@
+*{
+    border: 1px solid black;
+}
+
 /* Generic Rules */
 body{
     background-color: #1B263B;
+    font-family: sans-serif;
     margin: 0;
 }
 
@@ -12,44 +17,96 @@ p, li, h3, h1{
     color: #fff;
 }
 
-/* Structure: from top to bottem of homepage */
-#navBar{
-    display: flex;
-    justify-content: end;
-    background-color: #6C757D;
-    width: 100%;
+@keyframes fadeIn {
+    0%{
+        gap: 50px;
+        opacity: 0.5;
+    }
+    100%{
+        gap: 0;
+        opacity: 1;
+    }
 }
 
-#navBar li{
-    /* inline-block allows us to resize the elements since inline doesnt allow for margin and paddding resizing */
-    display: inline-block;
-    padding: 0 5px;
-    margin: 0 10px;
+#landingPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    animation: fadeIn 1s ease-out;
+}
+
+#landingPage h1{
+    width: fit-content;
+    height: fit-content;
+    font-size: 100px;
+    margin: 0;
+}
+
+#landingPage p{
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+}
+
+#pinpicture{
+    width: 30px;
+    height: 30px;
 }
 
 #socials{
     display: flex;
 }
 
+#socials ul{
+    padding-inline-start: 0;
+}
+
 #socials li{
     display: inline-block;
-    padding: 10px;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 #socials li img{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
-#pinpicture{
-    width: 12px;
-    height: 12px;
+/* LANGUAGES AND FRAMEWORK SECTION */
+#skills h3{
+    height: fit-content;
+    font-size: 30px;
 }
 
 .skillList img{
-    width: 12px;
-    height: 12px;
+    width: 25px;
+    height: 25px;
     /* Turns the black svg and png images white */
     filter: brightness(0) invert(1);
 }
+
+#skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: green;
+    width: 100vw;
+    height: 50vh;
+}
+
+
+#skills ul{
+    padding-inline-start: 0;
+    width: 90%;
+    height: 30%;
+}
+
+#skills li{
+    font-size: 30px;
+    display: inline;
+    margin: 10px;
+}
+
