@@ -34,28 +34,12 @@ p, li, h3, h1{
 #socials li{
     display: inline-block;
     padding: 10px;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 #socials li img{
     width: 25px;
     height: 25px;
-}
-
-/* TODO: fix this when you come back */
-@keyframes hoverAnimation{
-    0%{
-        box-shadow: 0px 0px 0px #f1f1f1;
-    }
-    100%{
-        box-shadow: 3px 3px 3px #f1f1f1;
-
-    }
-}
-
-#socials li:hover{
-    /* X offset | Y offset | Stregnth */
-    animation: hoverAnimation 2s linear;
 }
 
 #pinpicture{
