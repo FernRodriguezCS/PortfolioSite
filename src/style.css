@@ -1,9 +1,6 @@
-*{
-    border: 1px solid black;
-}
-
 /* Generic Rules */
 body{
+    color: #f1f1f1;
     background-color: #1B263B;
     font-family: sans-serif;
     margin: 0;
@@ -78,6 +75,7 @@ p, li, h3, h1{
 #skills h3{
     height: fit-content;
     font-size: 30px;
+    margin: 10px;
 }
 
 .skillList img{
@@ -92,21 +90,110 @@ p, li, h3, h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: green;
     width: 100vw;
     height: 50vh;
 }
 
-
 #skills ul{
     padding-inline-start: 0;
-    width: 90%;
-    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 75%;
+    height: fit-content;
+    background-color: #243447; /* dark grey-blue */
+    border-radius: 15px;
 }
 
+/* NOT TOO HAPPY WITH THIS SO COME BACK TO THIS */
 #skills li{
-    font-size: 30px;
-    display: inline;
+    padding-left: 45px;
+    padding-right: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
     margin: 10px;
+    border-radius: 15px;
 }
 
+/* This portion is for my experience section */
+#experienceSection{
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#experienceSection h3{
+    font-size: 40px;
+    margin: 0;
+}
+
+/* This is the portion for personal and or school related projects I want on here */
+.projectPost{
+    margin: 2%;
+    width: 250px;
+    height: 325px;
+    border-radius: 15px;
+    border: 1px solid #243447;
+    box-shadow: 1px 1px 10px #17212d;
+}
+
+.projectPost button{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    margin-left: 80px;
+}
+
+.projectPost img{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.projectPost h4{
+    margin-left: 90px;
+}
+
+#projectSection{
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#projectSection h3{
+    font-size: 40px;
+}
+
+#projectDisplay{
+    display: flex;
+    border-radius: 15px;
+    width: 90%;
+    height: 375px;
+    background-color: #243447;
+}
+
+/* This is the small about me section */
+#extraInfo{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#extraInfo h3{
+    font-size: 40px;
+}
+
+#extraInfo p{
+    margin: 0 10%;
+}
