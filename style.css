@@ -240,3 +240,72 @@ p, li, h3, h1{
 #extraInfo p{
     margin: 0 10%;
 }
+
+/* This is for the breakpoints */
+/* This is for the mobile screen (iphone)*/
+@media screen and (max-width: 500px){
+    #landingPage{
+        width: 768px;
+        height: 500px;
+        margin-bottom: 300px; 
+    }
+
+    #landingPage h1{
+        font-size: 80px;
+        margin-right: 50px;
+    }
+
+    #skills h3{
+        font-size: 40px;
+        margin-left: 525px;
+        width: 200%;
+    }
+    
+    .skillList img{
+        width: 50px;        
+        height: 50px;
+    }
+    
+    #skills ul{
+        margin-left: 300px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: 150%;
+    }
+
+    #experienceSection h3{
+        font-size: 50px;
+        margin-top: 100px;
+        margin-left: 300px;
+    }
+
+    #experienceSection p{
+        font-size: 25px;
+        margin-left: 325px;
+        width: 200px;
+    }
+
+    #projectSection h3{
+        font-size: 50px;
+        margin-left: 300px;
+    }
+
+    #projectDisplay{
+        width: 800px;
+        margin-left: 400px;
+    }
+
+    #extraInfo{
+        width: 100vw;
+    }
+
+    #extraInfo h3{
+        font-size: 50px;
+        margin-left: 475px;
+        width: 100vw;
+    }
+
+    #extraInfo p{
+        width: 100vw;
+        margin-left: 350px;
+    }
+}
