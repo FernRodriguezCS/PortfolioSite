@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box means the total width and height are calculated with padding and border */
+    box-sizing: border-box;
+} 
+
+.container{
+    background-color: navy;
+    display: flex;
+    /* Allows us to scroll on x axis since width with projects > than container width */
+    overflow-x: scroll;
+    padding: 24px;
+    width: 300px;
+    height: 360px;
+    /* This means that the container will snap to item element ONLY on the x-axis */
+    scroll-snap-type: x mandatory;
+    /* padding between item elements */
+    scroll-padding: 24px;
+    border-radius: 8px;
+    gap: 12px;
+    margin: 2rem auto;
+}
+
+.container .item{
+    background-color: grey;
+    flex: 0 0 100%;
+    padding: 24px;
+    border-radius: 8px;
+    /* this basically is where the container will snap on the item element such as its left - middle - or right side */
+    scroll-snap-align: start;
+}
