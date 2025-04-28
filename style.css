@@ -245,67 +245,86 @@ p, li, h3, h1{
 /* This is for the mobile screen (iphone)*/
 @media screen and (max-width: 500px){
     #landingPage{
-        width: 768px;
-        height: 500px;
-        margin-bottom: 300px; 
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 200px;
     }
 
     #landingPage h1{
-        font-size: 80px;
-        margin-right: 50px;
+        font-size: 45px;
+    }
+
+    #landingPage p{
+        font-size: 19px;
+    }
+
+    #skills{
+        height: fit-content;
+        width: 100vw;
     }
 
     #skills h3{
-        font-size: 40px;
-        margin-left: 525px;
-        width: 200%;
+        font-size: 17px;
+        width: 75vw;
     }
     
     .skillList img{
-        width: 50px;        
-        height: 50px;
+        width: 20px;        
+        height: 20px;
     }
     
     #skills ul{
-        margin-left: 300px;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        width: 150%;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    #skills li{
+        font-size: 15px;
+    }
+
+    #experienceSection{
+        width: 100vw;
+        height: fit-content;
     }
 
     #experienceSection h3{
-        font-size: 50px;
-        margin-top: 100px;
-        margin-left: 300px;
+        font-size: 30px;
     }
 
     #experienceSection p{
-        font-size: 25px;
-        margin-left: 325px;
-        width: 200px;
+        font-size: 20px;
+    }
+
+    #projectSection{
+        width: 100vw;
+        height: fit-content;
     }
 
     #projectSection h3{
         font-size: 50px;
-        margin-left: 300px;
     }
 
     #projectDisplay{
-        width: 800px;
-        margin-left: 400px;
+        display: block;
+        width: 90vw;
+        height: fit-content;
+    }
+
+    .projectPost{
+        margin: 15%;
+        width: 250px;
+        height: 325px;
     }
 
     #extraInfo{
         width: 100vw;
+        height: fit-content;
     }
 
     #extraInfo h3{
-        font-size: 50px;
-        margin-left: 475px;
-        width: 100vw;
+        font-size: 30px;
     }
 
     #extraInfo p{
-        width: 100vw;
-        margin-left: 350px;
+        margin: 5%;
     }
 }
