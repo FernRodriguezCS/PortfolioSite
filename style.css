@@ -303,16 +303,26 @@ p, li, h3, h1{
         font-size: 50px;
     }
 
+    /* Come back to this portion want one per swipe */
     #projectDisplay{
-        display: block;
         width: 90vw;
         height: fit-content;
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
     }
 
     .projectPost{
-        margin: 15%;
-        width: 250px;
+        margin: 20px;
+        max-width: 250px;
         height: 325px;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
     }
 
     #extraInfo{
@@ -328,3 +338,6 @@ p, li, h3, h1{
         margin: 5%;
     }
 }
+
+/* how I find my ip for the xcode emulator preview
+ipconfig getifaddr en0 */
