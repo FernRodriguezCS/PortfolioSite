@@ -1,9 +1,12 @@
 /* Generic Rules */
 body{
     color: #f1f1f1;
-    background-color: #1B263B;
     font-family: sans-serif;
     margin: 0;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* from https://cssgradient.io/gradient-backgrounds/ */
 }
 
 li{
@@ -17,7 +20,7 @@ p, li, h3, h1{
 /* Come back to this */
 .reveal{
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(60px);
     transition: all 0.6s ease;
 }
 
@@ -53,25 +56,32 @@ p, li, h3, h1{
 }
 
 #landingPage h1{
+    color: whitesmoke;
     width: fit-content;
     height: fit-content;
     font-size: 100px;
     margin: 0;
 }
 
+#landingPage h2{
+    transform: translateX(-240px);
+}
+
 #landingPage p{
-    font-size: 30px;
+    transform: translateX(-220px);
+    font-size: 25px;
     padding: 10px;
     margin: 0;
 }
 
 #pinpicture{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 #socials{
     display: flex;
+    background-color: green;
 }
 
 #socials ul{
@@ -84,8 +94,8 @@ p, li, h3, h1{
 }
 
 #socials li img{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 /* LANGUAGES AND FRAMEWORK SECTION */
