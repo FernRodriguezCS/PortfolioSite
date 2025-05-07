@@ -68,20 +68,21 @@ p, li, h3, h1{
 }
 
 #landingPage p{
-    transform: translateX(-220px);
-    font-size: 25px;
+    /* transform: translateX(-220px); */
+    font-size: 20px;
     padding: 10px;
     margin: 0;
 }
 
 #pinpicture{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
 }
 
 #socials{
+    transform: translateX(-275px);
     display: flex;
-    background-color: green;
 }
 
 #socials ul{
@@ -90,12 +91,21 @@ p, li, h3, h1{
 
 #socials li{
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 #socials li img{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+}
+
+#scrollDown{
+    position: relative;
+    top: 150px;
+    width: 60px;
+    height: 60px;
+    transform: rotate(90deg);
+    filter: brightness(0) invert(1);
 }
 
 /* LANGUAGES AND FRAMEWORK SECTION */
@@ -177,16 +187,16 @@ p, li, h3, h1{
         box-shadow: 1px 1px 10px #17212d;
     }
     100%{
-        box-shadow: 10px 10px 15px #17212d;
+        box-shadow: 20px 20px 25px #17212d;
     }
 }
 
 @keyframes putDown{
     0%{
-        box-shadow: 10px 10px 15px #17212d;
+        box-shadow: 20px 20px 25px rgb(43, 41, 41);
     }
     100%{
-        box-shadow: 1px 1px 10px #17212d;
+        box-shadow: 1px 1px 10px rgb(43, 41, 41);
     }
 }
 
@@ -195,8 +205,8 @@ p, li, h3, h1{
     width: 250px;
     height: 325px;
     border-radius: 15px;
-    border: 1px solid #243447;
-    box-shadow: 1px 1px 10px #17212d;
+    border: 1px solid rgb(43, 41, 41);
+    box-shadow: 1px 1px 10px rgb(43, 41, 41);
 }
 
 .projectPost:hover{
@@ -244,7 +254,7 @@ p, li, h3, h1{
     border-radius: 15px;
     width: 90%;
     height: 375px;
-    background-color: #243447;
+    background-color: rgb(76, 74, 74);
 }
 
 /* This is the small about me section */
