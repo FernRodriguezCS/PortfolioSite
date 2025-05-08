@@ -64,7 +64,7 @@ p, li, h3, h1{
 }
 
 #landingPage h2{
-    transform: translateX(-240px);
+    transform: translateX(-275px);
 }
 
 #landingPage p{
@@ -99,14 +99,49 @@ p, li, h3, h1{
     height: 20px;
 }
 
+.cursor {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    animation: blink 0.8s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100%{ 
+        opacity: 1; 
+    }
+    50%{ 
+        opacity: 0;
+     }
+  }
+
 #scrollDown{
+    opacity: 0;
     position: relative;
     top: 150px;
     width: 60px;
     height: 60px;
-    transform: rotate(90deg);
+    transform: translateY(20px) rotate(90deg);
     filter: brightness(0) invert(1);
+    animation: bounce 2s ease-in-out infinite;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+#scrollDown.show {
+    opacity: 1;
+    transform: translateY(0) rotate(90deg);
+  }
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) rotate(90deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(90deg);
+    }
+  }
 
 /* LANGUAGES AND FRAMEWORK SECTION */
 #skills h3{
@@ -127,7 +162,7 @@ p, li, h3, h1{
         transform: translateX(0);
     }
     to{
-        transform: translateX(-50%);
+        transform: translateX(-33.33%);
     }
 }
 
@@ -147,16 +182,12 @@ p, li, h3, h1{
 }
 
 #skills ul{
-    animation: slide 5s linear infinite;
+    animation: slide 20s linear infinite;
     padding-inline-start: 0;
     display: flex;
     width: max-content;
-    width: 100vw;
-    height: fit-content;
-    border-radius: 15px;
 }
 
-/* NOT TOO HAPPY WITH THIS SO COME BACK TO THIS */
 #skills li{
     padding-left: 40px;
     padding-right: 30px;
@@ -181,7 +212,7 @@ p, li, h3, h1{
     margin: 0;
 }
 
-/* This is the portion for personal and or school related projects I want on here */
+/* This is the portion for personal and or school related projects */
 @keyframes liftOff {
     0%{
         box-shadow: 1px 1px 10px #17212d;
