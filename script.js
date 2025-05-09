@@ -1,3 +1,5 @@
+const typedText = document.getElementById("typedText");
+
 window.addEventListener('load', () => {
     const landingPage = document.getElementById('landingPage');
     landingPage.classList.add('fadeIn');
@@ -6,6 +8,8 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       arrow.classList.add('show');
     }, 3000); // 3 seconds
+
+    setTimeout(typeEffect, 1000); 
 });
 
 const reveals = document.querySelectorAll('.reveal');
@@ -14,6 +18,7 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('active');
+      // fixes animation repeating while in view
       observer.unobserve(entry.target); 
     }
   });
@@ -34,7 +39,7 @@ const phrases = [
   "LeetCode Warrior"
 ];
 
-const typedText = document.getElementById("typedText");
+// const typedText = document.getElementById("typedText");
 let currentPhraseIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
@@ -59,7 +64,3 @@ function typeEffect() {
     setTimeout(typeEffect, 1000);
   }
 }
-
-window.addEventListener("load", () => {
-  setTimeout(typeEffect, 1000); 
-});
