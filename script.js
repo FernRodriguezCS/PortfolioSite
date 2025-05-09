@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     const arrow = document.getElementById('scrollDown');
     setTimeout(() => {
       arrow.classList.add('show');
-    }, 3000); // 3 seconds
+    }, 3000);
 
     setTimeout(typeEffect, 1000); 
 });
@@ -32,14 +32,11 @@ reveals.forEach(reveal => {
 
 const phrases = [
   "Software Engineer",
-  "Problem Solver",
   "CS Student",
   "Backend Builder",
-  "Goofy Goober",
   "LeetCode Warrior"
 ];
 
-// const typedText = document.getElementById("typedText");
 let currentPhraseIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
