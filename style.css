@@ -305,6 +305,8 @@ p, li, h3, h1{
 #extraInfo p{
     margin: 0 10%;
 }
+
+/*This is for the breakpoints*/
 /*When arrow breaks & hero section resize*/
 @media screen and (max-width: 888px){
     #landingPage h1{
@@ -346,99 +348,77 @@ p, li, h3, h1{
         scroll-snap-align: start;
     }
 }
-/* This is for the breakpoints
-@media screen and (max-width: 500px){
-    #landingPage{
-        width: 100%;
-        height: 100vh;
-        margin-bottom: 200px;
+/* second hero section resize */
+@media screen and (max-width: 750px){
+    #landingPage h1{
+        font-size: 69px;
     }
+    #landingPage h2{
+        margin-left: 35%;
+    }
+    #socials{
+        margin-left: 45%;
+    }
+}
 
+@media screen and (max-width: 650px){
+    #landingPage h1{
+        font-size: 55px;
+    }
+    #landingPage h2{
+        margin-left: 55%;
+    }
+    #socials{
+        transform: translateX(-150px);
+    }
+}
+
+@media screen and (max-width: 556px){
+    #socials p{
+        font-size: 15px;
+    }
+    #pinpicture{
+        width: 15px;
+        height: 15px;
+    }
+    #socials li img{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width: 520px){
     #landingPage h1{
         font-size: 45px;
     }
-
-    #landingPage p{
-        font-size: 19px;
+    #landingPage h2{
+        margin-left: 70%;
+        font-size: 10px;
     }
-
-    #skills{
-        height: fit-content;
-        width: 100vw;
+    #socials p{
+        font-size: 10px;
     }
-
+    #pinpicture{
+        width: 12px;
+        height: 12px;
+    }
+    #socials li img{
+        width: 12px;
+        height: 12px;
+    }
     #skills h3{
-        font-size: 17px;
-        width: 75vw;
+        font-size: 25px;
     }
-    
-    .skillList img{
-        width: 20px;        
-        height: 20px;
-    }
-    
-    #skills ul{
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
+}
 
-    #skills li{
-        font-size: 15px;
+@media screen and (max-width: 420px){
+    #landingPage h1{
+        font-size: 37px;
     }
-
-    #experienceSection{
-        width: 100vw;
-        height: fit-content;
+    #landingPage h2{
+        transform: translateX(-250px);
     }
-
-    #experienceSection h3{
-        font-size: 30px;
-    }
-
-    #experienceSection p{
+    #skills h3{
         font-size: 20px;
     }
-
-    #projectSection{
-        width: 100vw;
-        height: fit-content;
-    }
-
-    #projectSection h3{
-        font-size: 50px;
-    }
-
-    Come back to this portion want one per swipe 
-    #projectDisplay{
-        width: 90vw;
-        height: fit-content;
-
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        display: flex;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-padding: 24px;
-    }
-
-    .projectPost{
-        margin: 20px;
-        max-width: 250px;
-        height: 325px;
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-    }
-
-    #extraInfo{
-        width: 100vw;
-        height: fit-content;
-    }
-
-    #extraInfo h3{
-        font-size: 30px;
-    }
-
-    #extraInfo p{
-        margin: 5%;
-    }
-} */
+}
