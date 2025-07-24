@@ -305,9 +305,48 @@ p, li, h3, h1{
 #extraInfo p{
     margin: 0 10%;
 }
-
-/* This is for the breakpoints */
-/* This is for the mobile screen (iphone)*/
+/*When arrow breaks & hero section resize*/
+@media screen and (max-width: 888px){
+    #landingPage h1{
+        font-size: 80px;
+    }
+    #landingPage h2{
+        font-size: 20px;
+        margin-left: 25%;
+    }
+    #socials{
+        margin-left: 25%;   
+    }
+    #scrollDown{
+        top: 50px;
+    }
+}
+/* when project section breaks*/
+@media screen and (max-width: 840px){
+    #projectSection{
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+    #projectDisplay{
+        /* width: 90vw; */
+        /* height: fit-content; */
+        /* margin: 0; */
+        /* padding: 0; */
+        /* box-sizing: border-box; */
+        /* display: flex; */
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
+    }
+    .projectPost{
+        margin: 20px;
+        max-width: 250px;
+        height: 325px;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+}
+/* This is for the breakpoints
 @media screen and (max-width: 500px){
     #landingPage{
         width: 100%;
@@ -368,7 +407,7 @@ p, li, h3, h1{
         font-size: 50px;
     }
 
-    /* Come back to this portion want one per swipe */
+    Come back to this portion want one per swipe 
     #projectDisplay{
         width: 90vw;
         height: fit-content;
@@ -402,7 +441,4 @@ p, li, h3, h1{
     #extraInfo p{
         margin: 5%;
     }
-}
-
-/* how I find my ip for the xcode emulator preview
-ipconfig getifaddr en0 */
+} */
