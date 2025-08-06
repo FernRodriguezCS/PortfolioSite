@@ -1,32 +1,35 @@
 const typedText = document.getElementById("typedText");
 
-window.addEventListener('load', () => {
-    const landingPage = document.getElementById('landingPage');
-    landingPage.classList.add('fadeIn');
+window.addEventListener("load", () => {
+  const landingPage = document.getElementById("landingPage");
+  landingPage.classList.add("fadeIn");
 
-    const arrow = document.getElementById('scrollDown');
-    setTimeout(() => {
-      arrow.classList.add('show');
-    }, 3000);
+  const arrow = document.getElementById("scrollDown");
+  setTimeout(() => {
+    arrow.classList.add("show");
+  }, 3000);
 
-    setTimeout(typeEffect, 1000); 
+  setTimeout(typeEffect, 1000);
 });
 
-const reveals = document.querySelectorAll('.reveal');
+const reveals = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-      // fixes animation repeating while in view
-      observer.unobserve(entry.target); 
-    }
-  });
-}, {
-  threshold: 0.1 
-});
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        // fixes animation repeating while in view
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
 
-reveals.forEach(reveal => {
+reveals.forEach((reveal) => {
   observer.observe(reveal);
 });
 
@@ -34,7 +37,7 @@ const phrases = [
   "Software Engineer",
   "CS Student",
   "Backend Builder",
-  "LeetCode Warrior"
+  "LeetCode Warrior",
 ];
 
 let currentPhraseIndex = 0;
