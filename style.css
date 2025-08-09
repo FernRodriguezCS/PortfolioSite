@@ -386,13 +386,23 @@ h1 {
   }
 }
 
-@media screen and (max-width: 556px) {
+@media screen and (max-width: 619px){
   #socials p {
-    font-size: 15px;
+    font-size: 12px;
   }
-  #pinpicture {
+  #socials li img{
     width: 15px;
     height: 15px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  #socials p {
+    font-size: 10px;
+  }
+  #pinpicture {
+    width: 12px;
+    height: 12px;
   }
   #socials li img {
     width: 15px;
@@ -430,6 +440,9 @@ h1 {
   }
   #landingPage h2 {
     transform: translateX(-250px);
+  }
+  #socials p {
+    font-size: 9px;
   }
   #skills h3 {
     font-size: 20px;
