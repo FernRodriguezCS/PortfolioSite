@@ -60,7 +60,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   opacity: 0;
   gap: 50px;
@@ -70,17 +70,17 @@ h1 {
   color: whitesmoke;
   width: fit-content;
   height: fit-content;
-  font-size: 100px;
+  font-size: clamp(2rem, 5vw, 5rem); /*CHANGED*/
   margin: 0;
 }
 
 #landingPage h2 {
-  transform: translateX(-275px);
+  text-align: center; /*CHANGED*/
+  margin: 0; /*CHANGED*/
 }
 
 #landingPage p {
-  /* transform: translateX(-220px); */
-  font-size: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /*CHANGED*/
   padding: 10px;
   margin: 0;
 }
@@ -92,8 +92,10 @@ h1 {
 }
 
 #socials {
-  transform: translateX(-275px);
   display: flex;
+  flex-wrap: wrap; /* CHANGED*/
+  justify-content: center; /* CHANGED*/
+  gap: 10px; /* CHANGED*/
 }
 
 #socials ul {
@@ -159,14 +161,14 @@ h1 {
 /* LANGUAGES AND FRAMEWORK SECTION */
 #skills h3 {
   height: fit-content;
-  font-size: 30px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem); /*CHANGED*/
   margin: 10px;
+  margin-bottom: 50px;
 }
 
 .skillList img {
   width: 30px;
   height: 30px;
-  /* Turns the black svg and png images white */
   filter: brightness(0) invert(1);
 }
 
@@ -186,12 +188,8 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
-  height: 50vh;
-}
-
-#skills h3 {
-  margin-bottom: 75px;
+  width: 100%;
+  height: auto;
 }
 
 #skills ul {
@@ -202,10 +200,8 @@ h1 {
 }
 
 #skills li {
-  padding-left: 40px;
-  padding-right: 30px;
-  padding-bottom: 10px;
-  font-size: 20px;
+  padding: 10px; /* CHANGED */
+  font-size: 1rem; /* CHANGED */
   margin: 10px;
   border-radius: 15px;
 }
@@ -321,34 +317,38 @@ h1 {
 
 /*This is for the breakpoints*/
 /*When arrow breaks & hero section resize*/
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 768px) {
   #landingPage h1 {
-    font-size: 80px;
-  }
-  #landingPage h2 {
-    font-size: 20px;
-    margin-left: 25%;
+    font-size: 3rem;
   }
   #socials {
-    margin-left: 25%;
+    flex-direction: column;
+    align-items: center;
   }
-  #scrollDown {
-    top: 50px;
+  #skills ul {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  #skills li {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
   }
 }
-/* when project section breaks*/
+
+/* when project section breaks */
 @media screen and (max-width: 840px) {
   #projectSection {
     height: fit-content;
     padding-bottom: 50px;
   }
   #projectDisplay {
-    /* width: 90vw; */
-    /* height: fit-content; */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* box-sizing: border-box; */
-    /* display: flex; */
+    width: 90vw;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-padding: 24px;
@@ -361,16 +361,10 @@ h1 {
     scroll-snap-align: start;
   }
 }
-/* second hero section resize */
+
 @media screen and (max-width: 750px) {
   #landingPage h1 {
     font-size: 69px;
-  }
-  #landingPage h2 {
-    margin-left: 35%;
-  }
-  #socials {
-    margin-left: 45%;
   }
 }
 
@@ -378,19 +372,13 @@ h1 {
   #landingPage h1 {
     font-size: 55px;
   }
-  #landingPage h2 {
-    margin-left: 55%;
-  }
-  #socials {
-    transform: translateX(-150px);
-  }
 }
 
-@media screen and (max-width: 619px){
+@media screen and (max-width: 619px) {
   #socials p {
     font-size: 12px;
   }
-  #socials li img{
+  #socials li img {
     width: 15px;
     height: 15px;
   }
@@ -414,13 +402,6 @@ h1 {
   #landingPage h1 {
     font-size: 45px;
   }
-  #landingPage h2 {
-    margin-left: 70%;
-    font-size: 10px;
-  }
-  #socials p {
-    font-size: 10px;
-  }
   #pinpicture {
     width: 12px;
     height: 12px;
@@ -429,22 +410,28 @@ h1 {
     width: 12px;
     height: 12px;
   }
-  #skills h3 {
-    font-size: 25px;
-  }
 }
 
 @media screen and (max-width: 420px) {
   #landingPage h1 {
     font-size: 37px;
   }
-  #landingPage h2 {
-    transform: translateX(-250px);
+  #experienceSection h3 {
+    font-size: 15px;
   }
-  #socials p {
-    font-size: 9px;
+  #projectSection h3 {
+    font-size: 20px;
   }
   #skills h3 {
-    font-size: 20px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #landingPage h1 {
+    font-size: 2rem;
+  }
+  #landingPage h2 {
+    font-size: 1rem;
   }
 }
