@@ -28,7 +28,24 @@ h1 {
   color: #fff;
 }
 
-/* Come back to this */
+#donateBtn{
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  z-index: 99;
+  width: 55px;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+}
+
+#donateBtn:hover{
+  background-color: grey;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(60px);
