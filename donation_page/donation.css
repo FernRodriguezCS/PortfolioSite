@@ -5,6 +5,13 @@ body {
   align-items: center;
   justify-content: center;
   padding: 32px 16px;
+
+  background: linear-gradient(
+  to right,
+  #434343,
+  #000000
+); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* from https://cssgradient.io/gradient-backgrounds/ */
 }
 
 a {
@@ -35,6 +42,8 @@ a > button:hover {
   border: 0.5px solid black;
   border-radius: 16px;
   padding: 28px 24px;
+  background-color: white;
+  margin-top: 10%;
 }
 
 #donationContainer h2 {
