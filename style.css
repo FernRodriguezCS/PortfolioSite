@@ -43,7 +43,7 @@ h1 {
 }
 
 #donateBtn:hover{
-  background-color: grey;
+  animation: liftOff 1s ease forwards;
 }
 
 .reveal {
