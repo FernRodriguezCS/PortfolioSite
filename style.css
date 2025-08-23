@@ -226,16 +226,27 @@ h1 {
 /* This portion is for my experience section */
 #experienceSection {
   width: 100vw;
-  height: 25vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: red;
 }
 
 #experienceSection h3 {
   font-size: 40px;
-  margin: 0;
+  margin: 3% 0 2% 0;
+}
+
+.jobNode{
+  background-color: orange;
+  border-radius: 15px;
+  width: 70%;
+  max-height: 250px;
+  height: 250px;
+  margin: 5% 0 5% 0;
+  padding: 2%;
 }
 
 /* This is the portion for personal and or school related projects */
