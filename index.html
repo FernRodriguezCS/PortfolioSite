@@ -5,191 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fernando Rodriguez</title>
     <link rel="stylesheet" href="style.css" />
-    <!--Branch work today-->
   </head>
   <body>
     <a href="./donation_page/donation.html" id="donateBtn">Donate</a>
     <section id="landingPage">
-      <h1>Welcome, Im Fern!</h1>
+      <h1>Welcome, I'm Fern!</h1>
       <h2>I'm a <span id="typedText"></span><span class="cursor">|</span></h2>
       <div id="socials">
-        <p>
-          <img
-            src="assets/images/pin.png"
-            alt="pin"
-            id="pinpicture"
-          />Bakersfield CA
-        </p>
+        <!--loading="eager" loads quicker && loading="lazy" helps site preformance by loading when user gets near-->
+        <p><img src="assets/images/pin.png" alt="pin" id="pinpicture" loading="eager"/>Bakersfield CA</p>
         <ul>
-          <a
-            href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/"
-            target="_blank"
-            ><li class="skillList">
-              <img src="assets/images/linkedin.png" alt="LinkedIn" /></li
-          ></a>
-          <a href="https://www.youtube.com/@FernRodriguezCS" target="_blank"
-            ><li class="skillList">
-              <img src="assets/images/youtube.svg" alt="Youtube" /></li
-          ></a>
-          <a href="https://www.instagram.com/fernrodriguezcs/" target="_blank"
-            ><li class="skillList">
-              <img src="assets/images/instagram.svg" alt="Instagram" /></li
-          ></a>
-          <a href="https://www.tiktok.com/@fernrodriguezcs" target="_blank"
-            ><li class="skillList">
-              <img src="assets/images/tiktok.svg" alt="TikTok" /></li
-          ></a>
-          <a href="https://github.com/FernRodriguezCS" target="_blank"
-            ><li class="skillList">
-              <img src="assets/skillIcons/github.svg" alt="Github" /></li
-          ></a>
+          <!--'rel="nopener noreferrer" -> without can lead to 'reverse tabnabbing' 
+          newly opened page can access window.opener meaning...
+          - The new tab can redirect you to a malicious page (phising)'
+          - Try to run scripts that affect opener page-->
+          <a href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/linkedin.png" alt="LinkedIn" loading="eager"/></li></a>
+          <a href="https://www.youtube.com/@FernRodriguezCS" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/youtube.svg" alt="Youtube" loading="eager"/></li></a>
+          <a href="https://www.instagram.com/fernrodriguezcs/" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/instagram.svg" alt="Instagram" loading="eager"/></li></a>
+          <a href="https://www.tiktok.com/@fernrodriguezcs" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/tiktok.svg" alt="TikTok" loading="eager"/></li></a>
+          <a href="https://github.com/FernRodriguezCS" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/skillIcons/github.svg" alt="Github" loading="eager"/></li></a>
         </ul>
       </div>
 
-      <img
-        id="scrollDown"
-        src="/assets/images/arrow.png"
-        alt="scrolldown arrow"
-      />
+      <img id="scrollDown" src="assets/images/arrow.png" alt="scrolldown arrow" loading="eager"/>
     </section>
 
     <section id="skills" class="reveal">
       <h3>LANGUAGES AND FRAMEWORKS</h3>
       <ul>
-        <li class="skillList">
-          <img src="assets/skillIcons/html5.svg" alt="HTML5" /> HTML
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/css.svg" alt="CSS" /> CSS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/javascript.svg" alt="JavaScript" />
-          JavaScript
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/nodedotjs.svg" alt="Node.JS" /> NODE.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/react.svg" alt="React.JS" /> REACT.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/express.svg" alt="Express.JS" />
-          Express.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/cplusplus.svg" alt="C++" /> C++
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/python.svg" alt="Python" /> PYTHON
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" /> J.W.T
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/postgresql.svg" alt="PostGreSQL" />
-          PostgreSQL
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/git.svg" alt="git" /> GIT
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/github.svg" alt="Github" /> GITHUB
-        </li>
+        <li class="skillList"><img src="assets/skillIcons/html5.svg" alt="HTML5" loading="lazy"/> HTML</li>
+        <li class="skillList"><img src="assets/skillIcons/css.svg" alt="CSS" loading="lazy"/> CSS</li>
+        <li class="skillList"><img src="assets/skillIcons/javascript.svg" alt="JavaScript" loading="lazy"/> JavaScript</li>
+        <li class="skillList"><img src="assets/skillIcons/nodedotjs.svg" alt="Node.JS" loading="lazy"/> NODE.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/react.svg" alt="React.JS" loading="lazy"/> REACT.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/express.svg" alt="Express.JS" loading="lazy"/> Express.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/cplusplus.svg" alt="C++" loading="lazy"/> C++</li>
+        <li class="skillList"><img src="assets/skillIcons/python.svg" alt="Python" loading="lazy"/> PYTHON</li>
+        <li class="skillList"><img src="assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" loading="lazy"/> J.W.T</li>
+        <li class="skillList"><img src="assets/skillIcons/postgresql.svg" alt="PostGreSQL" loading="lazy"/> PostgreSQL</li>
+        <li class="skillList"><img src="assets/skillIcons/git.svg" alt="git" loading="lazy"/> GIT</li>
+        <li class="skillList"><img src="assets/skillIcons/github.svg" alt="Github" loading="lazy"/> GITHUB</li>
 
-        <li class="skillList">
-          <img src="assets/skillIcons/html5.svg" alt="HTML5" /> HTML
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/css.svg" alt="CSS" /> CSS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/javascript.svg" alt="JavaScript" />
-          JavaScript
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/nodedotjs.svg" alt="Node.JS" /> NODE.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/react.svg" alt="React.JS" /> REACT.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/express.svg" alt="Express.JS" />
-          Express.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/cplusplus.svg" alt="C++" /> C++
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/python.svg" alt="Python" /> PYTHON
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" /> J.W.T
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/postgresql.svg" alt="PostGreSQL" />
-          PostgreSQL
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/git.svg" alt="git" /> GIT
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/github.svg" alt="Github" /> GITHUB
-        </li>
+        <li class="skillList"><img src="assets/skillIcons/html5.svg" alt="HTML5" loading="lazy"/> HTML</li>
+        <li class="skillList"><img src="assets/skillIcons/css.svg" alt="CSS" loading="lazy"/> CSS</li>
+        <li class="skillList"><img src="assets/skillIcons/javascript.svg" alt="JavaScript" loading="lazy"/> JavaScript</li>
+        <li class="skillList"><img src="assets/skillIcons/nodedotjs.svg" alt="Node.JS" loading="lazy"/> NODE.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/react.svg" alt="React.JS" loading="lazy"/> REACT.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/express.svg" alt="Express.JS" loading="lazy"/> Express.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/cplusplus.svg" alt="C++" loading="lazy"/> C++</li>
+        <li class="skillList"><img src="assets/skillIcons/python.svg" alt="Python" loading="lazy"/> PYTHON</li>
+        <li class="skillList"><img src="assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" loading="lazy"/> J.W.T</li>
+        <li class="skillList"><img src="assets/skillIcons/postgresql.svg" alt="PostGreSQL" loading="lazy"/> PostgreSQL</li>
+        <li class="skillList"><img src="assets/skillIcons/git.svg" alt="git" loading="lazy"/> GIT</li>
+        <li class="skillList"><img src="assets/skillIcons/github.svg" alt="Github" loading="lazy"/> GITHUB</li>
 
-        <li class="skillList">
-          <img src="assets/skillIcons/html5.svg" alt="HTML5" /> HTML
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/css.svg" alt="CSS" /> CSS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/javascript.svg" alt="JavaScript" />
-          JavaScript
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/nodedotjs.svg" alt="Node.JS" /> NODE.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/react.svg" alt="React.JS" /> REACT.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/express.svg" alt="Express.JS" />
-          Express.JS
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/cplusplus.svg" alt="C++" /> C++
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/python.svg" alt="Python" /> PYTHON
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" /> J.W.T
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/postgresql.svg" alt="PostGreSQL" />
-          PostgreSQL
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/git.svg" alt="git" /> GIT
-        </li>
-        <li class="skillList">
-          <img src="assets/skillIcons/github.svg" alt="Github" /> GITHUB
-        </li>
+        <li class="skillList"><img src="assets/skillIcons/html5.svg" alt="HTML5" loading="lazy"/> HTML</li>
+        <li class="skillList"><img src="assets/skillIcons/css.svg" alt="CSS" loading="lazy"/> CSS</li>
+        <li class="skillList"><img src="assets/skillIcons/javascript.svg" alt="JavaScript" loading="lazy"/> JavaScript</li>
+        <li class="skillList"><img src="assets/skillIcons/nodedotjs.svg" alt="Node.JS" loading="lazy"/> NODE.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/react.svg" alt="React.JS" loading="lazy"/> REACT.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/express.svg" alt="Express.JS" loading="lazy"/> Express.JS</li>
+        <li class="skillList"><img src="assets/skillIcons/cplusplus.svg" alt="C++" loading="lazy"/> C++</li>
+        <li class="skillList"><img src="assets/skillIcons/python.svg" alt="Python" loading="lazy"/> PYTHON</li>
+        <li class="skillList"><img src="assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" loading="lazy"/> J.W.T</li>
+        <li class="skillList"><img src="assets/skillIcons/postgresql.svg" alt="PostGreSQL" loading="lazy"/> PostgreSQL</li>
+        <li class="skillList"><img src="assets/skillIcons/git.svg" alt="git" loading="lazy"/> GIT</li>
+        <li class="skillList"><img src="assets/skillIcons/github.svg" alt="Github" loading="lazy"/> GITHUB</li>
       </ul>
     </section>
 
     <section id="experienceSection" class="reveal">
       <h3>Experience</h3>
-
       <ol class="timeline">
         <li class="timeline-item">
           <article class="jobCard">
             <header class="jobHeader">
-              <img
-                src="assets/images/fwd.png"
-                alt="fwd:Dynamics"
-                class="jobPic"
-              />
+              <img src="assets/images/fwd.png" alt="fwd:Dynamics" class="jobPic" loading="lazy"/>
               <div>
                 <h4>FWD: Dynamics</h4>
                 <p class="jobDates">Jul 2025 – Present</p>
@@ -201,11 +92,7 @@
         <li class="timeline-item">
           <article class="jobCard">
             <header class="jobHeader">
-              <img
-                src="assets/images/codeNinjas.png"
-                alt="Code Ninjas"
-                class="jobPic"
-              />
+              <img src="assets/images/codeNinjas.png" alt="Code Ninjas" class="jobPic" loading="lazy"/>
               <div>
                 <h4>Code Ninjas</h4>
                 <p class="jobDates">May 2025 – Present</p>
@@ -253,6 +140,7 @@
         stopping by my portfolio — I’m excited to see where this journey leads.
       </p>
     </div>
-    <script src="script.js"></script>
+    <!--Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
+    <script src="script.js" defer></script>
   </body>
 </html>
