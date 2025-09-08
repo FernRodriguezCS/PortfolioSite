@@ -273,6 +273,10 @@ h1 {
   width: 90%;
   margin: 0 auto;
   padding: 64px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #experienceSection h3 {
@@ -283,7 +287,7 @@ h1 {
 
 .jobPost{
   height: fit-content;
-  width: 35%;
+  width: 50%;
   border-radius: 15px;
   display: flex;
   background: rgba(255, 255, 255, 0.06);
