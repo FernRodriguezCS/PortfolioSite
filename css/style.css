@@ -315,16 +315,12 @@ h1 {
 .jobTitle{
   width: 100%;
   height: fit-content;
-  margin: 1%;
   margin-top: 10%;
-  margin-bottom: 5%;
-  /* background-color: green; */
+  margin-bottom: 2%;
 }
 
 .jobDate{
-  margin: 1%;
-  height: fit-content;
-  /* background-color: yellow; */
+  width: 100%;
 }
 
 /*============================*/
