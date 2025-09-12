@@ -14,3 +14,6 @@ const FDinfo = {
     year: 2025
 };
 
+let monthPortions = document.getElementsByClassName("calcMDiff");
+for(let i = 0; i < monthPortions.length + 1; i++){ // main loop for modifying dates and time diffs
+}
