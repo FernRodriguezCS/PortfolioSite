@@ -170,7 +170,6 @@ h1 {
 }
 
 #skills {
-  /* background-color: orange; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,8 +212,8 @@ h1 {
 }
 
 .item img{
-  width: 50px;
-  height: 50px;
+  width: clamp(35px, 4vw, 64px);
+  height: clamp(35px, 4vw, 64px);
   filter: brightness(0) invert(1);
 }
 
@@ -287,7 +286,7 @@ h1 {
 
 .jobPost{
   height: fit-content;
-  width: 50%;
+  width: clamp(260px, 45vw, 520px);
   border-radius: 15px;
   display: flex;
   background: rgba(255, 255, 255, 0.06);
@@ -295,11 +294,11 @@ h1 {
 }
 
 .jobPost h4{
-  font-size: 25px;
-}
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+} 
 
 .jobPost h5{
-  font-size: 15px;
+  font-size: clamp(0.7rem, 2vw, 1.1rem);
 }
 
 .jobPic{
