@@ -64,3 +64,18 @@ function typeEffect() {
     setTimeout(typeEffect, 1000);
   }
 }
+
+const donateBtn = document.getElementById("donateBtn");
+const hero = document.getElementById("landingPage");
+const heroObserver = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      donateBtn.classList.remove("fade-out"); 
+    } else {
+      donateBtn.classList.add("fade-out"); 
+    }
+  },
+  { threshold: 0.1 }
+);
+
+heroObserver.observe(hero);
