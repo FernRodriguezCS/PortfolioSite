@@ -79,3 +79,8 @@ const heroObserver = new IntersectionObserver(
 );
 
 heroObserver.observe(hero);
+
+// ! 
+// TODO: 
+// *
+// ?
