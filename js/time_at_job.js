@@ -20,7 +20,7 @@ function formatYearsMonths(totalMonths) {
 
 function msUntilNextMonth() {
   const now = new Date();
-  // 5 seconds after midnight of the 1st next month
+  // * 5 seconds after midnight of the 1st next month
   const next = new Date(now.getFullYear(), now.getMonth() + 1, 1, 0, 0, 5);
   return next - now;
 }
@@ -33,7 +33,7 @@ function updateTenures() {
 
     const months = monthsBetween(job.startYear, job.startMonth);
     span.textContent = months;
-    span.title = formatYearsMonths(months); // "X yrs Y mos"
+    span.title = formatYearsMonths(months); // * "X yrs Y mos"
   });
 }
 

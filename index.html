@@ -12,13 +12,15 @@
       <h1>Welcome, I'm Fern!</h1>
       <h2>I'm a <span id="typedText"></span><span class="cursor">|</span></h2>
       <div id="socials">
-        <!--loading="eager" loads quicker && loading="lazy" helps site preformance by loading when user gets near-->
+        <!-- * loading="eager" loads quicker && loading="lazy" helps site preformance by loading when user gets near-->
         <p><img src="assets/images/pin.png" alt="pin" id="pinpicture" loading="eager"/>Bakersfield CA</p>
         <ul>
-          <!--'rel="nopener noreferrer" -> without can lead to 'reverse tabnabbing' 
-          newly opened page can access window.opener meaning...
-          - The new tab can redirect you to a malicious page (phising)'
-          - Try to run scripts that affect opener page-->
+          <!-- * 'rel="nopener noreferrer" -> without can lead to 'reverse tabnabbing' 
+          *   Newly opened page can access window.opener meaning...
+          * - The new tab can redirect you to a malicious page (phising)'
+          * - Try to run scripts that affect opener page
+          * -->
+          <!--TODO: Adjust size on mobile views-->>
           <a href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/linkedin.png" alt="LinkedIn" loading="eager"/></li></a>
           <a href="https://www.youtube.com/@FernRodriguezCS" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/youtube.svg" alt="Youtube" loading="eager"/></li></a>
           <a href="https://www.instagram.com/fernrodriguezcs/" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/instagram.svg" alt="Instagram" loading="eager"/></li></a>
@@ -48,6 +50,7 @@
       </div>
     </section>
 
+    <!--TODO: FIX hard coded values for job posts-->
     <section id="experienceSection" class="reveal">
       <h3>Experience</h3>
       <div class="jobPost">
@@ -69,6 +72,7 @@
       </div>
     </section>
 
+    <!--TODO: Do something with these they do NOTHING ATM-->
     <section id="projectSection" class="reveal">
       <h3>Projects</h3>
       <div id="projectDisplay">
@@ -103,7 +107,8 @@
         stopping by my portfolio — I’m excited to see where this journey leads.
       </p>
     </div>
-    <!--Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
+    <!-- * Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
+    <!--TODO: Add contact method that shoots to personal email-->
     <script src="/js/script.js" defer></script>
     <script src="/js/time_at_job.js" defer></script>
   </body>

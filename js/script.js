@@ -19,7 +19,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-        // fixes animation repeating while in view
+        // * fixes animation repeating while in view
         observer.unobserve(entry.target);
       }
     });
