@@ -36,7 +36,7 @@ reveals.forEach((reveal) => {
 const phrases = [
   "Software Engineer",
   "CS Student",
-  "Backend Builder",
+  "Student Mentor",
   "LeetCode Warrior",
 ];
 
