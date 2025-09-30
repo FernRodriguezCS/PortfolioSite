@@ -33,7 +33,7 @@ function updateTenures() {
 
     const months = monthsBetween(job.startYear, job.startMonth);
     span.textContent = months;
-    span.title = formatYearsMonths(months); // * "X yrs Y mos"
+    span.title = formatYearsMonths(months); 
   });
 }
 
