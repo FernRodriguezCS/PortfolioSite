@@ -104,7 +104,19 @@ h1 {
 #pinpicture {
   width: 20px;
   height: 20px;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
+}
+#pinpicture:hover {
+  transform: translateY(-3px) scale(1.15);
+  animation: pinBounce 0.6s linear;
+}
+@keyframes pinBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1.15);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.2);
+  }
 }
 #socials {
   display: flex;
@@ -295,6 +307,7 @@ h1 {
   border-radius: 15px;
   display: flex;
   background: rgba(255, 255, 255, 0.06);
+  padding: 1%;
   margin: 2%;
 }
 
