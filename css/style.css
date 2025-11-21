@@ -560,3 +560,114 @@ h1 {
     font-size: 1rem;
   }
 }
+
+/* ===== Modal + Backdrop ===== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.02);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 50;
+  perspective: 1200px; /* for 3D flip */
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+/* Make modal the same "card" shape as your project cards */
+.modal {
+  position: relative;
+  width: 250px;
+  height: 325px;
+  border-radius: 15px;
+  border: 1px solid rgb(43, 41, 41);
+  background: rgba(20, 20, 20, 0.98);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  padding: 16px 18px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Flip-in animation (card turning toward you) */
+.modal.is-flipping {
+  animation: modalFlip 0.55s ease forwards;
+}
+
+@keyframes modalFlip {
+  0% {
+    transform: translateY(10px) scale(0.95) rotateY(-90deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) scale(1.05) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1.02) rotateY(0deg);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  text-align: left;
+}
+
+.modal-body h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #f9fafb;
+}
+
+.modal-body p {
+  margin: 0;
+  color: #cbd5f5;
+  line-height: 1.5;
+}
+
+.modal-body #modalTagline {
+  margin-bottom: 8px;
+  color: #cbd5f5;
+}
+
+#modalTech {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(20, 20, 20, 0.95);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+}

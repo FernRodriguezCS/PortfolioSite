@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donation Page</title>
     <link rel="stylesheet" href="/css/donation.css" />
+
+    <!-- Stripe Buy Button script -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   </head>
   <body>
     <a href="/index.html"><button>Back to Portfolio site</button></a>
 
     <div id="donationContainer">
       <h2>Help Fund My Education</h2>
+
+      <!-- Existing external links -->
       <div id="externalContainer">
         <a href="https://cash.app/$FernRodriguezCS" target="_blank"><h3>CashApp</h3></a>
         <a href="https://account.venmo.com/u/Fernando-Rodriguez-CS" target="_blank"><h3>venmo</h3></a>
         <a href="https://www.paypal.com/paypalme/FernandoRodriguez625" target="_blank"><h3>PayPal</h3></a>
       </div>
+
+      <!-- Stripe section -->
+      <div id="stripeContainer">
+        <h3>Donate with Card (Stripe)</h3>
+
+        <stripe-buy-button
+          buy-button-id="buy_btn_1SVpjXGvWxTqWdmZJdwowqMU"
+          publishable-key="pk_live_51SVpW9GvWxTqWdmZXGjcCFKeL7pgMLSy8flbCVtpvFiRiN4Fo7wYu8bpCnLbN4HKkgvMfrNzdbiIMvgAKJNnFhJJ006yWFS1xb"
+        >
+        </stripe-buy-button>
+      </div>
+
       <h5>Your information is private and will not be sold or shared</h5>
+
       <div id="contactInfo">
         <h3>Contact Me || Zelle</h3>
         <h5>Fernando Rodriguez</h5>
