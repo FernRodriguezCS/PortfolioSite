@@ -79,3 +79,9 @@ const heroObserver = new IntersectionObserver(
 );
 
 heroObserver.observe(hero);
+
+document.querySelectorAll(".card-inner").forEach(inner => {
+  inner.addEventListener("click", ()=>{
+    inner.classList.toggle("is-flipped");
+  });
+});

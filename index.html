@@ -1,109 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fernando Rodriguez</title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <a href="./donation_page/donation.html" id="donateBtn" class="reveal hover-underline">Donate</a>
-    <section id="landingPage">
-      <h1>Welcome, I'm Fern!</h1>
-      <h2>I'm a <span id="typedText"></span><span class="cursor">|</span></h2>
-      <div id="socials">
-        <!-- * loading="eager" loads quicker && loading="lazy" helps site preformance by loading when user gets near-->
-        <p><img src="assets/images/pin.png" alt="pin" id="pinpicture" loading="eager"/>Bakersfield CA</p>
-        <ul>
-          <!-- * 'rel="nopener noreferrer" -> without can lead to 'reverse tabnabbing' 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando Rodriguez</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <a href="./donation_page/donation.html" id="donateBtn" class="reveal hover-underline">Donate</a>
+  <section id="landingPage">
+    <h1>Welcome, I'm Fern!</h1>
+    <h2>I'm a <span id="typedText"></span><span class="cursor">|</span></h2>
+    <div id="socials">
+      <!-- * loading="eager" loads quicker && loading="lazy" helps site preformance by loading when user gets near-->
+      <p><img src="assets/images/pin.png" alt="pin" id="pinpicture" loading="eager" />Bakersfield CA</p>
+      <ul>
+        <!-- * 'rel="nopener noreferrer" -> without can lead to 'reverse tabnabbing' 
           *   Newly opened page can access window.opener meaning...
           * - The new tab can redirect you to a malicious page (phising)'
           * - Try to run scripts that affect opener page
           * -->
-          <a href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/linkedin.png" alt="LinkedIn" loading="eager"/></li></a>
-          <a href="https://www.youtube.com/@FernRodriguezCS" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/youtube.svg" alt="Youtube" loading="eager"/></li></a>
-          <a href="https://www.instagram.com/fernrodriguezcs/" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/instagram.svg" alt="Instagram" loading="eager"/></li></a>
-          <a href="https://www.tiktok.com/@fernrodriguezcs" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/images/tiktok.svg" alt="TikTok" loading="eager"/></li></a>
-          <a href="https://github.com/FernRodriguezCS" rel="noopener noreferrer" target="_blank"><li class="skillList"><img src="assets/skillIcons/github.svg" alt="Github" loading="eager"/></li></a>
-        </ul>
-      </div>
+        <a href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/" rel="noopener noreferrer" target="_blank">
+          <li class="skillList"><img src="assets/images/linkedin.png" alt="LinkedIn" loading="eager" /></li>
+        </a>
+        <a href="https://www.youtube.com/@FernRodriguezCS" rel="noopener noreferrer" target="_blank">
+          <li class="skillList"><img src="assets/images/youtube.svg" alt="Youtube" loading="eager" /></li>
+        </a>
+        <a href="https://www.instagram.com/fernrodriguezcs/" rel="noopener noreferrer" target="_blank">
+          <li class="skillList"><img src="assets/images/instagram.svg" alt="Instagram" loading="eager" /></li>
+        </a>
+        <a href="https://www.tiktok.com/@fernrodriguezcs" rel="noopener noreferrer" target="_blank">
+          <li class="skillList"><img src="assets/images/tiktok.svg" alt="TikTok" loading="eager" /></li>
+        </a>
+        <a href="https://github.com/FernRodriguezCS" rel="noopener noreferrer" target="_blank">
+          <li class="skillList"><img src="assets/skillIcons/github.svg" alt="Github" loading="eager" /></li>
+        </a>
+      </ul>
+    </div>
 
-      <img id="scrollDown" src="assets/images/arrow.png" alt="scrolldown arrow" loading="eager"/>
-    </section>
-
-    <section id="skills" class="reveal">
-      <h3>LANGUAGES AND FRAMEWORKS</h3>
-      <div class="wrapper">
-        <div class="item item1"><img src="./assets/skillIcons/cplusplus.svg" alt="C++" class="skillList" loading="lazy"></div>
-        <div class="item item2"><img src="./assets/skillIcons/css.svg" alt="CSS" class="skillList" loading="lazy"></div>
-        <div class="item item3"><img src="./assets/skillIcons/express.svg" alt="EXPRESS.JS" class="skillList" loading="lazy"></div>
-        <div class="item item4"><img src="./assets/skillIcons/git.svg" alt="git" class="skillList" loading="lazy"></div>
-        <div class="item item5"><img src="./assets/skillIcons/github.svg" alt="github" class="skillList" loading="lazy"></div>
-        <div class="item item6"><img src="./assets/skillIcons/html5.svg" alt="HTML" class="skillList" loading="lazy"></div>
-        <div class="item item7"><img src="./assets/skillIcons/javascript.svg" alt="JavaScript" class="skillList" loading="lazy"></div>
-        <div class="item item8"><img src="./assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" class="skillList" loading="lazy"></div>
-        <div class="item item9"><img src="./assets/skillIcons/nodedotjs.svg" alt="NODE.JS" class="skillList" loading="lazy"></div>
-        <div class="item item10"><img src="./assets/skillIcons/postgresql.svg" alt="PostGreSQL" class="skillList" loading="lazy"></div>
-        <div class="item item11"><img src="./assets/skillIcons/python.svg" alt="Python" class="skillList" loading="lazy"></div>
-        <div class="item item12"><img src="./assets/skillIcons/react.svg" alt="REACT.JS" class="skillList" loading="lazy"></div>
-      </div>
-    </section>
-
-    <section id="experienceSection" class="reveal">
-      <h3>Experience</h3>
-      <div class="jobPost">
-        <img src="./assets/images/fwd.png" alt="FWD:Dynamics" class="jobPic">
-          <div class="jobInfo">
-            <h4 class="jobTitle">FWD:Dynamics</h4>
-            <h5 class="jobPosition">Web Developer</h5>
-            <h5 class="jobDate">JULY 2025 - PRESENT | <span class="calcMDiff" data-company="FWD:Dynamics"></span> MONTHS</h5>
-          </div>
-      </div>
-
-      <div class="jobPost">
-        <img src="./assets/images/codeNinjas.png" alt="CodeNinjas" class="jobPic">
-        <div class="jobInfo">
-          <h4 class="jobTitle">Code Ninjas</h4>
-          <h5 class="jobPosition">Programming Tutor</h5>
-          <h5 class="jobDate">MAY 2025 - PRESENT | <span class="calcMDiff" data-company="CodeNinjas"></span> MONTHS</h5>
-        </div>
-      </div>
-    </section>
-
-    <section id="projectSection" class="reveal">
-      <h3>Projects</h3>
-      <div id="projectDisplay">
-
-          <div id="lunaris" class="projectPost">
-          <img src="assets/images/lunarispost.png" alt="pic" loading="lazy"/>
-          <h4>Lunaris</h4>
-        </div>
-
-        <div id="SpellSprint" class="projectPost">
-          <img src="assets/images/spellsprintpost.png" alt="another pic" loading="lazy"/>
-          <h4>Spell Sprint</h4>
-        </div>
-
-          <div id="portfolio" class="projectPost">
-              <img src="assets/images/portfoliopost.png" alt="some other pic" loading="lazy" />
-              <h4>Portfolio Site</h4>
-        </div>
-        </div>
-      </div>
-    </section>
+    <img id="scrollDown" src="assets/images/arrow.png" alt="scrolldown arrow" loading="eager" />
   </section>
 
+  <section id="skills" class="reveal">
+    <h3>LANGUAGES AND FRAMEWORKS</h3>
+    <div class="wrapper">
+      <div class="item item1"><img src="./assets/skillIcons/cplusplus.svg" alt="C++" class="skillList" loading="lazy">
+      </div>
+      <div class="item item2"><img src="./assets/skillIcons/css.svg" alt="CSS" class="skillList" loading="lazy"></div>
+      <div class="item item3"><img src="./assets/skillIcons/express.svg" alt="EXPRESS.JS" class="skillList"
+          loading="lazy"></div>
+      <div class="item item4"><img src="./assets/skillIcons/git.svg" alt="git" class="skillList" loading="lazy"></div>
+      <div class="item item5"><img src="./assets/skillIcons/github.svg" alt="github" class="skillList" loading="lazy">
+      </div>
+      <div class="item item6"><img src="./assets/skillIcons/html5.svg" alt="HTML" class="skillList" loading="lazy">
+      </div>
+      <div class="item item7"><img src="./assets/skillIcons/javascript.svg" alt="JavaScript" class="skillList"
+          loading="lazy"></div>
+      <div class="item item8"><img src="./assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" class="skillList"
+          loading="lazy"></div>
+      <div class="item item9"><img src="./assets/skillIcons/nodedotjs.svg" alt="NODE.JS" class="skillList"
+          loading="lazy"></div>
+      <div class="item item10"><img src="./assets/skillIcons/postgresql.svg" alt="PostGreSQL" class="skillList"
+          loading="lazy"></div>
+      <div class="item item11"><img src="./assets/skillIcons/python.svg" alt="Python" class="skillList" loading="lazy">
+      </div>
+      <div class="item item12"><img src="./assets/skillIcons/react.svg" alt="REACT.JS" class="skillList" loading="lazy">
+      </div>
+    </div>
+  </section>
 
+  <section id="experienceSection" class="reveal">
+    <h3>Experience</h3>
+    <div class="jobPost">
+      <img src="./assets/images/fwd.png" alt="FWD:Dynamics" class="jobPic">
+      <div class="jobInfo">
+        <h4 class="jobTitle">FWD:Dynamics</h4>
+        <h5 class="jobPosition">Web Developer</h5>
+        <h5 class="jobDate">JULY 2025 - PRESENT | <span class="calcMDiff" data-company="FWD:Dynamics"></span> MONTHS
+        </h5>
+      </div>
+    </div>
 
+    <div class="jobPost">
+      <img src="./assets/images/codeNinjas.png" alt="CodeNinjas" class="jobPic">
+      <div class="jobInfo">
+        <h4 class="jobTitle">Code Ninjas</h4>
+        <h5 class="jobPosition">Programming Tutor</h5>
+        <h5 class="jobDate">MAY 2025 - PRESENT | <span class="calcMDiff" data-company="CodeNinjas"></span> MONTHS</h5>
+      </div>
+    </div>
+  </section>
 
+  <section id="projectSection" class="reveal">
+    <h3>Projects</h3>
+    <div id="projectDisplay">
 
+      <div id="lunaris" class="projectPost card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/images/lunarispost.png" alt="pic" loading="lazy" />
+            <h4>Lunaris</h4>
+          </div>
+          <div class="card-back"></div>
+        </div>
+      </div>
 
+      <div id="SpellSprint" class="projectPost card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/images/spellsprintpost.png" alt="another pic" loading="lazy" />
+            <h4>Spell Sprint</h4>
+          </div>
+          <div class="card-back"></div>
+        </div>
+      </div>
 
-
-
+      <div id="portfolio" class="projectPost card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/images/portfoliopost.png" alt="some other pic" loading="lazy" />
+            <h4>Portfolio Site</h4>
+          </div>
+          <div class="card-back"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
   <div id="extraInfo" class="reveal">
-
     <div id="extraInfo" class="reveal">
       <h3>About Me</h3>
       <p>
@@ -121,5 +148,6 @@
     <!-- * Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
     <script src="/js/script.js" defer></script>
     <script src="/js/time_at_job.js" defer></script>
-  </body>
+</body>
+
 </html>
