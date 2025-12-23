@@ -1,45 +1,68 @@
-/* Variables */
 :root {
   --primary_text_color: whitesmoke;
+  --global_font: sans-serif;
 }
 
-/*TODO: understand web kits*/
+body {
+  color: var(--primary_text_color);
+  font-family: var(--global_font);
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+/*! Non-standardized*/
+/** source: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar */
 body::-webkit-scrollbar {
   display: none;
 }
 
-body {
-  color: #f1f1f1;
-  font-family: sans-serif;
-  margin: 0;
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  background: linear-gradient(to right, #434343, #000000);
+/*TODO: Come back to this*/
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.6s ease;
 }
 
-li {
-  list-style-type: none;
-  color: var(--primary_text_color);
+/*TODO: Come back to this*/
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-p,
-h3,
-h1 {
-  color: var(--primary_text_color);
+/*TODO: Come back to this*/
+@keyframes fadeIn {
+  0% {
+    gap: 50px;
+    opacity: 0.5;
+  }
+  100% {
+    gap: 0;
+    opacity: 1;
+  }
 }
 
+/*TODO: Come back to this*/
+.fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/*============================*/
+/* Hero Section */
+/*============================*/
+/** Hover Animation taken from https://prismic.io/blog/css-hover-effects (Do not copy past this)*/
 #donateBtn {
-  color: var(--primary_text_color);
+  /*TODO: come back to this*/
   text-decoration: none;
   position: fixed;
   top: 5%;
   left: 5%;
   z-index: 99;
   font-size: 20px;
+  transition: opacity 0.4s ease;
 }
 
 .hover-underline {
   font-size: 2rem;
-  color: #ffffff;
+  color: var(--primary_text_color);
   position: relative;
   display: inline-block;
 }
@@ -50,7 +73,7 @@ h1 {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #48CAE4, var(--primary_text_color));
+  background: linear-gradient(to right, #666666, #000000);
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
@@ -68,45 +91,15 @@ h1 {
   transform: scaleX(1);
 }
 
-#donateBtn{
-  transition: opacity 0.4s ease;
-}
-
+/*TODO: come back to this*/
 #donateBtn.fade-out{
   opacity: 0;
   pointer-events: none;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes fadeIn {
-  0% {
-    gap: 50px;
-    opacity: 0.5;
-  }
-  100% {
-    gap: 0;
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-/*============================*/
-/* Hero Section */
-/*============================*/
+/*TODO: come back to this*/
 #landingPage {
+  /* background-color: green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,30 +109,45 @@ h1 {
   opacity: 0;
 }
 
+/*TODO: come back to this*/
 #landingPage h1 {
+  /* background-color: red; */
   color: var(--primary_text_color);
   width: fit-content;
   height: fit-content;
   font-size: clamp(2rem, 5vw, 5rem);
   margin: 0;
 }
+
+/*TODO: come back to this*/
 #landingPage h2 {
+  /* background-color: yellow; */
   text-align: center;
   margin: 0;
 }
+
+/*TODO: come back to this*/
 #landingPage p {
+  /* background-color: orange; */
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   padding: 10px;
   margin: 0;
 }
+
+/*TODO: come back to this*/
 #pinpicture {
+  /* background-color: #48CAE4; */
   width: 20px;
   height: 20px;
 }
+
+/*TODO: come back to this*/
 #pinpicture:hover {
   transform: translateY(-3px) scale(1.15);
   animation: pinBounce 0.6s linear;
 }
+
+/*TODO: come back to this*/
 @keyframes pinBounce {
   0%, 100% {
     transform: translateY(0) scale(1.15);
@@ -148,35 +156,53 @@ h1 {
     transform: translateY(-6px) scale(1.2);
   }
 }
+
+/*TODO: come back to this*/
 #socials {
+  /* background-color: yellowgreen; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
 
+/*TODO: come back to this*/
 #socials a{
+  /* background-color: antiquewhite; */
   text-decoration: none;
 }
 
+/*TODO: come back to this*/
 #socials ul {
+  /* background-color: blueviolet; */
   padding-inline-start: 0;
 }
+
+/*TODO: come back to this*/
 #socials li {
+  /* background-color: violet; */
   display: inline-block;
   margin: 0 5px;
 }
+
+/*TODO: come back to this*/
 #socials li img {
+  /* background-color: white; */
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1);
 }
+
+/*TODO: come back to this*/
 .cursor {
+  /* background-color: aliceblue; */
   display: inline-block;
   color: #fff;
   font-weight: bold;
   animation: blink 0.8s infinite;
 }
+
+/*TODO: come back to this*/
 @keyframes blink {
   0%,
   100% {
@@ -186,7 +212,10 @@ h1 {
     opacity: 0;
   }
 }
+
+/*TODO: come back to this*/
 #scrollDown {
+  /* background-color: black; */
   opacity: 0;
   position: relative;
   top: 150px;
@@ -199,10 +228,14 @@ h1 {
   animation-fill-mode: both;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+/*TODO: come back to this*/
 #scrollDown.show {
   opacity: 1;
   transform: translateY(0) rotate(90deg);
 }
+
+/*TODO: come back to this*/
 @keyframes bounce {
   0%,
   100% {
