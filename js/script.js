@@ -35,9 +35,10 @@ reveals.forEach((reveal) => {
 
 const phrases = [
   "Software Engineer",
-  "CS Student",
+  "C.S. Student",
   "Student Mentor",
   "LeetCode Warrior",
+  "Content Creater"
 ];
 
 let currentPhraseIndex = 0;
