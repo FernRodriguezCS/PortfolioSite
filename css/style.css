@@ -14,7 +14,6 @@ body {
   margin: 0;
   background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
-  /* overflow: hidden; */
 }
 
 li {
@@ -35,8 +34,6 @@ h1 {
   top: 5%;
   left: 5%;
   z-index: 99;
-  /* width: 55px;
-  height: 25px; */
   font-size: 20px;
 }
 
@@ -70,10 +67,6 @@ h1 {
 .hover-underline:hover::before {
   transform: scaleX(1);
 }
-
-/* #donateBtn:hover {
-  animation: liftOff 1s ease forwards;
-} */
 
 #donateBtn{
   transition: opacity 0.4s ease;
@@ -142,7 +135,6 @@ h1 {
 #pinpicture {
   width: 20px;
   height: 20px;
-  /* filter: brightness(0) invert(1); */
 }
 #pinpicture:hover {
   transform: translateY(-3px) scale(1.15);
@@ -162,6 +154,11 @@ h1 {
   justify-content: center;
   gap: 10px;
 }
+
+#socials a{
+  text-decoration: none;
+}
+
 #socials ul {
   padding-inline-start: 0;
 }
@@ -423,14 +420,64 @@ h1 {
   display: grid;
   color: white;
   transform: rotateY(180deg);
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+  padding: 14px;
+  justify-items: center;
+  align-content: start;
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+.card-back p {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.back-header{
+  display: grid;
+  gap: 6px;
+  width: 100%;
+}
+
+.back-title{
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.back-stack{
+  width: 100%;
+  display: grid;
+  gap: 8px;
+}
+
+.stack-label{
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 .card-inner.is-flipped{
   transform: rotateY(180deg);
 }
 
-#projectStack {
-  background-color: green;
+.stackContainer{
+  width: 100%;
+  max-width: 180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.stackContainer img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 0;
+  padding: 3px;
+  filter: brightness(0) invert(1);
 }
 
 @keyframes liftOff {
@@ -458,9 +505,10 @@ h1 {
   height: 325px;
   border-radius: 15px;
   border: 1px solid rgb(43, 41, 41);
+  overflow: hidden;
 }
 
-.projectPost img {
+.card-front img {
   width: 200px;
   height: 200px;
   border-radius: 15px;
@@ -633,4 +681,3 @@ h1 {
     font-size: 1rem;
   }
 }
-
