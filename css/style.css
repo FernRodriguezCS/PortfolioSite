@@ -15,24 +15,22 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/*TODO: Come back to this*/
 .reveal {
   opacity: 0;
   transform: translateY(100px);
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
 }
 
-/*TODO: Come back to this*/
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/*TODO: Come back to this*/
+/** Used for inital hero section load: ->./script.js*/
 @keyframes fadeIn {
   0% {
     gap: 50px;
-    opacity: 0.5;
+    opacity: 0;
   }
   100% {
     gap: 0;
@@ -40,26 +38,24 @@ body::-webkit-scrollbar {
   }
 }
 
-/*TODO: Come back to this*/
 .fadeIn {
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 1s ease-out forwards; /** forwards keeps elements in final state*/
 }
 
 /*============================*/
 /* Hero Section */
 /*============================*/
-/** Hover Animation taken from https://prismic.io/blog/css-hover-effects (Do not copy past this)*/
 #donateBtn {
-  /*TODO: come back to this*/
-  text-decoration: none;
+  text-decoration: none; /** removes underline*/
   position: fixed;
   top: 5%;
   left: 5%;
   z-index: 99;
   font-size: 20px;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s ease;
 }
 
+/** Hover Animation taken from https://prismic.io/blog/css-hover-effects (Do not copy past this)*/
 .hover-underline {
   font-size: 2rem;
   color: var(--primary_text_color);
@@ -91,63 +87,63 @@ body::-webkit-scrollbar {
   transform: scaleX(1);
 }
 
-/*TODO: come back to this*/
 #donateBtn.fade-out{
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; /** disables click*/
 }
 
-/*TODO: come back to this*/
 #landingPage {
-  /* background-color: green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  opacity: 0;
 }
 
-/*TODO: come back to this*/
 #landingPage h1 {
-  /* background-color: red; */
   color: var(--primary_text_color);
-  width: fit-content;
-  height: fit-content;
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2rem, 5vw, 5rem); /**default for 1 rem ("root em") is about 16px*/
   margin: 0;
 }
 
-/*TODO: come back to this*/
 #landingPage h2 {
-  /* background-color: yellow; */
-  text-align: center;
   margin: 0;
 }
 
-/*TODO: come back to this*/
-#landingPage p {
-  /* background-color: orange; */
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  padding: 10px;
-  margin: 0;
+#socials {
+  display: flex;
 }
 
-/*TODO: come back to this*/
-#pinpicture {
-  /* background-color: #48CAE4; */
+#socials ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding-inline-start: 0;
+}
+
+#socials ul img {
   width: 20px;
   height: 20px;
+  filter: brightness(0) invert(1);
 }
 
-/*TODO: come back to this*/
+#landingPage p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding: 10px; 
+  margin: 0;
+}
+
+#pinpicture {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 #pinpicture:hover {
-  transform: translateY(-3px) scale(1.15);
   animation: pinBounce 0.6s linear;
 }
 
-/*TODO: come back to this*/
+/*TODO: come back to this and create new up and swing animation*/
 @keyframes pinBounce {
   0%, 100% {
     transform: translateY(0) scale(1.15);
@@ -157,92 +153,50 @@ body::-webkit-scrollbar {
   }
 }
 
-/*TODO: come back to this*/
-#socials {
-  /* background-color: yellowgreen; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-/*TODO: come back to this*/
-#socials a{
-  /* background-color: antiquewhite; */
-  text-decoration: none;
-}
-
-/*TODO: come back to this*/
-#socials ul {
-  /* background-color: blueviolet; */
-  padding-inline-start: 0;
-}
-
-/*TODO: come back to this*/
-#socials li {
-  /* background-color: violet; */
-  display: inline-block;
-  margin: 0 5px;
-}
-
-/*TODO: come back to this*/
-#socials li img {
-  /* background-color: white; */
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1);
-}
-
-/*TODO: come back to this*/
+/*TODO: come back to this for J.S file slightly off centered (too low)*/
 .cursor {
-  /* background-color: aliceblue; */
-  display: inline-block;
-  color: #fff;
-  font-weight: bold;
+  color: var(--primary_text_color);
   animation: blink 0.8s infinite;
 }
 
-/*TODO: come back to this*/
 @keyframes blink {
-  0%,
-  100% {
+  0% {
     opacity: 1;
   }
   50% {
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
 }
 
-/*TODO: come back to this*/
 #scrollDown {
-  /* background-color: black; */
-  opacity: 0;
   position: relative;
   top: 150px;
   width: 60px;
   height: 60px;
-  transform: translateY(20px) rotate(90deg);
   filter: brightness(0) invert(1);
   animation: bounce 2s ease-in-out infinite;
   animation-delay: 3s;
-  animation-fill-mode: both;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation-fill-mode: both; /** applies style before and after animation*/
 }
 
-/*TODO: come back to this*/
+/* TODO: come back to this with J.S file */
 #scrollDown.show {
   opacity: 1;
   transform: translateY(0) rotate(90deg);
 }
 
-/*TODO: come back to this*/
 @keyframes bounce {
-  0%,
-  100% {
+  0% {
     transform: translateY(0) rotate(90deg);
   }
   50% {
-    transform: translateY(-10px) rotate(90deg);
+    transform: translateY(-25px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
   }
 }
 

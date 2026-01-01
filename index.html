@@ -19,31 +19,49 @@
     <h2>I'm a <span id="typedText"></span><span class="cursor">|</span></h2>
     <div id="socials">
       <!-- * loading="eager" loads quicker && loading="lazy" helps site preformance by loading when user gets near-->
-      <p><img src="assets/images/pin.png" alt="pin" id="pinpicture" loading="eager" />Bakersfield CA</p>
+      <p>
+        <img src="assets/images/pin.png" alt="pin" id="pinpicture" loading="eager" />
+        Bakersfield CA
+      </p>
+
       <ul>
         <!-- * 'rel="nopener noreferrer" -> without can lead to 'reverse tabnabbing' 
-          *   Newly opened page can access window.opener meaning...
-          * - The new tab can redirect you to a malicious page (phising)'
-          * - Try to run scripts that affect opener page
-          * -->
-        <a href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/" rel="noopener noreferrer" target="_blank">
-          <li class="skillList"><img src="assets/images/linkedin.png" alt="LinkedIn" loading="eager" /></li>
-        </a>
-        <a href="https://www.youtube.com/@FernRodriguezCS" rel="noopener noreferrer" target="_blank">
-          <li class="skillList"><img src="assets/images/youtube.svg" alt="Youtube" loading="eager" /></li>
-        </a>
-        <a href="https://www.instagram.com/fernrodriguezcs/" rel="noopener noreferrer" target="_blank">
-          <li class="skillList"><img src="assets/images/instagram.svg" alt="Instagram" loading="eager" /></li>
-        </a>
-        <!--TODO: Fix tiktok link to new page-->
-        <a href="https://www.tiktok.com/@fernrodriguezcs" rel="noopener noreferrer" target="_blank">
-          <li class="skillList"><img src="assets/images/tiktok.svg" alt="TikTok" loading="eager" /></li>
-        </a>
-        <a href="https://github.com/FernRodriguezCS" rel="noopener noreferrer" target="_blank">
-          <li class="skillList"><img src="assets/skillIcons/github.svg" alt="Github" loading="eager" /></li>
-        </a>
+      *   Newly opened page can access window.opener meaning...
+      * - The new tab can redirect you to a malicious page (phising)'
+      * - Try to run scripts that affect opener page
+      * -->
+        <li class="skillList">
+          <a href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/" rel="noopener noreferrer" target="_blank">
+            <img src="assets/images/linkedin.png" alt="LinkedIn" loading="eager" />
+          </a>
+        </li>
+
+        <li class="skillList">
+          <a href="https://www.youtube.com/@FernRodriguezCS" rel="noopener noreferrer" target="_blank">
+            <img src="assets/images/youtube.svg" alt="Youtube" loading="eager" />
+          </a>
+        </li>
+
+        <li class="skillList">
+          <a href="https://www.instagram.com/fernrodriguezcs/" rel="noopener noreferrer" target="_blank">
+            <img src="assets/images/instagram.svg" alt="Instagram" loading="eager" />
+          </a>
+        </li>
+
+        <li class="skillList">
+          <a href="https://www.tiktok.com/@fernrodriguez_" rel="noopener noreferrer" target="_blank">
+            <img src="assets/images/tiktok.svg" alt="TikTok" loading="eager" />
+          </a>
+        </li>
+
+        <li class="skillList">
+          <a href="https://github.com/FernRodriguezCS" rel="noopener noreferrer" target="_blank">
+            <img src="assets/skillIcons/github.svg" alt="Github" loading="eager" />
+          </a>
+        </li>
       </ul>
     </div>
+    <!--!: This section was fixed from <ul> <a> <li> </li></a></ul> to <ul> <li> </a> </a> </li> </ul>-->
 
     <img id="scrollDown" src="assets/images/arrow.png" alt="scrolldown arrow" loading="lazy" />
   </section>
@@ -165,23 +183,22 @@
   <!----Extra info. SECTION--->
   <!-------------------------->
   <div id="extraInfo" class="reveal">
-    <div id="extraInfo" class="reveal">
-      <h3>About Me</h3>
-      <p>
-        Hey! I’m Fernando Rodriguez, a computer science student at Cal State
-        Bakersfield with a passion for building cool, meaningful things with
-        code. I enjoy exploring both the front-end and back-end of development,
-        and I’m always looking for ways to improve my skills through hands-on
-        projects and real-world problem solving. Outside of coding, I’m all
-        about growth — whether that’s through chess, fitness, creative projects,
-        or diving deeper into my faith. I believe in working hard, staying
-        curious, and using technology to make a positive impact. Thanks for
-        stopping by my portfolio — I’m excited to see where this journey leads.
-      </p>
-    </div>
-    <!-- * Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
-    <script src="/js/script.js" defer></script>
-    <script src="/js/time_at_job.js" defer></script>
+    <h3>About Me</h3>
+    <p>
+      Hey! I’m Fernando Rodriguez, a computer science student at Cal State
+      Bakersfield with a passion for building cool, meaningful things with
+      code. I enjoy exploring both the front-end and back-end of development,
+      and I’m always looking for ways to improve my skills through hands-on
+      projects and real-world problem solving. Outside of coding, I’m all
+      about growth — whether that’s through chess, fitness, creative projects,
+      or diving deeper into my faith. I believe in working hard, staying
+      curious, and using technology to make a positive impact. Thanks for
+      stopping by my portfolio — I’m excited to see where this journey leads.
+    </p>
+  </div>
+  <!-- * Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
+  <script src="/js/script.js" defer></script>
+  <script src="/js/time_at_job.js" defer></script>
 </body>
 
 </html>
