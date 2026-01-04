@@ -313,7 +313,6 @@ body::-webkit-scrollbar {
   align-items: center;
   padding-top: 5%;
   padding-bottom: 5%;
-  /* position: relative; */
 }
 
 #experienceSection h3 {
@@ -322,143 +321,103 @@ body::-webkit-scrollbar {
 
 /*TODO: Come back to this*/
 .timeline{
+  position: relative; /*TODO: why does this extend the "line"*/
+  width: 50%;
+  height: fit-content;
   /* background-color: orange; */
-  position: relative;
-  width: 100%;
-  max-width: 950px;
-  display: grid;
-  gap: 36px;
-  padding: 8px 0 16px;
-  box-sizing: border-box;
 }
 
-/*TODO: Come back to this*/
 .timeline::before{
-  /* background-color: green; */
   content: "";
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 5px;
   background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.3), rgba(255,255,255,0));
-  transform: translateX(-50%);
 }
 
 /*TODO: Come back to this*/
 .jobPost{
-  /* background-color: #48cae4; */
-  height: fit-content;
   width: clamp(260px, 45vw, 520px);
   border-radius: 15px;
   display: flex;
   background: rgba(255, 255, 255, 0.06);
-  padding: 1%;
-  margin: 2%;
   position: relative;
 }
 
-/*TODO: Come back to this*/
 .jobPost h4{
-  /* background-color: aquamarine; */
   font-size: clamp(1rem, 2.5vw, 1.5rem);
 } 
 
-/*TODO: Come back to this*/
 .jobPost h5{
-  /* background-color: white; */
   font-size: clamp(0.7rem, 2vw, 1.1rem);
 }
 
-/*TODO: Come back to this*/
 .jobPic{
-  /* background-color: violet; */
   height: 80px;
   width: 80px;
   border-radius: 15px;
   margin: 2%;
-  padding-top: 5px;
 }
 
-/*TODO: Come back to this*/
 .jobInfo{
-  /* background-color: tomato; */
   margin-left: 3%;
 }
 
-/*TODO: Come back to this*/
 .jobTitle{
-  /* background-color: steelblue; */
-  width: 100%;
-  height: fit-content;
   margin-top: 5%;
   margin-bottom: 0;
 }
 
-/*TODO: Come back to this*/
-.jobDate{
-  /* background-color: springgreen; */
-  margin-top: 0;
-  width: 100%;
-  margin-bottom: 14px;
-}
-
-/*TODO: Come back to this*/
 .jobPosition{
-  /* background-color: sandybrown; */
-  padding-bottom: 5px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
+.jobDate{
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
 /*TODO: Come back to this*/
 .timeline .jobPost{
-  /* background-color: salmon; */
   width: 46%;
-  max-width: 460px;
-  margin: 0;
-  padding: 16px 18px;
-  box-sizing: border-box;
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
 /*TODO: Come back to this*/
 .timeline .jobPost:nth-child(odd){
-  /* background-color: brown; */
   justify-self: start;
   border-top-right-radius: 0;
 }
 
 /*TODO: Come back to this*/
 .timeline .jobPost:nth-child(even){
-  /* background-color: chocolate; */
   justify-self: end;
-  border-top-left-radius: 0;
+  border-top-left-radius: 0; /** Sharp edge on left top end*/
 }
 
-/*TODO: Come back to this*/
+/* TODO: Come back to this */
 .timeline .jobPost::after{
-  /* background-color: plum; */
   content: "";
   position: absolute;
-  top: 20px;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: #48cae4;
   box-shadow: 0 0 0 4px rgba(72,202,228,0.2);
 }
 
 /*TODO: Come back to this*/
 .timeline .jobPost:nth-child(odd)::after{
-  /* background-color: cornflowerblue; */
+  background-color: cornflowerblue;
   right: -34px;
 }
 
 /*TODO: Come back to this*/
 .timeline .jobPost:nth-child(even)::after{
-  /* background-color: royalblue; */
+  background-color: cornflowerblue;
   left: -34px;
 }
 
