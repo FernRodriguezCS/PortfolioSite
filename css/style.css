@@ -32,6 +32,7 @@ body::-webkit-scrollbar {
     gap: 50px;
     opacity: 0;
   }
+
   100% {
     gap: 0;
     opacity: 1;
@@ -39,14 +40,16 @@ body::-webkit-scrollbar {
 }
 
 .fadeIn {
-  animation: fadeIn 1s ease-out forwards; /** forwards keeps elements in final state*/
+  animation: fadeIn 1s ease-out forwards;
+  /** forwards keeps elements in final state*/
 }
 
 /*============================*/
 /* Hero Section */
 /*============================*/
 #donateBtn {
-  text-decoration: none; /** removes underline*/
+  text-decoration: none;
+  /** removes underline*/
   position: fixed;
   top: 5%;
   left: 5%;
@@ -87,9 +90,10 @@ body::-webkit-scrollbar {
   transform: scaleX(1);
 }
 
-#donateBtn.fade-out{
+#donateBtn.fade-out {
   opacity: 0;
-  pointer-events: none; /** disables click*/
+  pointer-events: none;
+  /** disables click*/
 }
 
 #landingPage {
@@ -103,7 +107,8 @@ body::-webkit-scrollbar {
 
 #landingPage h1 {
   color: var(--primary_text_color);
-  font-size: clamp(2rem, 5vw, 5rem); /**default for 1 rem ("root em") is about 16px*/
+  font-size: clamp(2rem, 5vw, 5rem);
+  /**default for 1 rem ("root em") is about 16px*/
   margin: 0;
 }
 
@@ -130,7 +135,7 @@ body::-webkit-scrollbar {
 
 #landingPage p {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
-  padding: 10px; 
+  padding: 10px;
   margin: 0;
 }
 
@@ -145,9 +150,12 @@ body::-webkit-scrollbar {
 
 /*TODO: come back to this and create new up and swing animation*/
 @keyframes pinBounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1.15);
   }
+
   50% {
     transform: translateY(-6px) scale(1.2);
   }
@@ -163,9 +171,11 @@ body::-webkit-scrollbar {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -179,7 +189,8 @@ body::-webkit-scrollbar {
   filter: brightness(0) invert(1);
   animation: bounce 2s ease-in-out infinite;
   animation-delay: 3s;
-  animation-fill-mode: both; /** applies style before and after animation*/
+  animation-fill-mode: both;
+  /** applies style before and after animation*/
 }
 
 /* TODO: come back to this with J.S file */
@@ -192,9 +203,11 @@ body::-webkit-scrollbar {
   0% {
     transform: translateY(0) rotate(90deg);
   }
+
   50% {
     transform: translateY(-25px) rotate(90deg);
   }
+
   100% {
     transform: translateY(0) rotate(90deg);
   }
@@ -223,13 +236,11 @@ body::-webkit-scrollbar {
   height: 100px;
   margin-top: 5rem;
   overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
+  mask-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0));
 }
 
 @keyframes scrollLeft {
@@ -248,7 +259,7 @@ body::-webkit-scrollbar {
   animation-iteration-count: infinite;
 }
 
-.item img{
+.item img {
   width: clamp(35px, 4vw, 64px);
   height: clamp(35px, 4vw, 64px);
   filter: brightness(0) invert(1);
@@ -286,19 +297,19 @@ body::-webkit-scrollbar {
   animation-delay: calc(30s / 12 * (12 - 8) * -1);
 }
 
-.item9{
+.item9 {
   animation-delay: calc(30s / 12 * (12 - 9) * -1);
 }
 
-.item10{
+.item10 {
   animation-delay: calc(30s / 12 * (12 - 10) * -1);
 }
 
-.item11{
+.item11 {
   animation-delay: calc(30s / 12 * (12 - 11) * -1);
 }
 
-.item12{
+.item12 {
   animation-delay: calc(30s / 12 * (12 - 12) * -1);
 }
 
@@ -320,25 +331,26 @@ body::-webkit-scrollbar {
 }
 
 /*TODO: Come back to this*/
-.timeline{
-  position: relative; /*TODO: why does this extend the "line"*/
+.timeline {
+  position: relative;
+  /*TODO: why does this extend the "line"*/
   width: 50%;
   height: fit-content;
   /* background-color: orange; */
 }
 
-.timeline::before{
+.timeline::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
   width: 5px;
-  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.3), rgba(255,255,255,0));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
 }
 
 /*TODO: Come back to this*/
-.jobPost{
+.jobPost {
   width: clamp(260px, 45vw, 520px);
   border-radius: 15px;
   display: flex;
@@ -346,77 +358,78 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
-.jobPost h4{
+.jobPost h4 {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
-} 
+}
 
-.jobPost h5{
+.jobPost h5 {
   font-size: clamp(0.7rem, 2vw, 1.1rem);
 }
 
-.jobPic{
+.jobPic {
   height: 80px;
   width: 80px;
   border-radius: 15px;
   margin: 2%;
 }
 
-.jobInfo{
+.jobInfo {
   margin-left: 3%;
 }
 
-.jobTitle{
+.jobTitle {
   margin-top: 5%;
   margin-bottom: 0;
 }
 
-.jobPosition{
+.jobPosition {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.jobDate{
+.jobDate {
   margin-top: 0;
   margin-bottom: 15px;
 }
 
 /*TODO: Come back to this*/
-.timeline .jobPost{
+.timeline .jobPost {
   width: 46%;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 }
 
 /*TODO: Come back to this*/
-.timeline .jobPost:nth-child(odd){
+.timeline .jobPost:nth-child(odd) {
   justify-self: start;
   border-top-right-radius: 0;
 }
 
 /*TODO: Come back to this*/
-.timeline .jobPost:nth-child(even){
+.timeline .jobPost:nth-child(even) {
   justify-self: end;
-  border-top-left-radius: 0; /** Sharp edge on left top end*/
+  border-top-left-radius: 0;
+  /** Sharp edge on left top end*/
 }
 
 /* TODO: Come back to this */
-.timeline .jobPost::after{
+.timeline .jobPost::after {
   content: "";
   position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(72,202,228,0.2);
+  box-shadow: 0 0 0 4px rgba(72, 202, 228, 0.2);
 }
 
 /*TODO: Come back to this*/
-.timeline .jobPost:nth-child(odd)::after{
+.timeline .jobPost:nth-child(odd)::after {
   background-color: cornflowerblue;
   right: -34px;
 }
 
 /*TODO: Come back to this*/
-.timeline .jobPost:nth-child(even)::after{
+.timeline .jobPost:nth-child(even)::after {
   background-color: cornflowerblue;
   left: -34px;
 }
@@ -463,7 +476,7 @@ body::-webkit-scrollbar {
   justify-items: center;
   align-content: start;
   text-align: center;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .card-back p {
@@ -472,33 +485,33 @@ body::-webkit-scrollbar {
   font-size: 0.9rem;
 }
 
-.back-header{
+.back-header {
   display: grid;
   gap: 6px;
   width: 100%;
 }
 
-.back-title{
+.back-title {
   font-size: 1.05rem;
   font-weight: 700;
 }
 
-.back-stack{
+.back-stack {
   width: 100%;
   display: grid;
   gap: 8px;
 }
 
-.stack-label{
+.stack-label {
   margin: 0;
   font-size: 0.9rem;
 }
 
-.card-inner.is-flipped{
+.card-inner.is-flipped {
   transform: rotateY(180deg);
 }
 
-.stackContainer{
+.stackContainer {
   width: 100%;
   max-width: 180px;
   display: grid;
@@ -508,7 +521,7 @@ body::-webkit-scrollbar {
   gap: 6px;
 }
 
-.stackContainer img{
+.stackContainer img {
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -521,6 +534,7 @@ body::-webkit-scrollbar {
   0% {
     box-shadow: 1px 1px 10px #17212d;
   }
+
   100% {
     box-shadow: 20px 20px 25px #17212d;
   }
@@ -530,6 +544,7 @@ body::-webkit-scrollbar {
   0% {
     box-shadow: 20px 20px 25px rgb(43, 41, 41);
   }
+
   100% {
     box-shadow: 1px 1px 10px rgb(43, 41, 41);
   }
@@ -605,36 +620,44 @@ body::-webkit-scrollbar {
   #landingPage h1 {
     font-size: 3rem;
   }
+
   #socials {
     flex-direction: column;
     align-items: center;
   }
-  .timeline{
+
+  .timeline {
     gap: 24px;
   }
-  .timeline::before{
+
+  .timeline::before {
     left: 16px;
   }
-  .timeline .jobPost{
+
+  .timeline .jobPost {
     width: 100%;
     max-width: none;
     justify-self: stretch;
     padding-left: 44px;
   }
+
   .timeline .jobPost:nth-child(odd),
-  .timeline .jobPost:nth-child(even){
+  .timeline .jobPost:nth-child(even) {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
   }
-  .timeline .jobPost::after{
+
+  .timeline .jobPost::after {
     left: 12px;
     right: auto;
   }
+
   #skills ul {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
+
   #skills li {
     flex: 0 0 auto;
     scroll-snap-align: center;
@@ -647,6 +670,7 @@ body::-webkit-scrollbar {
     height: fit-content;
     padding-bottom: 50px;
   }
+
   #projectDisplay {
     width: 90vw;
     height: fit-content;
@@ -658,6 +682,7 @@ body::-webkit-scrollbar {
     scroll-snap-type: x mandatory;
     scroll-padding: 24px;
   }
+
   .projectPost {
     margin: 20px;
     max-width: 250px;
@@ -683,6 +708,7 @@ body::-webkit-scrollbar {
   #socials p {
     font-size: 12px;
   }
+
   #socials li img {
     width: 15px;
     height: 15px;
@@ -693,10 +719,12 @@ body::-webkit-scrollbar {
   #socials p {
     font-size: 10px;
   }
+
   #pinpicture {
     width: 12px;
     height: 12px;
   }
+
   #socials li img {
     width: 15px;
     height: 15px;
@@ -707,10 +735,12 @@ body::-webkit-scrollbar {
   #landingPage h1 {
     font-size: 45px;
   }
+
   #pinpicture {
     width: 12px;
     height: 12px;
   }
+
   #socials li img {
     width: 12px;
     height: 12px;
@@ -721,12 +751,15 @@ body::-webkit-scrollbar {
   #landingPage h1 {
     font-size: 37px;
   }
+
   #experienceSection h3 {
     font-size: 15px;
   }
+
   #projectSection h3 {
     font-size: 20px;
   }
+
   #skills h3 {
     font-size: 15px;
   }
@@ -736,6 +769,7 @@ body::-webkit-scrollbar {
   #landingPage h1 {
     font-size: 2rem;
   }
+
   #landingPage h2 {
     font-size: 1rem;
   }
