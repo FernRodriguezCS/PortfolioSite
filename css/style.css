@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
 
 .hover-underline::after,
 .hover-underline::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -150,7 +150,6 @@ body::-webkit-scrollbar {
 
 /*TODO: come back to this and create new up and swing animation*/
 @keyframes pinBounce {
-
   0%,
   100% {
     transform: translateY(0) scale(1.15);
@@ -161,7 +160,6 @@ body::-webkit-scrollbar {
   }
 }
 
-/*TODO: come back to this for J.S file slightly off centered (too low)*/
 .cursor {
   color: var(--primary_text_color);
   animation: blink 0.8s infinite;
@@ -236,11 +234,13 @@ body::-webkit-scrollbar {
   height: 100px;
   margin-top: 5rem;
   overflow: hidden;
-  mask-image: linear-gradient(to right,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 1) 20%,
-      rgba(0, 0, 0, 1) 80%,
-      rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
 @keyframes scrollLeft {
@@ -343,7 +343,11 @@ body::-webkit-scrollbar {
   top: 0;
   bottom: 0;
   width: 5px;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .jobPost {
@@ -399,7 +403,8 @@ body::-webkit-scrollbar {
   border-top-left-radius: 0;
 }
 
-.timeline .jobPost::after { /** DOT*/
+.timeline .jobPost::after {
+  /** DOT*/
   content: "";
   position: absolute;
   width: 15px;
@@ -420,7 +425,6 @@ body::-webkit-scrollbar {
 /*============================*/
 /*  PROJECT SECTION           */
 /*============================*/
-
 #projectSection {
   width: 100%;
   height: 75vh;
@@ -527,73 +531,29 @@ body::-webkit-scrollbar {
   margin: 0 10%;
 }
 
-/*This is for the breakpoints*/
-/*When arrow breaks & hero section resize*/
+/*==========================*/
+/*   MEDIA BREAKPOINTS      */
+/*==========================*/
 @media screen and (max-width: 768px) {
-  #landingPage h1 {
-    font-size: 3rem;
+  #pinpicture {
+    width: 12px;
+    height: 12px;
   }
 
   #socials {
     flex-direction: column;
     align-items: center;
   }
-
-  .timeline {
-    gap: 24px;
-  }
-
-  .timeline::before {
-    left: 16px;
-  }
-
-  .timeline .jobPost {
-    width: 100%;
-    max-width: none;
-    justify-self: stretch;
-    padding-left: 44px;
-  }
-
-  .timeline .jobPost:nth-child(odd),
-  .timeline .jobPost:nth-child(even) {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-
-  .timeline .jobPost::after {
-    left: 12px;
-    right: auto;
-  }
-
-  #skills ul {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-
-  #skills li {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-  }
 }
 
-/* when project section breaks */
+/* Converts Project section from desktop to slider display*/
 @media screen and (max-width: 840px) {
-  #projectSection {
-    height: fit-content;
-    padding-bottom: 50px;
-  }
-
   #projectDisplay {
     width: 90vw;
     height: fit-content;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    scroll-padding: 24px;
+    scroll-padding: 25%;
   }
 
   .projectPost {
@@ -605,85 +565,31 @@ body::-webkit-scrollbar {
   }
 }
 
-@media screen and (max-width: 750px) {
-  #landingPage h1 {
-    font-size: 69px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  #landingPage h1 {
-    font-size: 55px;
-  }
-}
-
-@media screen and (max-width: 619px) {
-  #socials p {
-    font-size: 12px;
+@media (orientation: portrait) {
+  /**Mobile layout*/
+  .timeline::before {
+    left: 5%;
   }
 
-  #socials li img {
-    width: 15px;
-    height: 15px;
-  }
-}
-
-@media screen and (max-width: 556px) {
-  #socials p {
-    font-size: 10px;
+  .jobPost {
+    margin-top: 9%;
+    margin-bottom: 9%;
+    margin-left: 8%;
   }
 
-  #pinpicture {
-    width: 12px;
-    height: 12px;
+  .timeline .jobPost:nth-child(odd) {
+    justify-self: start;
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
   }
 
-  #socials li img {
-    width: 15px;
-    height: 15px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  #landingPage h1 {
-    font-size: 45px;
+  .timeline .jobPost:nth-child(even) {
+    justify-self: start;
+    border-top-left-radius: 0;
   }
 
-  #pinpicture {
-    width: 12px;
-    height: 12px;
-  }
-
-  #socials li img {
-    width: 12px;
-    height: 12px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  #landingPage h1 {
-    font-size: 37px;
-  }
-
-  #experienceSection h3 {
-    font-size: 15px;
-  }
-
-  #projectSection h3 {
-    font-size: 20px;
-  }
-
-  #skills h3 {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #landingPage h1 {
-    font-size: 2rem;
-  }
-
-  #landingPage h2 {
-    font-size: 1rem;
+  .timeline .jobPost:nth-child(odd)::after {
+    position: relative;
+    right: 105.5%;
   }
 }

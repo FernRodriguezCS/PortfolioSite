@@ -47,7 +47,7 @@ a {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #48CAE4, var(--primary_text_color));
+  background: linear-gradient(to right, #666666, #000000);
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
