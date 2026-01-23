@@ -333,7 +333,8 @@ body::-webkit-scrollbar {
 .timeline {
   position: relative;
   padding: 2%;
-  width: 60%;
+  min-width: 84%;
+  max-width: 84%;
   height: fit-content;
 }
 
@@ -352,7 +353,7 @@ body::-webkit-scrollbar {
 }
 
 .jobPost {
-  width: clamp(260px, 45vw, 520px);
+  width: clamp(125px, 39vw, 520px);
   border-radius: 15px;
   display: flex;
   background: rgba(255, 255, 255, 0.06);
@@ -576,6 +577,7 @@ body::-webkit-scrollbar {
     margin-top: 9%;
     margin-bottom: 9%;
     margin-left: 9%;
+    width: fit-content;
   }
 
   .timeline .jobPost:nth-child(odd) {
