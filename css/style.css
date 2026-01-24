@@ -1,3 +1,6 @@
+/*TODO: Update pin animation */
+/*TODO: Experience section is really f'd up fix it (sizing)*/
+
 :root {
   --primary_text_color: whitesmoke;
   --global_font: sans-serif;
@@ -191,7 +194,6 @@ body::-webkit-scrollbar {
   /** applies style before and after animation*/
 }
 
-/* TODO: come back to this with J.S file */
 #scrollDown.show {
   opacity: 1;
   transform: translateY(0) rotate(90deg);
