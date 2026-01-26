@@ -1,3 +1,4 @@
+//Todo: Come back to this file
 const typedText = document.getElementById("typedText");
 
 window.addEventListener("load", () => {
