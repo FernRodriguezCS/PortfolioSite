@@ -1,5 +1,4 @@
 /*TODO: Update pin animation */
-/*TODO: Experience section is really f'd up fix it (sizing)*/
 
 :root {
   --primary_text_color: whitesmoke;
@@ -335,15 +334,15 @@ body::-webkit-scrollbar {
 .timeline {
   position: relative;
   padding: 2%;
-  min-width: 84%;
-  max-width: 84%;
+  width: min(84%, 1100px);
+  margin: 0 auto;
   height: fit-content;
+  --line-x: 50%;
 }
 
 .timeline::before {
   content: ""; /** Needed for pseudo-element the .timeline::before acts as child of .timeline "content:""" needed*/
   position: absolute;
-  left: 50%;
   top: 0;
   bottom: 0;
   width: 5px;
@@ -352,6 +351,8 @@ body::-webkit-scrollbar {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0)
   );
+  left:var(--line-x);
+  transform: translateX(-50%);
 }
 
 .jobPost {
@@ -397,33 +398,33 @@ body::-webkit-scrollbar {
   margin-bottom: 2%;
 }
 
-.timeline .jobPost:nth-child(odd) {
-  justify-self: start;
+.timelineItem:nth-child(odd) .jobPost {
+  margin-right: auto;
   border-top-right-radius: 0;
 }
 
-.timeline .jobPost:nth-child(even) {
-  justify-self: end;
+.timelineItem:nth-child(even) .jobPost{
+  margin-left: auto;
   border-top-left-radius: 0;
 }
 
-.timeline .jobPost::after {
-  /** DOT*/
+.timelineItem{
+  position: relative;
+  width: 100%;
+  padding: 18px 0;
+}
+
+.timelineItem::after{
   content: "";
   position: absolute;
+  left: var(--line-x);
+  top: 28px;
+  transform: translateX(-50%);
   width: 15px;
   height: 15px;
   border-radius: 50%;
   box-shadow: 0 0 0 4px rgba(72, 202, 228, 0.2);
   background-color: cornflowerblue;
-}
-
-.timeline .jobPost:nth-child(odd)::after {
-  right: -34px;
-}
-
-.timeline .jobPost:nth-child(even)::after {
-  left: -34px;
 }
 
 /*============================*/
@@ -552,6 +553,26 @@ body::-webkit-scrollbar {
 
 /* Converts Project section from desktop to slider display*/
 @media screen and (max-width: 840px) {
+  .timeline{
+    --line-x: 8%;
+    width: 92%;
+  }
+
+  .jobPost{
+    width: calc(100% - 12%);
+    margin-left: 12%;
+    margin-right: 0;
+  }
+
+   /* disable alternating sides on mobile */
+   .timelineItem:nth-child(even) .jobPost,
+   .timelineItem:nth-child(odd) .jobPost {
+     margin-left: 12%;
+     margin-right: 0;
+     border-top-left-radius: 0;
+     border-top-right-radius: 15px;
+   }
+
   #projectDisplay {
     width: 90vw;
     height: fit-content;
@@ -566,32 +587,5 @@ body::-webkit-scrollbar {
     height: 325px;
     flex: 0 0 100%;
     scroll-snap-align: start;
-  }
-}
-
-@media (orientation: portrait) {
-  /**Mobile layout*/
-  .timeline::before {
-    left: 4%;
-  }
-
-  .jobPost {
-    margin-top: 9%;
-    margin-bottom: 9%;
-    margin-left: 9%;
-    width: fit-content;
-  }
-
-  .timeline .jobPost:nth-child(odd) {
-    border-top-left-radius: 0;
-    border-top-right-radius: 15px;
-  }
-
-  .timeline .jobPost:nth-child(even) {
-    justify-self: start;
-  }
-
-  .timeline .jobPost:nth-child(odd)::after {
-    right: 107.25%;
   }
 }
