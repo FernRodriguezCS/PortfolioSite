@@ -594,15 +594,6 @@ body::-webkit-scrollbar {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.back-bottom {
-  padding-top: 0.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.project-status {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.65);
-}
 /*===========================*/
 /*  EXTRA INFO. SECTION      */
 /*===========================*/
