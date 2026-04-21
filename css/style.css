@@ -450,6 +450,7 @@ body::-webkit-scrollbar {
   height: 375px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.06);
+  gap: 20px;
 }
 
 .projectPost {
