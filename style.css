@@ -602,7 +602,8 @@ body::-webkit-scrollbar {
   #projectDisplay {
     width: 90vw;
     height: fit-content;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-padding: 25%;
   }
