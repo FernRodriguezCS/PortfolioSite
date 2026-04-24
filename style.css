@@ -585,6 +585,10 @@ body::-webkit-scrollbar {
     --line-x: 10%;
   }
 
+  #extraInfo{
+    padding-bottom: 8rem;
+  }
+
   .jobPost{
     width: calc(100% - 14%);
     margin-left: 14%;
