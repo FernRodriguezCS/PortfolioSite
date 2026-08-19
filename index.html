@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fernando Rodriguez</title>
   <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/hero.css">
+  <link rel="stylesheet" href="./styles/skills.css">
   <link rel="stylesheet" href="./styles/style.css" />
 
   <!--Favicon info-->
@@ -47,21 +49,16 @@
   <!----HERO SECTION---------->
   <!-------------------------->
   <section id="landingPage">
-    <h1>Welcome, I'm Fern!</h1>
-    <h2>I'm a <span id="typedText"></span><span class="cursor">|</span></h2>
+    <h1>Hi, I'm Fernando!</h1>
+    <h2>Software Engineer</h2>
+
     <div id="socials">
-      <!-- * loading="eager" loads quicker && loading="lazy" helps site preformance by loading when user gets near-->
       <p>
         <img src="assets/images/pin.png" alt="pin" id="pinpicture" loading="eager" />
         Bakersfield CA
       </p>
 
       <ul>
-        <!-- * 'rel="nopener noreferrer" -> without can lead to 'reverse tabnabbing' 
-      *   Newly opened page can access window.opener meaning...
-      * - The new tab can redirect you to a malicious page (phising)'
-      * - Try to run scripts that affect opener page
-      * -->
         <li class="skillList">
           <a href="https://www.linkedin.com/in/fernando-rodriguez-2682a3297/" rel="noopener noreferrer" target="_blank">
             <img src="assets/images/linkedin.png" alt="LinkedIn" loading="eager" />
@@ -93,9 +90,9 @@
         </li>
       </ul>
     </div>
-    <!--!: This section was fixed from <ul> <a> <li> </li></a></ul> to <ul> <li> </a> </a> </li> </ul>-->
 
-    <img id="scrollDown" src="assets/images/arrow.png" alt="scrolldown arrow" loading="lazy" />
+    <div class="arrow arrow-first"></div>
+    <div class="arrow arrow-second"></div>
   </section>
 
   <!-------------------------->
@@ -104,28 +101,18 @@
   <section id="skills" class="reveal">
     <h3>LANGUAGES AND FRAMEWORKS</h3>
     <div class="wrapper">
-      <div class="item item1"><img src="./assets/skillIcons/cplusplus.svg" alt="C++" class="skillList" loading="lazy">
-      </div>
+      <div class="item item1"><img src="./assets/skillIcons/cplusplus.svg" alt="C++" class="skillList" loading="lazy"></div>
       <div class="item item2"><img src="./assets/skillIcons/css.svg" alt="CSS" class="skillList" loading="lazy"></div>
-      <div class="item item3"><img src="./assets/skillIcons/express.svg" alt="EXPRESS.JS" class="skillList"
-          loading="lazy"></div>
+      <div class="item item3"><img src="./assets/skillIcons/express.svg" alt="EXPRESS.JS" class="skillList"loading="lazy"></div>
       <div class="item item4"><img src="./assets/skillIcons/git.svg" alt="git" class="skillList" loading="lazy"></div>
-      <div class="item item5"><img src="./assets/skillIcons/github.svg" alt="github" class="skillList" loading="lazy">
-      </div>
-      <div class="item item6"><img src="./assets/skillIcons/html5.svg" alt="HTML" class="skillList" loading="lazy">
-      </div>
-      <div class="item item7"><img src="./assets/skillIcons/javascript.svg" alt="JavaScript" class="skillList"
-          loading="lazy"></div>
-      <div class="item item8"><img src="./assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" class="skillList"
-          loading="lazy"></div>
-      <div class="item item9"><img src="./assets/skillIcons/nodedotjs.svg" alt="NODE.JS" class="skillList"
-          loading="lazy"></div>
-      <div class="item item10"><img src="./assets/skillIcons/postgresql.svg" alt="PostGreSQL" class="skillList"
-          loading="lazy"></div>
-      <div class="item item11"><img src="./assets/skillIcons/python.svg" alt="Python" class="skillList" loading="lazy">
-      </div>
-      <div class="item item12"><img src="./assets/skillIcons/react.svg" alt="REACT.JS" class="skillList" loading="lazy">
-      </div>
+      <div class="item item5"><img src="./assets/skillIcons/github.svg" alt="github" class="skillList" loading="lazy"></div>
+      <div class="item item6"><img src="./assets/skillIcons/html5.svg" alt="HTML" class="skillList" loading="lazy"></div>
+      <div class="item item7"><img src="./assets/skillIcons/javascript.svg" alt="JavaScript" class="skillList"loading="lazy"></div>
+      <div class="item item8"><img src="./assets/skillIcons/jsonwebtokens.svg" alt="J.W.T" class="skillList"loading="lazy"></div>
+      <div class="item item9"><img src="./assets/skillIcons/nodedotjs.svg" alt="NODE.JS" class="skillList"loading="lazy"></div>
+      <div class="item item10"><img src="./assets/skillIcons/postgresql.svg" alt="PostGreSQL" class="skillList"loading="lazy"></div>
+      <div class="item item11"><img src="./assets/skillIcons/python.svg" alt="Python" class="skillList" loading="lazy"></div>
+      <div class="item item12"><img src="./assets/skillIcons/react.svg" alt="REACT.JS" class="skillList" loading="lazy"></div>
     </div>
   </section>
 
