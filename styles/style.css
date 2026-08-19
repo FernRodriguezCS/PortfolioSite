@@ -3,6 +3,10 @@
   --global_font: sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--primary_text_color);
   font-family: var(--global_font);
