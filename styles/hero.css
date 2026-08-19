@@ -8,8 +8,9 @@
 }
   
 #landingPage h1 {
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(2rem, 9vw, 6rem);
     margin: 0;
+    text-align: center;
 }
   
 #landingPage h2 {
@@ -30,12 +31,12 @@
     list-style: none;
     display: flex;
     gap: 15px;
+    padding-inline-start: 0;
 }
   
 #socials ul img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1);
 }
   
 #pinpicture {
@@ -90,7 +91,7 @@
 
 .arrow:before,
 .arrow:after {
-    background: #fff;
+    background: #000000;
     content: '';
     display: block;
     height: 3px; 

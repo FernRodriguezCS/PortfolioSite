@@ -6,7 +6,10 @@
   <title>Fernando Rodriguez</title>
   <link rel="stylesheet" href="./styles/navbar.css">
   <link rel="stylesheet" href="./styles/hero.css">
+  <link rel="stylesheet" href="./styles/about-me.css">
   <link rel="stylesheet" href="./styles/skills.css">
+  <link rel="stylesheet" href="./styles/expierence.css">
+  <link rel="stylesheet" href="./styles/project.css">
   <link rel="stylesheet" href="./styles/style.css" />
 
   <!--Favicon info-->
@@ -37,9 +40,10 @@
 <body>
   <nav id="navBar">
     <ul>
+      <li><a href="#extraInfo">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#experienceSection">Experience</a></li>
       <li><a href="#projectSection">Projects</a></li>
-      <li><a href="#extraInfo">About Me</a></li>
       <li><a href="">Tutoring</a></li>
       <li><a href="">Contact Me</a></li>
     </ul>
@@ -49,7 +53,7 @@
   <!----HERO SECTION---------->
   <!-------------------------->
   <section id="landingPage">
-    <h1>Hi, I'm Fernando!</h1>
+    <h1>HEY, I'M FERNANDO!</h1>
     <h2>Software Engineer</h2>
 
     <div id="socials">
@@ -96,10 +100,28 @@
   </section>
 
   <!-------------------------->
+  <!---About Me. SECTION--->
+  <!-------------------------->
+  <div id="extraInfo" class="reveal">
+    <h3>About Me</h3>
+    <p>
+      Hey! I’m Fernando Rodriguez, a computer science student at Cal State
+      Bakersfield with a passion for building cool, meaningful things with
+      code. I enjoy exploring both the front-end and back-end of development,
+      and I’m always looking for ways to improve my skills through hands-on
+      projects and real-world problem solving. Outside of coding, I’m all
+      about growth — whether that’s through chess, fitness, creative projects,
+      or diving deeper into my faith. I believe in working hard, staying
+      curious, and using technology to make a positive impact. Thanks for
+      stopping by my portfolio — I’m excited to see where this journey leads.
+    </p>
+  </div>
+
+  <!-------------------------->
   <!----Skills SECTION-------->
   <!-------------------------->
   <section id="skills" class="reveal">
-    <h3>LANGUAGES AND FRAMEWORKS</h3>
+    <h3>My Skills</h3>
     <div class="wrapper">
       <div class="item item1"><img src="./assets/skillIcons/cplusplus.svg" alt="C++" class="skillList" loading="lazy"></div>
       <div class="item item2"><img src="./assets/skillIcons/css.svg" alt="CSS" class="skillList" loading="lazy"></div>
@@ -113,6 +135,10 @@
       <div class="item item10"><img src="./assets/skillIcons/postgresql.svg" alt="PostGreSQL" class="skillList"loading="lazy"></div>
       <div class="item item11"><img src="./assets/skillIcons/python.svg" alt="Python" class="skillList" loading="lazy"></div>
       <div class="item item12"><img src="./assets/skillIcons/react.svg" alt="REACT.JS" class="skillList" loading="lazy"></div>
+      <div class="item item13"><img src="./assets/skillIcons/docker_img.svg" alt="Docker" class="skillList" loading="lazy"></div>
+      <div class="item item14"><img src="./assets/skillIcons/kubernetes-icon-black.svg" alt="Kubernetes" class="skillList" loading="lazy"></div>
+      <div class="item item15"><img src="./assets/skillIcons/codex-logo.svg" alt="Codex" class="skillList" loading="lazy"></div>
+      <div class="item item16"><img src="./assets/skillIcons/Bruno-Icon.svg" alt="Bruno" class="skillList" loading="lazy"></div>
     </div>
   </section>
 
@@ -249,24 +275,6 @@
     </div>
     </div>
   </section>
-
-  <!-------------------------->
-  <!----Extra info. SECTION--->
-  <!-------------------------->
-  <div id="extraInfo" class="reveal">
-    <h3>About Me</h3>
-    <p>
-      Hey! I’m Fernando Rodriguez, a computer science student at Cal State
-      Bakersfield with a passion for building cool, meaningful things with
-      code. I enjoy exploring both the front-end and back-end of development,
-      and I’m always looking for ways to improve my skills through hands-on
-      projects and real-world problem solving. Outside of coding, I’m all
-      about growth — whether that’s through chess, fitness, creative projects,
-      or diving deeper into my faith. I believe in working hard, staying
-      curious, and using technology to make a positive impact. Thanks for
-      stopping by my portfolio — I’m excited to see where this journey leads.
-    </p>
-  </div>
   <!-- * Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
   <script src="/js/script.js" defer></script>
   <script src="/js/time_at_job.js" defer></script>

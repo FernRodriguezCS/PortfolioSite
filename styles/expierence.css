@@ -1,0 +1,111 @@
+#experienceSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0% 5% 0%;
+  }
+  
+  #experienceSection h3 {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 2% 0;
+    width: min(84%, 1100px);
+    margin: 0 auto;
+    height: fit-content;
+    --line-x: 50%;
+  }
+  
+  .timeline::before {
+    content: ""; /** Needed for pseudo-element the .timeline::before acts as child of .timeline "content:""" needed*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(
+      rgba(80, 80, 80, 0),
+      rgba(80, 80, 80, 0.35),
+      rgba(80, 80, 80, 0)
+    );
+    left:var(--line-x);
+    transform: translateX(-50%);
+  }
+  
+  .jobPost {
+    width: clamp(125px, 39vw, 520px);
+    border-radius: 15px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.259);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+    border: 1px solid rgba(120, 120, 120, 0.18);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .jobPost h4 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  
+  .jobPost h5 {
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+  }
+  
+  .jobPic {
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+    margin: 2%;
+  }
+  
+  .jobInfo {
+    margin-left: 3%;
+  }
+  
+  .jobTitle {
+    margin-top: 5%;
+    margin-bottom: 0;
+  }
+  
+  .jobPosition {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .jobDate {
+    margin-top: 0;
+    margin-bottom: 2%;
+  }
+  
+  .timelineItem:nth-child(odd) .jobPost {
+    margin-right: auto;
+    border-top-right-radius: 0;
+  }
+  
+  .timelineItem:nth-child(even) .jobPost{
+    margin-left: auto;
+    border-top-left-radius: 0;
+  }
+  
+  .timelineItem{
+    position: relative;
+    width: 100%;
+    padding: 18px 0;
+  }
+  
+  .timelineItem::after{
+    content: "";
+    position: absolute;
+    left: var(--line-x);
+    top: 28px;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(72, 202, 228, 0.2);
+    background-color: cornflowerblue;
+  }
