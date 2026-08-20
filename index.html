@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./styles/skills.css">
   <link rel="stylesheet" href="./styles/expierence.css">
   <link rel="stylesheet" href="./styles/project.css">
+  <link rel="stylesheet" href="./styles/contact.css">
   <link rel="stylesheet" href="./styles/style.css" />
 
   <!--Favicon info-->
@@ -41,11 +42,11 @@
   <nav id="navBar">
     <ul>
       <li><a href="#extraInfo">About Me</a></li>
+      <li><a href="">Blog</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experienceSection">Experience</a></li>
-      <li><a href="#projectSection">Projects</a></li>
       <li><a href="">Tutoring</a></li>
-      <li><a href="">Contact Me</a></li>
+      <li><a href="#contactMe">Contact Me</a></li>
     </ul>
   </nav>
 
@@ -118,7 +119,7 @@
 
       <section id="aboutMe-images">
         <div id="aboutMe-imageGrid">
-          <img src="./assets/about-me-grid/IMG_3093.webp" alt="personal photo at code ninjas chess club">
+          <img src="./assets/about-me-grid/IMG_3093.webp" alt="personal photo at code ninjas chess club" decoding="async">
 
           <video 
             src="./assets/about-me-grid/IMG_4044.mp4"
@@ -127,7 +128,7 @@
             autoplay
           ></video>
 
-          <img src="./assets/about-me-grid/IMG_3341.webp" alt="personal photo of me fallen at the ice rink">
+          <img src="./assets/about-me-grid/IMG_3341.webp" alt="personal photo of me fallen at the ice rink" decoding="async">
 
           <video 
             src="./assets/about-me-grid/IMG_4200.mp4"
@@ -136,7 +137,7 @@
             autoplay
           ></video>
 
-          <img src="./assets/about-me-grid/IMG_1507.webp" alt="personal photo of me playing chess during the last day of highschool">
+          <img src="./assets/about-me-grid/IMG_1507.webp" alt="personal photo of me playing chess during the last day of highschool" decoding="async">
 
           <video 
             src="./assets/about-me-grid/IMG_2396.mp4"
@@ -145,7 +146,7 @@
             autoplay
           ></video>
           
-          <img src="./assets/about-me-grid/IMG_0564.webp" alt="personal photo of me playing a game of chess with my dog">
+          <img src="./assets/about-me-grid/IMG_0564.webp" alt="personal photo of me playing a game of chess with my dog" decoding="async">
           
           <video 
             src="./assets/about-me-grid/IMG_3470.mp4"
@@ -253,9 +254,31 @@
     </div>
   </section>
 
-  <!-- * Defer allows script to be downloaded in parrallel to HTML page being built out and executes when done (doesn't block HTML parsing)-->
+  <!------------------------>
+  <!--Contact Form Section-->
+  <!------------------------>
+  <section id="contactMe">
+    <h1>Contact Me!</h1>
+    <div id="contactContainer">
+      <form action="">
+        <label for="">First Name *</label>
+        <input type="text" name="" id="" placeholder="First Name">
+
+        <label for="">Last Name *</label>
+        <input type="text" name="" id="" placeholder="last Name">
+
+        <label for="">Email *</label>
+        <input type="email" name="" id="" placeholder="Email">
+
+        <label for="">Message *</label>
+        <textarea name="" id="" placeholder="Enter Message Here"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
   <script src="/js/script.js" defer></script>
   <script src="/js/time_at_job.js" defer></script>
 </body>
-
 </html>
