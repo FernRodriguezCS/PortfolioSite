@@ -67,10 +67,6 @@ body::-webkit-scrollbar {
     --line-x: 10%;
   }
 
-  #extraInfo{
-    padding-bottom: 8rem;
-  }
-
   .jobPost{
     width: calc(100% - 14%);
     margin-left: 14%;
@@ -84,21 +80,4 @@ body::-webkit-scrollbar {
      border-top-left-radius: 0;
      border-top-right-radius: 15px;
    }
-
-  #projectDisplay {
-    width: 90vw;
-    height: fit-content;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 25%;
-  }
-
-  .projectPost {
-    margin: 20px;
-    max-width: 250px;
-    height: 325px;
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-  }
 }

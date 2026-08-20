@@ -1,6 +1,6 @@
 // TODO: Come back to this file
 const JOBS = [
-  { company: "FWD:Dynamics", startYear: 2025, startMonth: 7 },
+  { company: "FWD:Dynamics", startYear: 2026, startMonth: 4 },
   { company: "CodeNinjas", startYear: 2025, startMonth: 5 },
 ];
 

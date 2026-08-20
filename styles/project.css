@@ -1,171 +1,31 @@
-#projectSection {
+#projectSection{
+  width: 75%;
+  height: 75%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.projectPost{
+  position: relative;
+  z-index: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  border-radius: 15px;
+  border: 0.5px solid rgba(120, 120, 120, 0.18);
+  background:
+  linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(92, 92, 92, 0.78)),
+  linear-gradient(315deg, rgba(42, 42, 42, 0.82), rgba(255, 255, 255, 0.35));
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-#projectSection h3 {
-  font-size: 40px;
-}
-
-#projectDisplay {
-  display: flex;
-  border-radius: 15px;
-  width: 90%;
-  height: 375px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.259);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  gap: 20px;
-}
-
-.projectPost {
-  position: relative;
-  width: 290px;
-  min-height: 360px;
-  border-radius: 18px;
-  border: 1px solid rgba(120, 120, 120, 0.18);
-  background-color: rgba(255, 255, 255, 0.259);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  perspective: 1000px;
-  flex-shrink: 0;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.card-inner.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 18px;
-  backface-visibility: hidden;
-  overflow: hidden;
-}
-
-.card-front {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-}
-
-.card-front img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-top: 18px;
-}
-
-.card-front h4 {
-  margin-top: 18px;
-  font-size: 1.4rem;
-  text-align: center;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.2rem;
-  box-sizing: border-box;
-  text-align: left;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.259);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(120, 120, 120, 0.18);
-}
-
-.back-top {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-}
-
-.project-tag {
-  width: fit-content;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.35);
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.back-title {
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  font-weight: 700;
-}
-
-.back-copy {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: rgba(0, 0, 0, 0.72);
-}
-
-.back-middle {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.stack-label {
-  margin: 0;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(0, 0, 0, 0.62);
-}
-
-.stackContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-}
-
-.stack-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.35);
-  border: 1px solid rgba(120, 120, 120, 0.18);
-}
-
-.stack-pill img {
-  width: 16px;
-  height: 16px;
-  filter: none;
-}
-
-.stack-pill span {
-  font-size: 0.78rem;
-  color: rgba(0, 0, 0, 0.82);
+@media screen and (max-width: 700px){
+  #projectSection{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

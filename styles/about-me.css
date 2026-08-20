@@ -20,7 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: clamp(1rem, 2vw, 1.75rem);
+  font-size: clamp(0.90rem, 2vw, 1.75rem);
   padding: 3%;
   width: 50%;
 }
