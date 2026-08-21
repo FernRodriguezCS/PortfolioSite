@@ -260,18 +260,18 @@
   <section id="contactMe">
     <h1>Contact Me!</h1>
     <div id="contactContainer">
-      <form action="">
-        <label for="">First Name *</label>
-        <input type="text" name="" id="" placeholder="First Name">
+      <form  method="POST" id="contactForm">
+        <label for="firstName">First Name *</label>
+        <input type="text" name="firstName" placeholder="First Name" required>
 
-        <label for="">Last Name *</label>
-        <input type="text" name="" id="" placeholder="last Name">
+        <label for="lastName">Last Name *</label>
+        <input type="text" name="lastName" placeholder="last Name" required>
 
-        <label for="">Email *</label>
-        <input type="email" name="" id="" placeholder="Email">
+        <label for="email">Email *</label>
+        <input type="email" name="email" placeholder="Email" required>
 
-        <label for="">Message *</label>
-        <textarea name="" id="" placeholder="Enter Message Here"></textarea>
+        <label for="message">Message *</label>
+        <textarea name="message" placeholder="Enter Message Here" maxlength="2000" required></textarea>
 
         <button type="submit">Submit</button>
       </form>
@@ -280,5 +280,6 @@
 
   <script src="/js/script.js" defer></script>
   <script src="/js/time_at_job.js" defer></script>
+  <script src="/js/form.js" defer></script>
 </body>
 </html>
