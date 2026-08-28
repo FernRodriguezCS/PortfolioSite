@@ -2,6 +2,7 @@
 const JOBS = [
   { company: "FWD:Dynamics", startYear: 2026, startMonth: 4 },
   { company: "CodeNinjas", startYear: 2025, startMonth: 5 },
+  { company: "CSUB", startYear: 2026, startMonth: 7},
 ];
 
 function monthsBetween(startY, startM, endDate = new Date()) {
