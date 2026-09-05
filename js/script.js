@@ -1,4 +1,3 @@
-//Todo: Come back to this file
 const typedText = document.getElementById("typedText");
 
 window.addEventListener("load", () => {
@@ -33,20 +32,6 @@ const observer = new IntersectionObserver(
 reveals.forEach((reveal) => {
   observer.observe(reveal);
 });
-
-const hero = document.getElementById("landingPage");
-const heroObserver = new IntersectionObserver(
-  ([entry]) => {
-    if (entry.isIntersecting) {
-      donateBtn.classList.remove("fade-out");
-    } else {
-      donateBtn.classList.add("fade-out");
-    }
-  },
-  { threshold: 0.1 }
-);
-
-heroObserver.observe(hero);
 
 document.querySelectorAll(".card-inner").forEach(inner => {
   inner.addEventListener("click", ()=>{
