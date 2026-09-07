@@ -16,15 +16,16 @@
 
 #navBar ul{
     display: flex;
-    gap: clamp(18px, 1.5rem, 25px);
-    margin: 0;
-    padding: 0 40px;
+    gap: clamp(1px, 1.5rem, 25px);
+    padding-inline: 20px;
+    max-width: 100%;
+    justify-content: flex-end;
 }
 
 #navBar li{
     padding: 0;
     list-style-type: none;
-    font-size: clamp(16px,1.6vw, 24px);
+    font-size: clamp(11px, 2vw, 24px);
 }
 
 #navBar a{
@@ -50,11 +51,6 @@
     width: 100%;
     left: 0;
 }
-
-@media screen and (max-width: 840px){
-    #navBar{
-        display: none;
-    }
-}
   
+
 

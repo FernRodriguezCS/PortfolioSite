@@ -3,13 +3,6 @@ const typedText = document.getElementById("typedText");
 window.addEventListener("load", () => {
   const landingPage = document.getElementById("landingPage");
   landingPage.classList.add("fadeIn");
-
-  const arrow = document.getElementById("scrollDown");
-  setTimeout(() => {
-    arrow.classList.add("show");
-  }, 3000);
-
-  setTimeout(typeEffect, 1000);
 });
 
 const reveals = document.querySelectorAll(".reveal");
