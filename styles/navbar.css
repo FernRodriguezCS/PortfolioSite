@@ -51,6 +51,9 @@
     width: 100%;
     left: 0;
 }
-  
 
-
+@media screen and (max-width: 840px){
+    #navBar{
+        display: none;
+    }
+}
