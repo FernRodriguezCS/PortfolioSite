@@ -45,6 +45,20 @@ body::-webkit-scrollbar {
   /** forwards keeps elements in final state*/
 }
 
+footer{
+  width: 100vw;
+  height: auto;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+/*For accessibility on form input elements*/
+a:focus-visible,
+button:focus-visible{
+  outline: 3px solid cornflowerblue;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
 
 /*==========================*/
 /*   MEDIA BREAKPOINTS      */

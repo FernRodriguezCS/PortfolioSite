@@ -31,3 +31,15 @@ document.querySelectorAll(".card-inner").forEach(inner => {
     inner.classList.toggle("is-flipped");
   });
 });
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if(!reduceMotion){
+  const lenis = new Lenis({
+    autoRaf: true,
+    duration: 1,
+    wheelMultiplier: 0.6,
+    smoothWheel: true,
+    smoothTouch: true,
+  });
+}

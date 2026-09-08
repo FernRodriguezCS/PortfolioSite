@@ -1,6 +1,7 @@
 #projectSection{
   width: 75%;
-  height: 75%;
+  min-height: 60svh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;

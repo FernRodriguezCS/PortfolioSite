@@ -1,6 +1,7 @@
 #blogSection{
     width: 100vw;
-    height: 100vh;
+    min-height: 100svh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +15,8 @@
 
 #LatestBlogPost{
     width: 75%;
-    height: 60%;
+    min-height: 60svh;
+    height: auto;
     border-radius: 15px;
     border: 1px solid black;
 }
@@ -25,9 +27,9 @@
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
-    font-size: clamp(25px, 2vw, 30px);
+    font-size: clamp(15px, 1rem, 25px);
     margin-top: 2%;
-    margin-left: 50%;
+    margin-left: 45%;
 }
 
 #blogSection a::after {
