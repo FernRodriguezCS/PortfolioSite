@@ -46,7 +46,7 @@ body::-webkit-scrollbar {
 }
 
 footer{
-  width: 100vw;
+  width: 100%;
   height: auto;
   text-align: center;
   margin-bottom: 10%;
