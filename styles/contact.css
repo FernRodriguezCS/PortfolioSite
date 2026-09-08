@@ -14,7 +14,7 @@
 
 #contactContainer{
     width: 55%;
-    min-height: 80svh;
+    min-height: 85svh;
     height: auto;
     display: flex;
     flex-direction: column;
