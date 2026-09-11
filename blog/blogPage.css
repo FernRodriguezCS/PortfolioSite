@@ -14,7 +14,7 @@ body{
 
 #pageContainer{
     width: 95vw;
-    min-height: 90svh;
+    min-height: 85svh;
     height: auto;
     /* border-radius: 15px;
     border: 1px solid rgba(120, 120, 120, 0.18);
@@ -27,23 +27,75 @@ body{
 #scrollContainer{
     width: 25%;
     min-height: 85svh;
+    max-height: 85svh;
     height: auto;
     margin: 1%;
-    border: 1px solid rgba(120, 120, 120, 0.18);
+    /* border: 1px solid rgba(120, 120, 120, 0.18);
     background-color: rgba(255, 255, 255, 0.259);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 15px;
+    border-radius: 15px; */
+    overflow-y: scroll;
+}
+
+#scrollContainer ul{
+    padding-inline-start: 0;
+    margin: 0;
+    padding: 5%;
+}
+
+#scrollContainer li{
+    list-style-type: none;
+    margin-bottom: 14px;
+    padding: 22px;
+    border: 1px solid rgba(120, 120, 120, 0.18);
+    background: rgba(255, 255, 255, 0.42);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#scrollContainer li:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+#scrollContainer li p{
+    margin: 0;
+}
+
+#scrollContainer li p:first-child{
+    font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+    font-weight: 700;
+    opacity: 0.65;
+}
+
+#scrollContainer li p:nth-child(2){
+    margin-top: 12px;
+    font-size: clamp(1.15rem, 1.55vw, 1.4rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+#scrollContainer li p:nth-child(3){
+    margin-top: 10px;
+    font-size: clamp(1.08rem, 1.35vw, 1.25rem);
+    line-height: 1.45;
+    opacity: 0.75;
 }
 
 #actArticle{
     width: 70%;
     min-height: 85svh;
+    max-height: 85svh;
     height: auto;
     margin: 1%;
     border: 1px solid rgba(120, 120, 120, 0.18);
     background-color: rgba(255, 255, 255, 0.259);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 15px;
+    overflow-y: scroll;
 }
 
 #blogHeader a{
@@ -73,4 +125,38 @@ body{
 #blogHeader a:hover::after{
     width: 100%;
     left: 0;
+}
+
+@media screen and (max-width: 840px){
+    #pageContainer{
+        flex-direction: column;
+    }
+
+    #scrollContainer,
+    #actArticle{
+        width: 95%;
+        min-height: auto;
+        max-height: none;
+    }
+
+    #scrollContainer ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    #scrollContainer li{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 560px){
+    #blogHeader{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #scrollContainer ul{
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,102 +1,271 @@
 [
-    {
-      "title": "Test Blog Post 2",
-      "cover-description": "A short test description for the cover card.",
-      "tags": ["test", "demo", "blog"],
-      "content": "This is sample blog post content used for testing the page layout and card generation.",
-      "id": "test-blog-post-001",
-      "created_at": "2026-09-10",
-      "published_at": "2026-09-10"
-    },
-    {
-      "title": "Building My First Blog Generator",
-      "cover-description": "Turning simple JSON files into reusable static blog cards.",
-      "tags": ["javascript", "static-site", "portfolio"],
-      "content": "This mock post explains how a small Node.js script can read JSON entries and generate static HTML for a personal portfolio blog.",
-      "id": "building-my-first-blog-generator",
-      "created_at": "2026-09-11",
-      "published_at": "2026-09-11"
-    },
-    {
-      "title": "What I Learned Styling Portfolio Sections",
-      "cover-description": "A quick reflection on making sections feel consistent across a portfolio site.",
-      "tags": ["css", "design", "portfolio"],
-      "content": "This mock post covers spacing, card styles, typography, and how small visual decisions can make a portfolio feel more polished.",
-      "id": "styling-portfolio-sections",
-      "created_at": "2026-09-12",
-      "published_at": "2026-09-12"
-    },
-    {
-      "title": "Using JSON as a Content Source",
-      "cover-description": "A simple way to keep blog content separate from layout code.",
-      "tags": ["json", "content", "workflow"],
-      "content": "This mock post introduces the idea of writing blog data in JSON and letting JavaScript build the visible page from that data.",
-      "id": "using-json-as-content-source",
-      "created_at": "2026-09-13",
-      "published_at": "2026-09-13"
-    },
-    {
-      "title": "Designing a Better Blog Card",
-      "cover-description": "Improving a plain blog card with better spacing, hierarchy, and visual rhythm.",
-      "tags": ["css", "ui", "blog"],
-      "content": "This mock post explores how layout, font sizing, borders, and hover states can make a blog preview card feel more intentional.",
-      "id": "designing-a-better-blog-card",
-      "created_at": "2026-09-14",
-      "published_at": "2026-09-14"
-    },
-    {
-      "title": "Automating Small Portfolio Updates",
-      "cover-description": "How tiny scripts can save time when maintaining a personal website.",
-      "tags": ["automation", "node", "portfolio"],
-      "content": "This mock post discusses using Node.js scripts to update repeated sections of a static website without editing HTML by hand every time.",
-      "id": "automating-small-portfolio-updates",
-      "created_at": "2026-09-15",
-      "published_at": "2026-09-15"
-    },
-    {
-      "title": "My Notes on Clean HTML Structure",
-      "cover-description": "Keeping markup readable while still making it easy for scripts to update.",
-      "tags": ["html", "accessibility", "structure"],
-      "content": "This mock post focuses on semantic HTML, clear section markers, and maintainable structure for static web projects.",
-      "id": "clean-html-structure-notes",
-      "created_at": "2026-09-16",
-      "published_at": "2026-09-16"
-    },
-    {
-      "title": "Why I Like Static Sites",
-      "cover-description": "Fast, simple, and easy to host without much backend complexity.",
-      "tags": ["static-site", "web-dev", "hosting"],
-      "content": "This mock post shares a beginner-friendly explanation of why static websites are useful for portfolios, blogs, and small project pages.",
-      "id": "why-i-like-static-sites",
-      "created_at": "2026-09-17",
-      "published_at": "2026-09-17"
-    },
-    {
-      "title": "Debugging My First Build Script",
-      "cover-description": "A practical walkthrough of small mistakes that can break a Node.js script.",
-      "tags": ["debugging", "node", "javascript"],
-      "content": "This mock post reviews common issues like wrong file paths, missing imports, mismatched variable names, and forgetting to call a function.",
-      "id": "debugging-my-first-build-script",
-      "created_at": "2026-09-18",
-      "published_at": "2026-09-18"
-    },
-    {
-      "title": "Making CSS Feel Less Random",
-      "cover-description": "Using repeated spacing, radius, and shadows to create a consistent visual style.",
-      "tags": ["css", "design-system", "frontend"],
-      "content": "This mock post explains how reusing visual rules across sections can make a small personal website feel more professional.",
-      "id": "making-css-feel-less-random",
-      "created_at": "2026-09-19",
-      "published_at": "2026-09-19"
-    },
-    {
-        "title": "",
-        "cover-description": "",
-        "tags": [],
-        "content": "",
-        "id": "",
-        "created_at": "",
-        "published_at": ""
-    }
+  {
+    "title": "Test Blog Post 2",
+    "cover-description": "A short test description for the cover card.",
+    "tags": [
+      "test",
+      "demo",
+      "blog"
+    ],
+    "content": "This is sample blog post content used for testing the page layout and card generation.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "test-blog-post-001",
+    "created_at": "2026-09-10",
+    "published_at": "2026-09-10"
+  },
+  {
+    "title": "Building My First Blog Generator",
+    "cover-description": "Turning simple JSON files into reusable static blog cards.",
+    "tags": [
+      "javascript",
+      "static-site",
+      "portfolio"
+    ],
+    "content": "This mock post explains how a small Node.js script can read JSON entries and generate static HTML for a personal portfolio blog.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "building-my-first-blog-generator",
+    "created_at": "2026-09-11",
+    "published_at": "2026-09-11"
+  },
+  {
+    "title": "What I Learned Styling Portfolio Sections",
+    "cover-description": "A quick reflection on making sections feel consistent across a portfolio site.",
+    "tags": [
+      "css",
+      "design",
+      "portfolio"
+    ],
+    "content": "This mock post covers spacing, card styles, typography, and how small visual decisions can make a portfolio feel more polished.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "styling-portfolio-sections",
+    "created_at": "2026-09-12",
+    "published_at": "2026-09-12"
+  },
+  {
+    "title": "Using JSON as a Content Source",
+    "cover-description": "A simple way to keep blog content separate from layout code.",
+    "tags": [
+      "json",
+      "content",
+      "workflow"
+    ],
+    "content": "This mock post introduces the idea of writing blog data in JSON and letting JavaScript build the visible page from that data.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "using-json-as-content-source",
+    "created_at": "2026-09-13",
+    "published_at": "2026-09-13"
+  },
+  {
+    "title": "Designing a Better Blog Card",
+    "cover-description": "Improving a plain blog card with better spacing, hierarchy, and visual rhythm.",
+    "tags": [
+      "css",
+      "ui",
+      "blog"
+    ],
+    "content": "This mock post explores how layout, font sizing, borders, and hover states can make a blog preview card feel more intentional.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "designing-a-better-blog-card",
+    "created_at": "2026-09-14",
+    "published_at": "2026-09-14"
+  },
+  {
+    "title": "Automating Small Portfolio Updates",
+    "cover-description": "How tiny scripts can save time when maintaining a personal website.",
+    "tags": [
+      "automation",
+      "node",
+      "portfolio"
+    ],
+    "content": "This mock post discusses using Node.js scripts to update repeated sections of a static website without editing HTML by hand every time.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "automating-small-portfolio-updates",
+    "created_at": "2026-09-15",
+    "published_at": "2026-09-15"
+  },
+  {
+    "title": "My Notes on Clean HTML Structure",
+    "cover-description": "Keeping markup readable while still making it easy for scripts to update.",
+    "tags": [
+      "html",
+      "accessibility",
+      "structure"
+    ],
+    "content": "This mock post focuses on semantic HTML, clear section markers, and maintainable structure for static web projects.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "clean-html-structure-notes",
+    "created_at": "2026-09-16",
+    "published_at": "2026-09-16"
+  },
+  {
+    "title": "Why I Like Static Sites",
+    "cover-description": "Fast, simple, and easy to host without much backend complexity.",
+    "tags": [
+      "static-site",
+      "web-dev",
+      "hosting"
+    ],
+    "content": "This mock post shares a beginner-friendly explanation of why static websites are useful for portfolios, blogs, and small project pages.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "why-i-like-static-sites",
+    "created_at": "2026-09-17",
+    "published_at": "2026-09-17"
+  },
+  {
+    "title": "Debugging My First Build Script",
+    "cover-description": "A practical walkthrough of small mistakes that can break a Node.js script.",
+    "tags": [
+      "debugging",
+      "node",
+      "javascript"
+    ],
+    "content": "This mock post reviews common issues like wrong file paths, missing imports, mismatched variable names, and forgetting to call a function.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "debugging-my-first-build-script",
+    "created_at": "2026-09-18",
+    "published_at": "2026-09-18"
+  },
+  {
+    "title": "Making CSS Feel Less Random",
+    "cover-description": "Using repeated spacing, radius, and shadows to create a consistent visual style.",
+    "tags": [
+      "css",
+      "design-system",
+      "frontend"
+    ],
+    "content": "This mock post explains how reusing visual rules across sections can make a small personal website feel more professional.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "making-css-feel-less-random",
+    "created_at": "2026-09-19",
+    "published_at": "2026-09-19"
+  },
+  {
+    "title": "Adding Search to a Static Blog",
+    "cover-description": "Planning a simple client-side search experience for blog entries.",
+    "tags": [
+      "javascript",
+      "search",
+      "blog"
+    ],
+    "content": "This mock post explores how a static blog can support search by filtering existing JSON-powered entries directly in the browser.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "adding-search-to-a-static-blog",
+    "created_at": "2026-09-20",
+    "published_at": "2026-09-20"
+  },
+  {
+    "title": "Thinking Through Blog Navigation",
+    "cover-description": "Designing a sidebar that makes posts easy to scan and open.",
+    "tags": [
+      "ui",
+      "navigation",
+      "frontend"
+    ],
+    "content": "This mock post looks at how blog list items, active states, and readable previews can help users move through a blog page more easily.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "thinking-through-blog-navigation",
+    "created_at": "2026-09-21",
+    "published_at": "2026-09-21"
+  },
+  {
+    "title": "Keeping Build Scripts Simple",
+    "cover-description": "Why small scripts are easier to debug when each step has one job.",
+    "tags": [
+      "node",
+      "automation",
+      "debugging"
+    ],
+    "content": "This mock post discusses how separating latest-card generation from full blog-list generation can make a project easier to maintain.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "keeping-build-scripts-simple",
+    "created_at": "2026-09-22",
+    "published_at": "2026-09-22"
+  },
+  {
+    "title": "Testing Empty Blog States",
+    "cover-description": "Making sure a page still looks good before any real posts exist.",
+    "tags": [
+      "testing",
+      "frontend",
+      "ux"
+    ],
+    "content": "This mock post covers how empty states, fallback text, and placeholder content can make development smoother while building a blog.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "testing-empty-blog-states",
+    "created_at": "2026-09-23",
+    "published_at": "2026-09-23"
+  },
+  {
+    "title": "Small CSS Decisions That Matter",
+    "cover-description": "A few tiny styling choices that can make cards feel cleaner.",
+    "tags": [
+      "css",
+      "design",
+      "details"
+    ],
+    "content": "This mock post reflects on spacing, line height, border color, and hover feedback as small details that improve the feel of a website.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "small-css-decisions-that-matter",
+    "created_at": "2026-09-24",
+    "published_at": "2026-09-24"
+  },
+  {
+    "title": "Writing Better Mock Content",
+    "cover-description": "Using realistic placeholder posts to catch layout problems earlier.",
+    "tags": [
+      "content",
+      "testing",
+      "design"
+    ],
+    "content": "This mock post explains why test content should vary in title length, description length, and tags to reveal real layout issues.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "writing-better-mock-content",
+    "created_at": "2026-09-25",
+    "published_at": "2026-09-25"
+  },
+  {
+    "title": "Organizing Project Folders",
+    "cover-description": "Keeping content, scripts, styles, and pages in predictable places.",
+    "tags": [
+      "project-structure",
+      "workflow",
+      "web-dev"
+    ],
+    "content": "This mock post walks through a simple folder structure for a static portfolio with generated blog cards and reusable content data.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "organizing-project-folders",
+    "created_at": "2026-09-26",
+    "published_at": "2026-09-26"
+  },
+  {
+    "title": "From Static HTML to a Tiny CMS",
+    "cover-description": "How JSON content can become the first step toward a lightweight content system.",
+    "tags": [
+      "cms",
+      "json",
+      "static-site"
+    ],
+    "content": "This mock post describes how manually edited JSON can act like a tiny content management system before adding anything more complex.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "from-static-html-to-a-tiny-cms",
+    "created_at": "2026-09-27",
+    "published_at": "2026-09-27"
+  },
+  {
+    "title": "Preparing a Portfolio for Deployment",
+    "cover-description": "Checking generated files, paths, and links before pushing a static site live.",
+    "tags": [
+      "deployment",
+      "portfolio",
+      "hosting"
+    ],
+    "content": "This mock post covers a basic pre-deploy checklist for static portfolio sites, including build scripts, links, generated HTML, and assets.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "preparing-a-portfolio-for-deployment",
+    "created_at": "2026-09-28",
+    "published_at": "2026-09-28"
+  },
+  {
+    "title": "A Better Way to Think About Refactors",
+    "cover-description": "Changing code in small steps while keeping the site working.",
+    "tags": [
+      "refactoring",
+      "workflow",
+      "javascript"
+    ],
+    "content": "This mock post explains how small, focused refactors can make a codebase cleaner without making it harder to debug.\n\nThis is extended mock content for scroll testing. It is intentionally longer than a normal preview so the article panel has enough body text to overflow, breathe, and reveal whether the layout handles a realistic reading experience. The goal here is not literary perfection; it is to create enough substance to test spacing, line height, container padding, and vertical scrolling inside the article area.\n\nA good test post needs a few different rhythms. Some sentences are short. Others run a little longer so the browser has to wrap text across several lines and expose any awkward gaps or cramped typography. This paragraph is here to make sure the content column stays readable and the tag bubbles, title, summary, and article body keep their spacing when the post is no longer tiny.\n\nWhen this article is clicked from the sidebar, the right side should replace the previous article cleanly. Nothing should jump outside its container, overlap with the navigation, or push the entire page into a strange layout. If the scroll behavior feels smooth and the text remains comfortable to read, then the generated article flow is doing its job.\n\nThis final paragraph adds one more block of text for good measure. It should help test the lower edge of the article panel, especially on smaller screens where the list stacks above the article content. If this mock content feels easy to scan, the real blog entries will have a solid foundation when they become longer, more personal, and more detailed.",
+    "id": "better-way-to-think-about-refactors",
+    "created_at": "2026-09-29",
+    "published_at": "2026-09-29"
+  },
+  {
+    "title": "",
+    "cover-description": "",
+    "tags": [],
+    "content": "",
+    "id": "",
+    "created_at": "",
+    "published_at": ""
+  }
 ]
-

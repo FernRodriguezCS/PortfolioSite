@@ -12,6 +12,7 @@
 
     <link rel="canonical" href="https://fernrodriguez.com/blog/blog.html">
     <link rel="stylesheet" href="/blog/blogPage.css">
+    <link rel="stylesheet" href="/blog/article.css">
 
     <title>Fernando Rodriguez Blog | Software Engineering, Projects, and Tech</title>
 
@@ -26,13 +27,131 @@
     <section id="pageContainer">
         <!--sidescroll / search + filter-->
         <div id="scrollContainer">
-<!--BLOG_LIST_START-->
+            <ul>
+<!--BLOG_LIST_START--><li class="CardListItem" data-post-id="building-my-first-blog-generator">
+        <p>2026-09-11</p>
+        <p>Building My First Blog Generator</p>
+        <p>Turning simple JSON files into reusable static blog cards.</p>
+    </li>
+    <li class="CardListItem" data-post-id="styling-portfolio-sections">
+        <p>2026-09-12</p>
+        <p>What I Learned Styling Portfolio Sections</p>
+        <p>A quick reflection on making sections feel consistent across a portfolio site.</p>
+    </li>
+    <li class="CardListItem" data-post-id="using-json-as-content-source">
+        <p>2026-09-13</p>
+        <p>Using JSON as a Content Source</p>
+        <p>A simple way to keep blog content separate from layout code.</p>
+    </li>
+    <li class="CardListItem" data-post-id="designing-a-better-blog-card">
+        <p>2026-09-14</p>
+        <p>Designing a Better Blog Card</p>
+        <p>Improving a plain blog card with better spacing, hierarchy, and visual rhythm.</p>
+    </li>
+    <li class="CardListItem" data-post-id="automating-small-portfolio-updates">
+        <p>2026-09-15</p>
+        <p>Automating Small Portfolio Updates</p>
+        <p>How tiny scripts can save time when maintaining a personal website.</p>
+    </li>
+    <li class="CardListItem" data-post-id="clean-html-structure-notes">
+        <p>2026-09-16</p>
+        <p>My Notes on Clean HTML Structure</p>
+        <p>Keeping markup readable while still making it easy for scripts to update.</p>
+    </li>
+    <li class="CardListItem" data-post-id="why-i-like-static-sites">
+        <p>2026-09-17</p>
+        <p>Why I Like Static Sites</p>
+        <p>Fast, simple, and easy to host without much backend complexity.</p>
+    </li>
+    <li class="CardListItem" data-post-id="debugging-my-first-build-script">
+        <p>2026-09-18</p>
+        <p>Debugging My First Build Script</p>
+        <p>A practical walkthrough of small mistakes that can break a Node.js script.</p>
+    </li>
+    <li class="CardListItem" data-post-id="making-css-feel-less-random">
+        <p>2026-09-19</p>
+        <p>Making CSS Feel Less Random</p>
+        <p>Using repeated spacing, radius, and shadows to create a consistent visual style.</p>
+    </li>
+    <li class="CardListItem" data-post-id="adding-search-to-a-static-blog">
+        <p>2026-09-20</p>
+        <p>Adding Search to a Static Blog</p>
+        <p>Planning a simple client-side search experience for blog entries.</p>
+    </li>
+    <li class="CardListItem" data-post-id="thinking-through-blog-navigation">
+        <p>2026-09-21</p>
+        <p>Thinking Through Blog Navigation</p>
+        <p>Designing a sidebar that makes posts easy to scan and open.</p>
+    </li>
+    <li class="CardListItem" data-post-id="keeping-build-scripts-simple">
+        <p>2026-09-22</p>
+        <p>Keeping Build Scripts Simple</p>
+        <p>Why small scripts are easier to debug when each step has one job.</p>
+    </li>
+    <li class="CardListItem" data-post-id="testing-empty-blog-states">
+        <p>2026-09-23</p>
+        <p>Testing Empty Blog States</p>
+        <p>Making sure a page still looks good before any real posts exist.</p>
+    </li>
+    <li class="CardListItem" data-post-id="small-css-decisions-that-matter">
+        <p>2026-09-24</p>
+        <p>Small CSS Decisions That Matter</p>
+        <p>A few tiny styling choices that can make cards feel cleaner.</p>
+    </li>
+    <li class="CardListItem" data-post-id="writing-better-mock-content">
+        <p>2026-09-25</p>
+        <p>Writing Better Mock Content</p>
+        <p>Using realistic placeholder posts to catch layout problems earlier.</p>
+    </li>
+    <li class="CardListItem" data-post-id="organizing-project-folders">
+        <p>2026-09-26</p>
+        <p>Organizing Project Folders</p>
+        <p>Keeping content, scripts, styles, and pages in predictable places.</p>
+    </li>
+    <li class="CardListItem" data-post-id="from-static-html-to-a-tiny-cms">
+        <p>2026-09-27</p>
+        <p>From Static HTML to a Tiny CMS</p>
+        <p>How JSON content can become the first step toward a lightweight content system.</p>
+    </li>
+    <li class="CardListItem" data-post-id="preparing-a-portfolio-for-deployment">
+        <p>2026-09-28</p>
+        <p>Preparing a Portfolio for Deployment</p>
+        <p>Checking generated files, paths, and links before pushing a static site live.</p>
+    </li>
+    <li class="CardListItem" data-post-id="better-way-to-think-about-refactors">
+        <p>2026-09-29</p>
+        <p>A Better Way to Think About Refactors</p>
+        <p>Changing code in small steps while keeping the site working.</p>
+    </li>
+    <!--NEXT_LIST_ITEM_HERE-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--BLOG_LIST_END-->
+            </ul>
         </div>
 
         <!--Actual article / blog post-->
         <div id="actArticle">
         </div>
     </section>
+
+    <script type="module" src="addListeners.js"></script>
 </body>
 </html>
