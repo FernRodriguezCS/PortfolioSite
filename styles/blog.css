@@ -6,33 +6,82 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5% 0;
+    box-sizing: border-box;
 }
 
-#blogSection h3{
-    font-size: clamp(35px, 2rem, 300px);
+#blogSection h2{
+    font-size: clamp(2rem, 3vw, 3.5rem);
     text-align: center;
+    margin: 0 0 3%;
 }
 
 #LatestBlogPost{
     width: 75%;
-    min-height: 60svh;
+    min-height: auto;
     height: auto;
     border-radius: 15px;
-    border: 1px solid black;
+    border: 1px solid rgba(120, 120, 120, 0.18);
+    background-color: rgba(255, 255, 255, 0.259);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+}
+
+.blogCard{
+    width: 100%;
+    min-height: 52svh;
+    height: auto;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(0.9rem, 2vw, 1.4rem);
+    box-sizing: border-box;
+}
+
+.blogCard p:first-child{
+    width: fit-content;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid rgba(120, 120, 120, 0.35);
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.45);
+    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.blogCard p:nth-child(2){
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    max-width: 12ch;
+}
+
+.blogCard p:nth-child(3){
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    line-height: 1.45;
+    max-width: 42rem;
+    margin: 0;
 }
 
 #blogSection a{
     all: unset;
     cursor: pointer;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
     padding-bottom: 5px;
-    font-size: clamp(15px, 1rem, 25px);
-    margin-top: 2%;
-    margin-left: 45%;
+    font-size: clamp(0.95rem, 1vw, 1.1rem);
+    font-weight: 700;
+    margin-top: 1%;
 }
 
-#blogSection a::after {
+#blogSection a::after{
     content: "";
     position: absolute;
     left: 50%;
@@ -46,4 +95,23 @@
 #blogSection a:hover::after{
     width: 100%;
     left: 0;
+}
+
+@media (max-width: 700px){
+    #blogSection{
+        min-height: auto;
+        padding: 18% 0;
+    }
+
+    #LatestBlogPost{
+        width: 88%;
+    }
+
+    .blogCard{
+        min-height: 44svh;
+    }
+
+    .blogCard p:nth-child(2){
+        max-width: 100%;
+    }
 }

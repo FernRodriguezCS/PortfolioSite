@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Test Blog Post 2",
+        "cover-description": "A short test description for the cover card.",
+        "tags": ["test", "demo", "blog"],
+        "content": "This is sample blog post content used for testing the page layout and card generation.",
+        "id": "test-blog-post-001",
+        "created_at": "2026-09-10",
+        "published_at": "2026-09-10"     
+    },
+    {
+        "title": "",
+        "cover-description": "",
+        "tags": [],
+        "content": "",
+        "id": "",
+        "created_at": "",
+        "published_at": ""
+    }
+]
+
