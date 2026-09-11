@@ -1,12 +1,93 @@
 [
     {
-        "title": "Test Blog Post 2",
-        "cover-description": "A short test description for the cover card.",
-        "tags": ["test", "demo", "blog"],
-        "content": "This is sample blog post content used for testing the page layout and card generation.",
-        "id": "test-blog-post-001",
-        "created_at": "2026-09-10",
-        "published_at": "2026-09-10"     
+      "title": "Test Blog Post 2",
+      "cover-description": "A short test description for the cover card.",
+      "tags": ["test", "demo", "blog"],
+      "content": "This is sample blog post content used for testing the page layout and card generation.",
+      "id": "test-blog-post-001",
+      "created_at": "2026-09-10",
+      "published_at": "2026-09-10"
+    },
+    {
+      "title": "Building My First Blog Generator",
+      "cover-description": "Turning simple JSON files into reusable static blog cards.",
+      "tags": ["javascript", "static-site", "portfolio"],
+      "content": "This mock post explains how a small Node.js script can read JSON entries and generate static HTML for a personal portfolio blog.",
+      "id": "building-my-first-blog-generator",
+      "created_at": "2026-09-11",
+      "published_at": "2026-09-11"
+    },
+    {
+      "title": "What I Learned Styling Portfolio Sections",
+      "cover-description": "A quick reflection on making sections feel consistent across a portfolio site.",
+      "tags": ["css", "design", "portfolio"],
+      "content": "This mock post covers spacing, card styles, typography, and how small visual decisions can make a portfolio feel more polished.",
+      "id": "styling-portfolio-sections",
+      "created_at": "2026-09-12",
+      "published_at": "2026-09-12"
+    },
+    {
+      "title": "Using JSON as a Content Source",
+      "cover-description": "A simple way to keep blog content separate from layout code.",
+      "tags": ["json", "content", "workflow"],
+      "content": "This mock post introduces the idea of writing blog data in JSON and letting JavaScript build the visible page from that data.",
+      "id": "using-json-as-content-source",
+      "created_at": "2026-09-13",
+      "published_at": "2026-09-13"
+    },
+    {
+      "title": "Designing a Better Blog Card",
+      "cover-description": "Improving a plain blog card with better spacing, hierarchy, and visual rhythm.",
+      "tags": ["css", "ui", "blog"],
+      "content": "This mock post explores how layout, font sizing, borders, and hover states can make a blog preview card feel more intentional.",
+      "id": "designing-a-better-blog-card",
+      "created_at": "2026-09-14",
+      "published_at": "2026-09-14"
+    },
+    {
+      "title": "Automating Small Portfolio Updates",
+      "cover-description": "How tiny scripts can save time when maintaining a personal website.",
+      "tags": ["automation", "node", "portfolio"],
+      "content": "This mock post discusses using Node.js scripts to update repeated sections of a static website without editing HTML by hand every time.",
+      "id": "automating-small-portfolio-updates",
+      "created_at": "2026-09-15",
+      "published_at": "2026-09-15"
+    },
+    {
+      "title": "My Notes on Clean HTML Structure",
+      "cover-description": "Keeping markup readable while still making it easy for scripts to update.",
+      "tags": ["html", "accessibility", "structure"],
+      "content": "This mock post focuses on semantic HTML, clear section markers, and maintainable structure for static web projects.",
+      "id": "clean-html-structure-notes",
+      "created_at": "2026-09-16",
+      "published_at": "2026-09-16"
+    },
+    {
+      "title": "Why I Like Static Sites",
+      "cover-description": "Fast, simple, and easy to host without much backend complexity.",
+      "tags": ["static-site", "web-dev", "hosting"],
+      "content": "This mock post shares a beginner-friendly explanation of why static websites are useful for portfolios, blogs, and small project pages.",
+      "id": "why-i-like-static-sites",
+      "created_at": "2026-09-17",
+      "published_at": "2026-09-17"
+    },
+    {
+      "title": "Debugging My First Build Script",
+      "cover-description": "A practical walkthrough of small mistakes that can break a Node.js script.",
+      "tags": ["debugging", "node", "javascript"],
+      "content": "This mock post reviews common issues like wrong file paths, missing imports, mismatched variable names, and forgetting to call a function.",
+      "id": "debugging-my-first-build-script",
+      "created_at": "2026-09-18",
+      "published_at": "2026-09-18"
+    },
+    {
+      "title": "Making CSS Feel Less Random",
+      "cover-description": "Using repeated spacing, radius, and shadows to create a consistent visual style.",
+      "tags": ["css", "design-system", "frontend"],
+      "content": "This mock post explains how reusing visual rules across sections can make a small personal website feel more professional.",
+      "id": "making-css-feel-less-random",
+      "created_at": "2026-09-19",
+      "published_at": "2026-09-19"
     },
     {
         "title": "",
