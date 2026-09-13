@@ -16,6 +16,7 @@ BlogUL.addEventListener("click", (event) => {
     ArticleSpace.innerHTML = "";
 
     const article = document.createElement("article");
+    const isMobile = window.matchMedia("(max-width: 840px)").matches;
 
     article.innerHTML = `
         <p>${post.published_at}</p>
@@ -29,6 +30,24 @@ BlogUL.addEventListener("click", (event) => {
         <p>${post.content}</p>
   `;
 
+  if(isMobile){
+    const closeButton = document.createElement("button");
+
+    closeButton.className = "closeArticleBtn";
+    closeButton.type = "button";
+    closeButton.textContent = "X";
+    closeButton.addEventListener("click", () => {
+        ArticleSpace.classList.remove("articleOpen");
+    });
+
+    article.prepend(closeButton);
+  }
+
   ArticleSpace.appendChild(article);
+
+  if(isMobile){
+    ArticleSpace.scrollTop = 0;
+    ArticleSpace.classList.add("articleOpen");
+  }
     
 });
