@@ -1,0 +1,198 @@
+:root{
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-snap: cubic-bezier(0.2, 0.85, 0.22, 1);
+  --section-distance: 72px;
+  --card-distance: 46px;
+  --motion-blur: 14px;
+}
+
+.reveal{
+  opacity: 0;
+  transform: translate3d(0, var(--section-distance), 0) scale(0.985);
+  filter: blur(var(--motion-blur));
+  transition:
+    opacity 900ms var(--motion-ease),
+    transform 1000ms var(--motion-ease),
+    filter 900ms var(--motion-ease);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.active{
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+#extraInfo #aboutMe-text,
+#extraInfo #aboutMe-images,
+#skills h2,
+#skills .wrapper,
+#projectSection .projectPost,
+#experienceSection h2,
+#experienceSection .timelineItem,
+#blogSection h2,
+#blogSection .blogCard,
+#contactMe h2,
+#contactMe #contactContainer{
+  opacity: 0;
+  filter: blur(12px);
+  transition:
+    opacity 820ms var(--motion-ease),
+    transform 920ms var(--motion-ease),
+    filter 820ms var(--motion-ease);
+  will-change: opacity, transform, filter;
+}
+
+#extraInfo #aboutMe-text,
+#skills h2,
+#experienceSection h2,
+#blogSection h2,
+#contactMe h2{
+  transform: translate3d(-56px, 18px, 0);
+}
+
+#extraInfo #aboutMe-images{
+  transform: translate3d(56px, 18px, 0) scale(0.96);
+}
+
+#skills .wrapper,
+#blogSection .blogCard,
+#contactMe #contactContainer{
+  transform: translate3d(0, var(--card-distance), 0) scale(0.965);
+}
+
+#projectSection .projectPost:nth-child(odd){
+  transform: translate3d(-64px, var(--card-distance), 0) scale(0.96);
+}
+
+#projectSection .projectPost:nth-child(even){
+  transform: translate3d(64px, var(--card-distance), 0) scale(0.96);
+}
+
+#experienceSection .timelineItem:nth-child(odd){
+  transform: translate3d(-54px, 34px, 0);
+}
+
+#experienceSection .timelineItem:nth-child(even){
+  transform: translate3d(54px, 34px, 0);
+}
+
+#extraInfo.active #aboutMe-text,
+#extraInfo.active #aboutMe-images,
+#skills.active h2,
+#skills.active .wrapper,
+#projectSection.active .projectPost,
+#experienceSection.active h2,
+#experienceSection.active .timelineItem,
+#blogSection.active h2,
+#blogSection.active .blogCard,
+#contactMe.active h2,
+#contactMe.active #contactContainer{
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+#extraInfo.active #aboutMe-images,
+#skills.active .wrapper,
+#blogSection.active .blogCard,
+#contactMe.active #contactContainer{
+  transition-delay: 140ms;
+}
+
+#projectSection.active .projectPost:nth-child(1),
+#experienceSection.active .timelineItem:nth-child(1){
+  transition-delay: 0ms;
+}
+
+#projectSection.active .projectPost:nth-child(2),
+#experienceSection.active .timelineItem:nth-child(2){
+  transition-delay: 110ms;
+}
+
+#projectSection.active .projectPost:nth-child(3),
+#experienceSection.active .timelineItem:nth-child(3){
+  transition-delay: 220ms;
+}
+
+#projectSection.active .projectPost:nth-child(4),
+#experienceSection.active .timelineItem:nth-child(4){
+  transition-delay: 330ms;
+}
+
+#projectSection.active .projectPost:nth-child(5),
+#experienceSection.active .timelineItem:nth-child(5){
+  transition-delay: 440ms;
+}
+
+#projectSection .left,
+#aboutMe-imageGrid img,
+#aboutMe-imageGrid video,
+.jobPic{
+  transform: scale(1.08);
+  filter: saturate(0.84) contrast(0.96);
+  transition:
+    transform 1200ms var(--motion-snap),
+    filter 1000ms var(--motion-ease);
+}
+
+#projectSection.active .left,
+#extraInfo.active #aboutMe-imageGrid img,
+#extraInfo.active #aboutMe-imageGrid video,
+#experienceSection.active .jobPic{
+  transform: scale(1);
+  filter: saturate(1) contrast(1);
+}
+
+@media screen and (max-width: 700px){
+  :root{
+    --section-distance: 42px;
+    --card-distance: 30px;
+    --motion-blur: 8px;
+  }
+
+  #projectSection .projectPost:nth-child(odd),
+  #projectSection .projectPost:nth-child(even),
+  #experienceSection .timelineItem:nth-child(odd),
+  #experienceSection .timelineItem:nth-child(even){
+    transform: translate3d(0, var(--card-distance), 0) scale(0.98);
+  }
+
+  #projectSection.active .projectPost,
+  #experienceSection.active .timelineItem{
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .reveal,
+  #extraInfo #aboutMe-text,
+  #extraInfo #aboutMe-images,
+  #skills h2,
+  #skills .wrapper,
+  #projectSection .projectPost,
+  #experienceSection h2,
+  #experienceSection .timelineItem,
+  #blogSection h2,
+  #blogSection .blogCard,
+  #contactMe h2,
+  #contactMe #contactContainer,
+  #projectSection .left,
+  #aboutMe-imageGrid img,
+  #aboutMe-imageGrid video,
+  .jobPic{
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

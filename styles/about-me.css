@@ -22,7 +22,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: clamp(0.90rem, 2vw, 1.75rem);
+  font-size: clamp(1.45rem, 2.35vw, 2.15rem);
+  line-height: 1.45;
   padding: 3%;
   width: 50%;
 }
@@ -60,6 +61,10 @@
 }
 
 @media screen and (max-width: 840px) {
+  #aboutMe-text{
+    font-size: clamp(1.35rem, 4.6vw, 2rem);
+  }
+
   #aboutMe-imageGrid video{
     display: none;
   }

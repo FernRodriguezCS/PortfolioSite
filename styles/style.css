@@ -1,5 +1,5 @@
 :root {
-  --global_font: sans-serif;
+  --global_font: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 html{

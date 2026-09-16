@@ -13,8 +13,8 @@
 }
 
 #contactContainer{
-    width: 55%;
-    min-height: 85svh;
+    width: 48%;
+    min-height: 76svh;
     height: auto;
     display: flex;
     flex-direction: column;
