@@ -67,5 +67,6 @@ form button{
 @media screen and (max-Width: 1200px) {
     #contactContainer{
         min-width: 90%;
+        min-height: 86svh;
     }
 }

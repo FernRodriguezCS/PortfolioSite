@@ -121,9 +121,20 @@
 @media screen and (max-width: 700px){
   #projectSection{
     grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 380px;
   }
 
   .right{
-    padding: 20px;
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .right p:first-child{
+    font-size: clamp(1.15rem, 6vw, 1.55rem);
+  }
+
+  .right p:nth-child(2){
+    font-size: clamp(0.82rem, 3.8vw, 0.98rem);
+    line-height: 1.3;
   }
 }
