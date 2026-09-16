@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
 });
 
 const reveals = document.querySelectorAll(".reveal");
+const revealThreshold = window.matchMedia("(max-width: 700px)").matches ? 0.12 : 0.35;
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
@@ -18,7 +19,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.35,
+    threshold: revealThreshold,
   }
 );
 

@@ -70,12 +70,6 @@
     min-height: auto;
   }
 
-  #aboutMe-text{
-    font-size: clamp(1.12rem, 4vw, 1.45rem);
-    line-height: 1.32;
-    padding: 2%;
-  }
-
   #aboutMe-imageGrid video{
     display: none;
   }
