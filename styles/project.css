@@ -4,29 +4,126 @@
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 350px;
   gap: 12px;
 }
 
 .projectPost{
-  position: relative;
-  z-index: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  overflow: hidden;
   border-radius: 15px;
-  border: 0.5px solid rgba(120, 120, 120, 0.18);
-  background:
-  linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(92, 92, 92, 0.78)),
-  linear-gradient(315deg, rgba(42, 42, 42, 0.82), rgba(255, 255, 255, 0.35));
-  backdrop-filter: blur(28px) saturate(140%);
-  -webkit-backdrop-filter: blur(28px) saturate(140%);
-  color: white;
+  border: 1px solid rgba(120, 120, 120, 0.18);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.left{
+  width: 38%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right{
+  width: 62%;
+  height: 100%;
+  padding: 26px;
+  box-sizing: border-box;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.right p{
+  margin: 0;
+}
+
+.right p:first-child{
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.right p:nth-child(2){
+  color: rgba(0, 0, 0, 0.68);
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  line-height: 1.45;
+}
+
+.techStack{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.techStack li{
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.76);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.right a{
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.right a::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.right a:hover::after{
+  width: 100%;
+  left: 0;
+}
+
+.projectPost img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: block;
+}
+
+.projectPost img.LargerImagePostCover{
+  object-fit: contain;
+  background-color: #030f10;
+}
+
 @media screen and (max-width: 700px){
   #projectSection{
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .right{
+    padding: 20px;
   }
 }
