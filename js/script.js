@@ -1,5 +1,3 @@
-const typedText = document.getElementById("typedText");
-
 window.addEventListener("load", () => {
   const landingPage = document.getElementById("landingPage");
   landingPage.classList.add("fadeIn");
@@ -27,20 +25,10 @@ reveals.forEach((reveal) => {
   observer.observe(reveal);
 });
 
-document.querySelectorAll(".card-inner").forEach(inner => {
-  inner.addEventListener("click", ()=>{
-    inner.classList.toggle("is-flipped");
-  });
-});
-
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if(!reduceMotion){
   const lenis = new Lenis({
-    autoRaf: true,
-    duration: 1,
-    wheelMultiplier: 0.6,
-    smoothWheel: true,
-    smoothTouch: true,
+    autoRaf: true
   });
 }
