@@ -1,0 +1,231 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#constructPageContainer{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#constructContainer{
+    text-align: center;
+    border: 0.25px solid black;
+    border-radius: 15px;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+#eyesContainer{
+    width: 75%;
+    height: 40%;
+    margin: 3px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#leftEye,
+#rightEye{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    flex: 0 0 250px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftPupil,
+#rightPupil{
+    flex: 0 0 250px;
+    height: 33%;
+    max-width: 33%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* Eye animations: pupils sway and eyeballs blink */
+#leftEye,
+#rightEye {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+#leftPupil,
+#rightPupil {
+    position: relative;
+    z-index: 1;
+    --gaze-x: 40px;
+    --gaze-y: 30px;
+    animation: humanGaze 12s ease-in-out infinite;
+}
+
+#leftEye::after,
+#rightEye::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: white;
+    border-bottom: 2px solid black;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: eyelidBlink 5.5s ease-in-out infinite;
+}
+
+@keyframes humanGaze {
+    0%,
+    6% {
+        transform: translate(0, 0);
+    }
+
+    13%,
+    17% {
+        transform: translate(calc(-1 * var(--gaze-x)), calc(-1 * var(--gaze-y)));
+    }
+
+    23%,
+    27% {
+        transform: translate(0, calc(-1 * var(--gaze-y)));
+    }
+
+    33%,
+    37% {
+        transform: translate(var(--gaze-x), calc(-1 * var(--gaze-y)));
+    }
+
+    43%,
+    47% {
+        transform: translate(var(--gaze-x), 0);
+    }
+
+    53%,
+    57% {
+        transform: translate(var(--gaze-x), var(--gaze-y));
+    }
+
+    63%,
+    67% {
+        transform: translate(0, var(--gaze-y));
+    }
+
+    73%,
+    77% {
+        transform: translate(calc(-1 * var(--gaze-x)), var(--gaze-y));
+    }
+
+    83%,
+    87% {
+        transform: translate(calc(-1 * var(--gaze-x)), 0);
+    }
+
+    94%,
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes eyelidBlink {
+    0%,
+    42%,
+    58%,
+    100% {
+        transform: translateY(0);
+    }
+
+    48%,
+    52% {
+        transform: translateY(100%);
+    }
+}
+
+#constructContainer a {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    margin-top: 5%;
+}
+
+#constructContainer a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#constructContainer a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 700px) {
+    #constructPageContainer {
+        min-height: 100svh;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #constructContainer {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        min-height: 0;
+        padding: 2rem 1rem;
+    }
+
+    #constructContainer h1 {
+        width: 100%;
+        margin: 0 0 1.5rem;
+        text-align: center;
+        font-size: clamp(1.25rem, 6vw, 1.8rem);
+        line-height: 1.2;
+    }
+
+    #eyesContainer {
+        width: 100%;
+        height: auto;
+        gap: clamp(0.5rem, 4vw, 1rem);
+        margin: 0 0 1.5rem;
+    }
+
+    #leftEye,
+    #rightEye {
+        width: clamp(72px, 30vw, 150px);
+        height: auto;
+        flex: 0 1 clamp(72px, 30vw, 150px);
+        aspect-ratio: 1;
+    }
+
+    #leftPupil,
+    #rightPupil {
+        width: 33%;
+        max-width: none;
+        height: auto;
+        flex: 0 0 33%;
+        aspect-ratio: 1;
+        --gaze-x: clamp(18px, 8vw, 28px);
+        --gaze-y: clamp(14px, 6vw, 22px);
+    }
+}
