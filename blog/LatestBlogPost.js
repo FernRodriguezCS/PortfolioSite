@@ -1,7 +1,7 @@
-import Entries from "../content/09-2026/test.json" with { type: "json" };
+import Entries from "../content/09-2026/sept.json" with { type: "json" };
 import { readFile, writeFile } from "node:fs/promises";
 
-const filePath = "index.html";
+const filePath = "../index.html";
 const content = Entries[0];
 
 const BlogPost = {

@@ -1,4 +1,4 @@
-import Entries from "../content/09-2026/test.json" with { type: "json" };
+import Entries from "../content/09-2026/sept.json" with { type: "json" };
 
 const BlogUL = document.querySelector('ul');
 const ArticleSpace = document.getElementById('actArticle');

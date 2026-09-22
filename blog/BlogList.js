@@ -1,5 +1,5 @@
 import { writeFile, readFile } from "node:fs/promises";
-import Entries from "../content/09-2026/test.json" with { type: "json" };
+import Entries from "../content/09-2026/sept.json" with { type: "json" };
 
 //console.log(Entries);
 const filePath = "blog.html";
@@ -28,8 +28,10 @@ async function writeNextListItem(){
 let BlogCard = ``;
 let content = ``;
 
-for(let i = 1; i < Entries.length - 1; i++){
+for(let i = 0; i < Entries.length; i++){
     content = Entries[i];
+
+    if(!content.id || !content.title) continue;
 
     BlogCard = `<li class="CardListItem" data-post-id="${content.id}">
         <p>${content.published_at}</p>
