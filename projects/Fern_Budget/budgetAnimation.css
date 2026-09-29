@@ -1,0 +1,38 @@
+/* FernBudget page motion: subtle, editorial reveals with safe defaults. */
+@media (prefers-reduced-motion: no-preference) {
+  body.budget-motion-ready .budget-reveal {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+    transition:
+      opacity 680ms cubic-bezier(0.2, 0.75, 0.25, 1),
+      transform 760ms cubic-bezier(0.2, 0.75, 0.25, 1);
+    will-change: opacity, transform;
+  }
+
+  body.budget-motion-ready .budget-reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Screenshots settle into place with a slight scale change as they appear. */
+  body.budget-motion-ready .budget-reveal img {
+    transform: scale(1.018);
+    transition: transform 950ms cubic-bezier(0.2, 0.75, 0.25, 1);
+  }
+
+  body.budget-motion-ready .budget-reveal.is-visible img {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.budget-motion-ready .budget-reveal,
+  body.budget-motion-ready .budget-reveal.is-visible,
+  body.budget-motion-ready .budget-reveal img,
+  body.budget-motion-ready .budget-reveal.is-visible img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

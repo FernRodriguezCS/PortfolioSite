@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bloody Rails is a first-person investigation game about solving a murder aboard a passenger train in the late 1800s.">
+  <meta name="theme-color" content="#f8f8f6">
+  <title>Bloody Rails — Fernando Rodriguez</title>
+
+  <link rel="stylesheet" href="bloody.css">
+  <link rel="stylesheet" href="bloodyanimations.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="page-header">
+    <a class="back-link" href="../../index.html">
+      <span aria-hidden="true">←</span>
+      <span>Back to portfolio</span>
+    </a>
+    <p>Project page</p>
+  </header>
+
+  <main id="main">
+    <section class="hero page-width" aria-labelledby="page-title">
+      <div class="hero-copy br-reveal br-reveal--left">
+        <p class="project-context">Group project for Software Engineering</p>
+        <h1 id="page-title">Bloody<br>Rails</h1>
+        <p class="hero-description">A first-person investigation game set aboard a passenger train in the late 1800s.</p>
+        <p class="hero-hook">Find the truth before the final stop.</p>
+
+        <div class="hero-details">
+          <span>Built with Godot</span>
+          <span>Class MVP, now in continued development</span>
+        </div>
+
+        <a class="text-link" href="#the-case">Explore the project <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <figure class="cover-art br-reveal br-reveal--right">
+        <img
+          src="../../assets/images/Bloody_rails-Post.png"
+          alt="Bloody Rails cover art: a black locomotive beneath a red title, silhouetted against an orange sunset."
+          width="1280"
+          height="1034"
+          fetchpriority="high">
+        <figcaption>Project cover art</figcaption>
+      </figure>
+    </section>
+
+    <section class="lead-scene" aria-labelledby="scene-title">
+      <div class="page-width">
+        <div class="section-heading br-reveal">
+          <div>
+            <p class="section-label">On board</p>
+            <h2 id="scene-title">A case unfolding between stations.</h2>
+          </div>
+          <p>Move through the passenger cars, speak with the people aboard, and follow the evidence.</p>
+        </div>
+
+        <figure class="featured-shot br-reveal">
+          <img
+            src="assets/passenger-car-aisle.png"
+            alt="First-person view down a dim passenger carriage toward a door, with forest visible through the windows."
+            width="3164"
+            height="2070"
+            fetchpriority="high">
+          <figcaption>Looking through one of the passenger cars.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section page-width" id="the-case" aria-labelledby="case-title">
+      <div class="case-copy br-reveal br-reveal--left">
+        <p class="section-label">The story</p>
+        <h2 id="case-title">Five days. One murder to solve.</h2>
+        <p>Before the train reaches its final stop, the player must question suspects, collect clues, and take notes to discover who murdered Adrian.</p>
+      </div>
+
+      <div class="controls-panel br-reveal br-reveal--right">
+        <h3>On the train</h3>
+        <dl class="controls-list">
+          <div><dt><kbd>W</kbd><kbd>S</kbd></dt><dd>Move forward and back</dd></div>
+          <div><dt><kbd>E</kbd></dt><dd>Interact</dd></div>
+          <div><dt><kbd>Enter</kbd></dt><dd>Advance dialogue</dd></div>
+          <div><dt><kbd>Tab</kbd></dt><dd>Open or close notebook</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="screens-section" id="screenshots" aria-labelledby="screens-title">
+      <div class="page-width">
+        <div class="section-heading screens-heading br-reveal">
+          <div>
+            <h2 id="screens-title">Inside the train</h2>
+          </div>
+          <p>Gameplay captures from the current build, from the forest outside to conversations on board.</p>
+        </div>
+
+        <div class="screen-gallery">
+          <figure class="screen screen--wide br-reveal">
+            <img src="assets/train-in-forest.png" alt="Elevated view of the dark train moving through a low-poly evergreen forest." width="3164" height="2070" loading="lazy" decoding="async">
+            <figcaption>The train crossing a forest at night.</figcaption>
+          </figure>
+
+          <figure class="screen br-reveal">
+            <img src="assets/note-by-window.png" alt="A paper note on a table beside a curtained train window." width="3164" height="2070" loading="lazy" decoding="async">
+            <figcaption>A note beside the carriage window.</figcaption>
+          </figure>
+
+          <figure class="screen br-reveal">
+            <img src="assets/doctor-dialogue.png" alt="A conversation with the doctor, shown in a dialogue panel inside the train." width="3164" height="2070" loading="lazy" decoding="async">
+            <figcaption>Dialogue with the doctor.</figcaption>
+          </figure>
+
+          <figure class="screen br-reveal">
+            <img src="assets/dining-car-passengers.png" alt="Passengers sitting in booths and at tables in the dining car." width="3164" height="2070" loading="lazy" decoding="async">
+            <figcaption>Passengers in the dining car.</figcaption>
+          </figure>
+
+          <figure class="screen br-reveal">
+            <img src="assets/empty-seat.png" alt="An empty seat beside a train window, framed by dark curtains." width="3164" height="2070" loading="lazy" decoding="async">
+            <figcaption>An empty seat beside the carriage window.</figcaption>
+          </figure>
+
+          <figure class="screen screen--prototype br-reveal">
+            <img src="assets/track-loading.png" alt="A locomotive and circular track shown in a Godot preview with a 50 percent loading bar." width="3164" height="2070" loading="lazy" decoding="async">
+            <figcaption>Early prototype capture of the locomotive and track.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contribution-section page-width" aria-labelledby="role-title">
+      <div class="contribution-copy br-reveal br-reveal--left">
+        <p class="section-label">My contribution</p>
+        <h2 id="role-title">A path from feature work to a stable build.</h2>
+        <p>
+          I handled DevOps, backend work, and game configuration, and developed the one-way integration ladder from feature branches through THE RING, MUDPIT, and POND to MAIN.
+        </p>
+        <p>I’m continuing development beyond the class MVP to expand and complete the game.</p>
+      </div>
+
+      <div class="workflow br-reveal br-reveal--right" aria-labelledby="workflow-title">
+        <div class="workflow-heading">
+          <h3 id="workflow-title">The integration ladder</h3>
+          <p>Changes move forward through the team’s development path.</p>
+        </div>
+
+        <ol class="release-path">
+          <li>
+            <span class="path-name">Feature branches</span>
+            <span class="path-detail">Build features in isolation.</span>
+          </li>
+          <li>
+            <span class="path-name">THE RING</span>
+            <span class="path-detail">Check how completed features work together.</span>
+          </li>
+          <li>
+            <span class="path-name">MUDPIT</span>
+            <span class="path-detail">Make major changes in the working build.</span>
+          </li>
+          <li>
+            <span class="path-name">POND</span>
+            <span class="path-detail">Handle QA and polish.</span>
+          </li>
+          <li>
+            <span class="path-name">MAIN</span>
+            <span class="path-detail">Keep the stable release.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="timeline-section page-width" aria-labelledby="timeline-title">
+      <div class="timeline-intro br-reveal br-reveal--left">
+        <p class="section-label">Project timeline</p>
+        <h2 id="timeline-title">From class MVP to the next build.</h2>
+      </div>
+
+      <ol class="project-timeline">
+        <li class="br-reveal">
+          <p class="timeline-date">
+            <time datetime="2026-01-20">Jan 20, 2026</time>
+            <span aria-hidden="true">—</span>
+            <time datetime="2026-05-18">May 18, 2026</time>
+          </p>
+          <h3>Spring 2026: Software Engineering MVP</h3>
+          <p>The team built Bloody Rails as a group project for my Software Engineering class and presented it as the class MVP.</p>
+        </li>
+        <li class="timeline-current br-reveal">
+          <p class="timeline-date">In progress</p>
+          <h3>Expanding beyond the MVP</h3>
+          <p>I’m continuing development to bring the game closer to a complete experience.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="credits-section page-width" aria-labelledby="credits-title">
+      <div class="br-reveal br-reveal--left">
+        <h2 id="credits-title">A group project.</h2>
+      </div>
+      <ul class="credits-list br-reveal br-reveal--right">
+        <li>Audrey Flores</li>
+        <li>Fernando Rodriguez</li>
+        <li>Brooklyn Stitt</li>
+        <li>Shanelle Malanum</li>
+        <li>Shelsey Melgar Pineda</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page-footer page-width">
+    <a class="back-link" href="../../index.html">
+      <span aria-hidden="true">←</span>
+      <span>Back to portfolio</span>
+    </a>
+    <p>Bloody Rails project page</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
+  <script src="bloodyanimations.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ratthew is a 2D graphics class project built in C++ with X11, shaped from simple forms into a finished character render.">
+  <meta name="theme-color" content="#f1f3f4">
+  <title>Ratthew — Fernando Rodriguez</title>
+
+  <link rel="stylesheet" href="rat.css">
+  <link rel="stylesheet" href="ratAnimation.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <a class="brand" href="#top" aria-label="Ratthew project page">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>Ratthew</span>
+      </a>
+      <a class="back-link" href="../../index.html">
+        <span aria-hidden="true">←</span>
+        <span>Back to portfolio</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="page-width hero-layout">
+        <div class="hero-copy">
+          <p class="project-type">2D graphics class project</p>
+          <h1 id="page-title">Ratthew</h1>
+          <p class="hero-tagline">Built one shape at a time.</p>
+          <p class="hero-description">
+            A character study made in C++ with X11. I began with simple ellipses, then worked through the proportions, facial features, and curves until the shapes came together.
+          </p>
+          <a class="hero-link" href="#process">
+            Follow the drawing process
+            <span aria-hidden="true">↓</span>
+          </a>
+
+          <dl class="hero-facts" aria-label="Project details">
+            <div>
+              <dt>Language</dt>
+              <dd>C++</dd>
+            </div>
+            <div>
+              <dt>Display</dt>
+              <dd>X11 graphics</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>2D shape construction</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero-art">
+          <div class="artboard">
+            <img
+              src="assets/final-curved-render.png"
+              alt="Finished Ratthew render: a black character with tall ears, large eyes, and a round muzzle on a white canvas."
+              width="876"
+              height="886"
+              fetchpriority="high">
+          </div>
+          <figcaption>
+            <span class="caption-rule" aria-hidden="true"></span>
+            The final pass uses curved outlines and extra samples to smooth the edges.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="process-section page-width" id="process" aria-labelledby="process-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Drawing process</p>
+          <h2 id="process-title">From an ellipse to a character.</h2>
+        </div>
+        <p class="section-description">
+          Each pass added a little more structure. The screenshots follow the work from a first outline to a smoother final silhouette.
+        </p>
+      </div>
+
+      <ol class="process-list">
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/ellipse-outline.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/ellipse-outline.png" alt="A single upright ellipse outline drawn on a white canvas." width="878" height="848" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Start with an outline</h3>
+              <p>I started with an ellipse outline.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/filled-ellipse.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/filled-ellipse.png" alt="The ellipse filled solid black, establishing a basic shape." width="878" height="848" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Fill the form</h3>
+              <p>Filling it gave me a basic shape to build with.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/head-and-ears-layout.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/head-and-ears-layout.png" alt="A large filled oval for the head with two outlined ovals positioned as ears." width="878" height="848" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Lay out the head</h3>
+              <p>A few ellipses set the first head-and-ears proportions.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/first-full-figure.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/first-full-figure.png" alt="An early full character made from separate head, body, arm, and leg shapes." width="878" height="848" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Build the silhouette</h3>
+              <p>Stretched and rotated ellipses formed the body and limbs, though some pieces still felt separate.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/feature-refinement.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/feature-refinement.png" alt="A more complete black character with large white eyes and a white muzzle." width="878" height="848" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Refine the face</h3>
+              <p>Adjusting the proportions, eyes, and muzzle made the character more recognizable.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/reference-and-x11-render.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/reference-and-x11-render.png" alt="A browser view of a plush character reference beside the open Ratthew_Render X11 window." width="2208" height="1436" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Keep the reference close</h3>
+              <p>A browser view of the character reference sits beside the open Ratthew_Render X11 window.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/primitive-detail-pass.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/primitive-detail-pass.png" alt="A full character render with whiskers and more pointed eye details." width="1268" height="998" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Test more primitives</h3>
+              <p>Lines, capsules, rounded rectangles, triangles, and pointed eye shapes added detail, but this pass felt less successful.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="process-step">
+          <figure>
+            <a class="process-image" href="assets/final-curved-render.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/final-curved-render.png" alt="The final Ratthew character with a smoother rounded head, body, arms, and legs." width="876" height="886" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Smooth the contours</h3>
+              <p>Curved outlines and extra samples gave the edges a smoother finish.</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+    </section>
+
+    <section class="study-section" aria-labelledby="study-title">
+      <div class="page-width study-layout">
+        <div class="study-heading">
+          <p class="section-label">Graphics concepts</p>
+          <h2 id="study-title">Simple shapes, carefully adjusted.</h2>
+          <p>The project grew through small decisions about how each form should sit beside the next.</p>
+        </div>
+
+        <ul class="study-list">
+          <li>
+            <h3>Stretch and rotate</h3>
+            <p>Reuse ellipses at different proportions to block in the head, body, arms, and legs.</p>
+          </li>
+          <li>
+            <h3>Layer the details</h3>
+            <p>Build the face from simple shapes, then compare how the eyes and muzzle affect recognition.</p>
+          </li>
+          <li>
+            <h3>Refine the curves</h3>
+            <p>Try several outline styles and add samples to make the final edges look smoother.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <a class="back-link" href="../../index.html">
+        <span aria-hidden="true">←</span>
+        <span>Back to portfolio</span>
+      </a>
+      <p>Ratthew · 2D graphics in C++ and X11</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
+  <script src="rat.js" defer></script>
+</body>
+</html>
