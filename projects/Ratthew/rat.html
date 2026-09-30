@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ratthew is a 2D graphics class project built in C++ with X11, shaped from simple forms into a finished character render.">
-  <meta name="theme-color" content="#f1f3f4">
+  <meta name="theme-color" content="#edf2f8">
   <title>Ratthew — Fernando Rodriguez</title>
 
-  <link rel="stylesheet" href="rat.css">
-  <link rel="stylesheet" href="ratAnimation.css">
+  <link rel="stylesheet" href="rat.css?v=20260929.1">
+  <link rel="stylesheet" href="ratAnimation.css?v=20260929.1">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
 </head>
 <body>
@@ -20,9 +20,9 @@
         <span class="brand-mark" aria-hidden="true">R</span>
         <span>Ratthew</span>
       </a>
-      <a class="back-link" href="../../index.html">
+      <a class="home-button" href="../../index.html">
         <span aria-hidden="true">←</span>
-        <span>Back to portfolio</span>
+        <span>Back to home</span>
       </a>
     </div>
   </header>
@@ -60,12 +60,14 @@
 
         <figure class="hero-art">
           <div class="artboard">
-            <img
-              src="assets/final-curved-render.png"
-              alt="Finished Ratthew render: a black character with tall ears, large eyes, and a round muzzle on a white canvas."
-              width="876"
-              height="886"
-              fetchpriority="high">
+            <a class="image-link" href="assets/final-curved-render.png" target="_blank" rel="noopener noreferrer">
+              <img
+                src="assets/final-curved-render.png"
+                alt="Finished Ratthew render: a black character with tall ears, large eyes, and a round muzzle on a white canvas."
+                width="876"
+                height="886"
+                fetchpriority="high">
+            </a>
           </div>
           <figcaption>
             <span class="caption-rule" aria-hidden="true"></span>
@@ -89,7 +91,7 @@
       <ol class="process-list">
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/ellipse-outline.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/ellipse-outline.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/ellipse-outline.png" alt="A single upright ellipse outline drawn on a white canvas." width="878" height="848" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -100,7 +102,7 @@
         </li>
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/filled-ellipse.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/filled-ellipse.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/filled-ellipse.png" alt="The ellipse filled solid black, establishing a basic shape." width="878" height="848" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -111,7 +113,7 @@
         </li>
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/head-and-ears-layout.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/head-and-ears-layout.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/head-and-ears-layout.png" alt="A large filled oval for the head with two outlined ovals positioned as ears." width="878" height="848" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -122,7 +124,7 @@
         </li>
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/first-full-figure.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/first-full-figure.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/first-full-figure.png" alt="An early full character made from separate head, body, arm, and leg shapes." width="878" height="848" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -133,7 +135,7 @@
         </li>
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/feature-refinement.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/feature-refinement.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/feature-refinement.png" alt="A more complete black character with large white eyes and a white muzzle." width="878" height="848" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -144,7 +146,7 @@
         </li>
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/reference-and-x11-render.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/reference-and-x11-render.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/reference-and-x11-render.png" alt="A browser view of a plush character reference beside the open Ratthew_Render X11 window." width="2208" height="1436" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -155,7 +157,7 @@
         </li>
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/primitive-detail-pass.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/primitive-detail-pass.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/primitive-detail-pass.png" alt="A full character render with whiskers and more pointed eye details." width="1268" height="998" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -166,7 +168,7 @@
         </li>
         <li class="process-step">
           <figure>
-            <a class="process-image" href="assets/final-curved-render.png" target="_blank" rel="noopener noreferrer">
+            <a class="image-link process-image" href="assets/final-curved-render.png" target="_blank" rel="noopener noreferrer">
               <img src="assets/final-curved-render.png" alt="The final Ratthew character with a smoother rounded head, body, arms, and legs." width="876" height="886" loading="lazy" decoding="async">
             </a>
             <figcaption>
@@ -206,15 +208,15 @@
 
   <footer class="site-footer">
     <div class="page-width footer-inner">
-      <a class="back-link" href="../../index.html">
+      <a class="home-button" href="../../index.html">
         <span aria-hidden="true">←</span>
-        <span>Back to portfolio</span>
+        <span>Back to home</span>
       </a>
       <p>Ratthew · 2D graphics in C++ and X11</p>
     </div>
   </footer>
 
   <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
-  <script src="rat.js" defer></script>
+  <script src="ratAnimation.js?v=20260929.1" defer></script>
 </body>
 </html>

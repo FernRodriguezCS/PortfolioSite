@@ -1,38 +1,87 @@
-/* FernBudget page motion: subtle, editorial reveals with safe defaults. */
+/* Frames grow into place; the feature list follows in one short cascade. */
+:root { --image-ring: #54866a; }
+
 @media (prefers-reduced-motion: no-preference) {
-  body.budget-motion-ready .budget-reveal {
-    opacity: 0;
-    transform: translate3d(0, 1.25rem, 0);
-    transition:
-      opacity 680ms cubic-bezier(0.2, 0.75, 0.25, 1),
-      transform 760ms cubic-bezier(0.2, 0.75, 0.25, 1);
-    will-change: opacity, transform;
+  .budget-motion-ready .hero-copy.is-visible {
+    animation: budget-copy-arrive 720ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
 
-  body.budget-motion-ready .budget-reveal.is-visible {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+  .budget-motion-ready .hero-preview.is-visible .preview-window,
+  .budget-motion-ready .screen.is-visible .screen-window {
+    transform-origin: center bottom;
+    animation: budget-frame-grow 1000ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
-  /* Screenshots settle into place with a slight scale change as they appear. */
-  body.budget-motion-ready .budget-reveal img {
-    transform: scale(1.018);
-    transition: transform 950ms cubic-bezier(0.2, 0.75, 0.25, 1);
+  .budget-motion-ready .hero-preview.is-visible .capture-mark {
+    animation: budget-mark-grow 1000ms 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
-  body.budget-motion-ready .budget-reveal.is-visible img {
-    transform: scale(1);
+  .budget-motion-ready .feature-list.is-visible .feature-item {
+    animation: budget-feature-arrive 750ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .budget-motion-ready .feature-list.is-visible .feature-item:nth-child(2) { animation-delay: 110ms; }
+  .budget-motion-ready .feature-list.is-visible .feature-item:nth-child(3) { animation-delay: 220ms; }
+  .budget-motion-ready .feature-list.is-visible .feature-item:nth-child(4) { animation-delay: 330ms; }
+
+  .button {
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  body.budget-motion-ready .budget-reveal,
-  body.budget-motion-ready .budget-reveal.is-visible,
-  body.budget-motion-ready .budget-reveal img,
-  body.budget-motion-ready .budget-reveal.is-visible img {
-    opacity: 1;
-    transform: none;
-    transition: none;
-    will-change: auto;
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .button--bright:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes budget-copy-arrive {
+  from { opacity: 0.65; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes budget-frame-grow {
+  0% { opacity: 0.65; transform: translateY(34px) scale(0.94); }
+  75% { opacity: 1; transform: translateY(-4px) scale(1); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes budget-mark-grow {
+  0% { transform: scale(0.3); }
+  60% { transform: scale(1.6); }
+  100% { transform: scale(1); }
+}
+
+@keyframes budget-feature-arrive {
+  from { opacity: 0.6; transform: translateX(18px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* The home control responds consistently on every project page. */
+@media (prefers-reduced-motion: no-preference) {
+  .home-button {
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  }
+
+  .home-button span[aria-hidden] {
+    transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .image-link {
+    transition: box-shadow 180ms ease;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .home-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .home-button:hover span[aria-hidden] {
+    transform: translateX(-4px);
+  }
+
+  .image-link:hover {
+    box-shadow: 0 0 0 3px var(--image-ring);
   }
 }

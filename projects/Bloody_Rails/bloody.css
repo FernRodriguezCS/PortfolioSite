@@ -1,10 +1,10 @@
 :root {
-  --paper: #f8f8f6;
-  --ink: #181817;
-  --muted: #62615d;
-  --line: #d8d8d3;
-  --rail-red: #9e2926;
-  --signal-amber: #d79537;
+  --paper: #f5eee2;
+  --ink: #191619;
+  --muted: #635b59;
+  --line: #d8ccc0;
+  --rail-red: #6f2b31;
+  --signal-amber: #d5ae70;
   --page-font: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --display-font: Georgia, "Times New Roman", serif;
   --page-width: 1240px;
@@ -30,6 +30,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 figure,
@@ -81,7 +82,10 @@ a:focus-visible {
 }
 
 .page-header {
-  min-height: 76px;
+  min-height: 80px;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-block: 0.8rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -92,28 +96,107 @@ a:focus-visible {
   font-size: 0.85rem;
 }
 
-.back-link {
+/* The same home control is kept locally so each project remains independent. */
+.home-button {
   display: inline-flex;
+  min-height: 44px;
+  flex: 0 0 auto;
   align-items: center;
-  gap: 0.6rem;
-  font-size: 0.92rem;
-  font-weight: 650;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.25em;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid #cbd3db;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+  color: #253244;
+  font: 650 0.875rem/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.back-link span:first-child {
-  color: var(--rail-red);
+.home-button span[aria-hidden] {
   font-size: 1.2rem;
+  line-height: 1;
+}
+
+.home-button:hover {
+  background: #e6edf4;
+  border-color: #8293a5;
+  color: #182638;
+}
+
+.home-button:focus-visible {
+  outline: 3px solid #547cb4;
+  outline-offset: 4px;
+}
+
+.image-link {
+  display: block;
+  border-radius: inherit;
+  cursor: zoom-in;
+}
+
+.image-link:focus-visible {
+  outline: 3px solid #547cb4;
+  outline-offset: -4px;
+}
+
+.capture-link {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  font: 650 0.8rem/1.4 system-ui, sans-serif;
+  text-underline-offset: 0.25em;
+  white-space: nowrap;
+}
+
+.page-header .project-wordmark {
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-family: var(--display-font);
+  font-weight: 700;
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
+  color: var(--paper);
   min-height: min(84svh, 900px);
   padding-block: clamp(4rem, 8vw, 7.5rem);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(310px, 0.88fr);
   align-items: center;
   gap: clamp(3rem, 8vw, 7.5rem);
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  box-shadow: 0 0 0 100vmax #351e27;
+  clip-path: inset(0 -100vmax);
+  background: #351e27;
+  content: "";
+}
+
+.hero .project-context,
+.hero .text-link span {
+  color: var(--signal-amber);
+}
+
+.hero .hero-hook,
+.hero .hero-details,
+.hero .cover-art figcaption {
+  color: #d6c5bf;
+}
+
+.hero .hero-details span:first-child,
+.hero .text-link {
+  color: var(--paper);
+}
+
+.hero .hero-details {
+  border-color: #715258;
 }
 
 .hero-copy {
@@ -134,7 +217,7 @@ a:focus-visible {
   font-family: var(--display-font);
   font-size: clamp(4.75rem, 10.5vw, 8.5rem);
   font-weight: 700;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.05em;
   line-height: 0.82;
 }
 
@@ -210,6 +293,11 @@ a:focus-visible {
 .cover-art figcaption,
 .featured-shot figcaption,
 .screen figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
   padding-top: 0.7rem;
   color: var(--muted);
   font-size: 0.8rem;
@@ -267,8 +355,8 @@ a:focus-visible {
   margin: 0;
   padding: clamp(0.45rem, 1vw, 0.75rem);
   border: 1px solid var(--signal-amber);
-  border-radius: 16px;
-  background: var(--paper);
+  border-radius: 12px;
+  background: #242025;
 }
 
 .featured-shot img {
@@ -280,7 +368,7 @@ a:focus-visible {
 
 .featured-shot figcaption {
   padding-inline: 0.25rem;
-  color: var(--ink);
+  color: var(--paper);
 }
 
 .case-section {
@@ -389,13 +477,13 @@ kbd {
 }
 
 .screen {
-  grid-column: span 4;
+  grid-column: span 6;
   min-width: 0;
   margin: 0;
-  padding: 0.55rem;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
 }
 
 .screen--wide {
@@ -403,7 +491,7 @@ kbd {
 }
 
 .screen--prototype {
-  grid-column: span 4;
+  grid-column: span 6;
 }
 
 .screen img {
@@ -414,7 +502,12 @@ kbd {
 }
 
 .screen figcaption {
-  padding: 0.75rem 0.45rem 0.35rem;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.8rem 0 0;
 }
 
 .contribution-section {

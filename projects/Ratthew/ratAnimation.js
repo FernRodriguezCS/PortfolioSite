@@ -1,7 +1,7 @@
 /* Optional, one-time frame entrances. Nothing is hidden while awaiting a reveal. */
 (() => {
   const motionPreference = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-  const revealItems = [...document.querySelectorAll(".hero-copy, .hero-screen, .search-screen")];
+  const revealItems = [...document.querySelectorAll(".hero-copy, .hero-art, .process-step")];
   const seenItems = new WeakSet();
   let revealObserver = null;
   let lenis = null;
@@ -9,7 +9,7 @@
   function stopMotion() {
     revealObserver?.disconnect();
     revealObserver = null;
-    document.body.classList.remove("commerce-motion-ready");
+    document.body.classList.remove("rat-motion-ready");
     revealItems.forEach((item) => item.classList.remove("is-visible"));
 
     // Clear our reference even if the optional CDN library fails during cleanup.
@@ -54,11 +54,11 @@
       revealItems.forEach((item) => {
         if (!seenItems.has(item)) revealObserver.observe(item);
       });
-      document.body.classList.add("commerce-motion-ready");
+      document.body.classList.add("rat-motion-ready");
     } catch {
       revealObserver?.disconnect();
       revealObserver = null;
-      document.body.classList.remove("commerce-motion-ready");
+      document.body.classList.remove("rat-motion-ready");
     }
   }
 

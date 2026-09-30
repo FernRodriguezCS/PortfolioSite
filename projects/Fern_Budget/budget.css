@@ -1,9 +1,9 @@
 :root {
-  --forest: #0b332b;
+  --forest: #143e32;
   --fern: #236b4f;
-  --leaf: #86cd99;
-  --citrus: #d8ef73;
-  --mist: #f1f6f2;
+  --leaf: #bfe4c2;
+  --citrus: #dceab5;
+  --mist: #f2f7f3;
   --slate: #52685f;
   --page-width: 1240px;
   --body-font: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -30,6 +30,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 figure,
@@ -82,6 +83,8 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block: 0.8rem;
   gap: 1.5rem;
 }
 
@@ -92,7 +95,7 @@ a:focus-visible {
   color: var(--forest);
   font-family: var(--display-font);
   font-size: 1.16rem;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: -0.04em;
   text-decoration: none;
 }
@@ -104,18 +107,58 @@ a:focus-visible {
   mix-blend-mode: multiply;
 }
 
-.back-link {
+/* The same home control is kept locally so each project remains independent. */
+.home-button {
   display: inline-flex;
+  min-height: 44px;
+  flex: 0 0 auto;
   align-items: center;
-  gap: 0.55rem;
-  font-size: 0.9rem;
-  font-weight: 650;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid #cbd3db;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+  color: #253244;
+  font: 650 0.875rem/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   text-decoration: none;
+  white-space: nowrap;
 }
 
-.back-link span:first-child {
-  color: var(--fern);
+.home-button span[aria-hidden] {
   font-size: 1.2rem;
+  line-height: 1;
+}
+
+.home-button:hover {
+  background: #e6edf4;
+  border-color: #8293a5;
+  color: #182638;
+}
+
+.home-button:focus-visible {
+  outline: 3px solid #547cb4;
+  outline-offset: 4px;
+}
+
+.image-link {
+  display: block;
+  border-radius: inherit;
+  cursor: zoom-in;
+}
+
+.image-link:focus-visible {
+  outline: 3px solid #547cb4;
+  outline-offset: -4px;
+}
+
+.capture-link {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  font: 650 0.8rem/1.4 system-ui, sans-serif;
+  text-underline-offset: 0.25em;
+  white-space: nowrap;
 }
 
 .hero {
@@ -148,9 +191,9 @@ a:focus-visible {
 .hero h1 {
   margin-bottom: 0.65rem;
   font-family: var(--display-font);
-  font-size: clamp(3.8rem, 7.6vw, 6.4rem);
-  font-weight: 750;
-  letter-spacing: -0.085em;
+  font-size: clamp(3.8rem, 7.1vw, 5.8rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
   line-height: 0.95;
   text-wrap: balance;
 }
@@ -191,7 +234,6 @@ a:focus-visible {
   font-size: 0.92rem;
   font-weight: 700;
   text-decoration: none;
-  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .button--bright {
@@ -200,7 +242,6 @@ a:focus-visible {
 }
 
 .button--bright:hover {
-  transform: translateY(-2px);
   background: var(--leaf);
 }
 
@@ -223,7 +264,6 @@ a:focus-visible {
 }
 
 .preview-window {
-  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid rgba(216, 239, 115, 0.45);
   border-radius: 13px;
@@ -232,14 +272,14 @@ a:focus-visible {
 
 .hero-preview img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 80%;
+  height: auto;
+  object-fit: contain;
 }
 
 .hero-preview figcaption {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.6rem;
   padding-top: 0.8rem;
   color: rgba(241, 246, 242, 0.68);
@@ -278,7 +318,7 @@ a:focus-visible {
   font-family: var(--display-font);
   font-size: clamp(2rem, 4vw, 3.4rem);
   font-weight: 700;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.045em;
   line-height: 1.04;
   text-wrap: balance;
 }
@@ -361,30 +401,29 @@ a:focus-visible {
 }
 
 .screen--overview {
-  grid-column: span 7;
-}
-
-.screen--history {
-  grid-column: span 5;
-}
-
-.screen--proof {
   grid-column: 1 / -1;
 }
 
+.screen--history {
+  grid-column: span 6;
+}
+
+.screen--proof {
+  grid-column: span 6;
+}
+
 .screen-window {
-  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid rgba(11, 51, 43, 0.18);
-  border-radius: 9px;
-  background: var(--forest);
+  border-radius: 12px;
+  background: #111827;
+  box-shadow: 0 14px 36px rgb(20 62 50 / 10%);
 }
 
 .screen img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 80%;
+  height: auto;
+  object-fit: contain;
 }
 
 .screen figcaption {
@@ -405,7 +444,7 @@ a:focus-visible {
 }
 
 .screen figcaption a {
-  color: var(--fern);
+  color: var(--forest);
   font-size: 0.78rem;
   font-weight: 650;
   text-underline-offset: 0.25em;
@@ -545,14 +584,10 @@ a:focus-visible {
     gap: 2.5rem;
   }
 
-  .screen--overview,
-  .screen--history {
-    grid-column: span 6;
-  }
-
-  .screen--proof {
+  .screen--overview {
     grid-column: 1 / -1;
   }
+
 }
 
 @media (max-width: 700px) {
@@ -572,10 +607,6 @@ a:focus-visible {
   .brand img {
     width: 2.1rem;
     height: 2.1rem;
-  }
-
-  .back-link {
-    font-size: 0.82rem;
   }
 
   .hero-layout {
