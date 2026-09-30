@@ -1,10 +1,10 @@
 :root {
   color-scheme: light;
-  --evergreen: #123e32;
-  --marigold: #f4cc3e;
-  --chamber-violet: #6c4c8c;
-  --directory-paper: #f5f5ec;
-  --ink: #252820;
+  --evergreen: #154e40;
+  --marigold: #ecc23c;
+  --chamber-violet: #65437d;
+  --directory-paper: #f4f7f5;
+  --ink: #193830;
   --soft-ink: #58635c;
   --line: #cbd4c8;
   --display-font: Georgia, "Times New Roman", serif;
@@ -34,6 +34,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -79,6 +80,8 @@ a:focus-visible {
   min-height: 4.75rem;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block: 0.8rem;
   gap: 1rem;
 }
 
@@ -91,27 +94,66 @@ a:focus-visible {
   text-decoration: none;
 }
 
-.back-link {
+/* The same home control is kept locally so each project remains independent. */
+.home-button {
   display: inline-flex;
-  min-height: 2.75rem;
+  min-height: 44px;
+  flex: 0 0 auto;
   align-items: center;
-  gap: 0.55rem;
-  color: var(--evergreen);
-  font-size: 0.88rem;
-  font-weight: 700;
-  text-underline-offset: 0.2em;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid #cbd3db;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+  color: #253244;
+  font: 650 0.875rem/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.back-link:hover {
-  color: var(--chamber-violet);
+.home-button span[aria-hidden] {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.home-button:hover {
+  background: #e6edf4;
+  border-color: #8293a5;
+  color: #182638;
+}
+
+.home-button:focus-visible {
+  outline: 3px solid #547cb4;
+  outline-offset: 4px;
+}
+
+.image-link {
+  display: block;
+  border-radius: inherit;
+  cursor: zoom-in;
+}
+
+.image-link:focus-visible {
+  outline: 3px solid #547cb4;
+  outline-offset: -4px;
+}
+
+.capture-link {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  font: 650 0.8rem/1.4 system-ui, sans-serif;
+  text-underline-offset: 0.25em;
+  white-space: nowrap;
 }
 
 .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--evergreen);
-  color: var(--directory-paper);
+  background: #e7f0ea;
+  color: var(--evergreen);
 }
 
 .hero-layout {
@@ -132,7 +174,7 @@ a:focus-visible {
 .hero-kicker,
 .section-label {
   margin: 0 0 0.9rem;
-  color: var(--marigold);
+  color: var(--chamber-violet);
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.045em;
@@ -142,11 +184,11 @@ a:focus-visible {
 .hero h1 {
   max-width: 9ch;
   margin: 0;
-  color: var(--directory-paper);
+  color: var(--evergreen);
   font-family: var(--display-font);
   font-size: clamp(4.8rem, 8.6vw, 8.2rem);
   font-weight: 400;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.05em;
   line-height: 0.92;
   overflow-wrap: anywhere;
 }
@@ -154,7 +196,7 @@ a:focus-visible {
 .hero-description {
   max-width: 33rem;
   margin: 1.5rem 0 0;
-  color: rgb(245 245 236 / 88%);
+  color: var(--soft-ink);
   font-size: clamp(1.05rem, 1.5vw, 1.24rem);
   line-height: 1.6;
 }
@@ -172,18 +214,17 @@ a:focus-visible {
   font-size: 0.9rem;
   font-weight: 800;
   text-decoration: none;
-  transition: background-color 160ms ease, color 160ms ease;
 }
 
 .primary-link:hover {
-  background: transparent;
-  color: var(--marigold);
+  background: var(--evergreen);
+  color: var(--directory-paper);
 }
 
 .hero-screen {
   position: relative;
   z-index: 0;
-  width: min(100%, 23rem);
+  width: min(100%, 21rem);
   justify-self: center;
   margin: 0;
   padding-top: 0.75rem;
@@ -203,18 +244,13 @@ a:focus-visible {
 
 .screen-artwork {
   width: 100%;
-  height: clamp(28rem, 48vw, 36rem);
-  overflow: hidden;
-  border: 0.5rem solid rgb(255 255 255 / 9%);
-  border-radius: 2.1rem;
-  background: #080b09;
-  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 27%);
+  border-radius: 1rem;
 }
 
 .screen-artwork a,
 .screen-artwork img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .screen-artwork a {
@@ -227,8 +263,13 @@ a:focus-visible {
 }
 
 .hero-screen figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem 0.8rem;
   margin-top: 0.7rem;
-  color: rgb(245 245 236 / 75%);
+  color: var(--soft-ink);
   font-size: 0.78rem;
   text-align: center;
 }
@@ -239,7 +280,7 @@ a:focus-visible {
   gap: 1.8rem 2.6rem;
   margin: 2.3rem 0 0;
   padding-top: 1.2rem;
-  border-top: 1px solid rgb(245 245 236 / 27%);
+  border-top: 1px solid var(--line);
 }
 
 .project-facts div {
@@ -248,7 +289,7 @@ a:focus-visible {
 }
 
 .project-facts dt {
-  color: rgb(245 245 236 / 67%);
+  color: var(--soft-ink);
   font-size: 0.73rem;
   font-weight: 750;
   letter-spacing: 0.06em;
@@ -256,13 +297,13 @@ a:focus-visible {
 
 .project-facts dd {
   margin: 0;
-  color: var(--directory-paper);
+  color: var(--evergreen);
   font-size: 0.93rem;
   font-weight: 700;
 }
 
 .project-frame {
-  background: var(--marigold);
+  background: #e8e3ef;
   color: var(--evergreen);
 }
 
@@ -374,19 +415,14 @@ a:focus-visible {
 }
 
 .screen-stage {
-  width: min(100%, 26rem);
-  height: clamp(30rem, 57vw, 40rem);
+  width: min(100%, 24rem);
   margin-inline: auto;
-  overflow: hidden;
-  border: 0.5rem solid #171b18;
-  border-radius: 2rem;
-  background: #090b0a;
-  box-shadow: 0 1.4rem 2.5rem rgb(37 40 32 / 17%);
+  border-radius: 1rem;
 }
 
 .screen-stage img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   object-position: center;
 }
@@ -395,6 +431,7 @@ a:focus-visible {
   display: flex;
   width: min(100%, 26rem);
   align-items: baseline;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
   margin: 0.8rem auto 0;
@@ -415,7 +452,7 @@ a:focus-visible {
 }
 
 .project-timeline {
-  background: #e9eddf;
+  background: #e7f0ea;
 }
 
 .timeline-layout {
@@ -534,14 +571,8 @@ a:focus-visible {
 .footer-inner {
   min-height: 5rem;
 }
-
-.site-footer .wordmark,
-.site-footer .back-link {
+.site-footer .wordmark {
   color: var(--directory-paper);
-}
-
-.site-footer .back-link:hover {
-  color: var(--marigold);
 }
 
 @media (max-width: 900px) {
@@ -553,10 +584,6 @@ a:focus-visible {
 
   .hero h1 {
     font-size: clamp(4.3rem, 8.5vw, 6.5rem);
-  }
-
-  .screen-artwork {
-    height: clamp(27rem, 53vw, 33rem);
   }
 
   .frame-layout,
@@ -584,11 +611,6 @@ a:focus-visible {
     font-size: 1.18rem;
   }
 
-  .back-link {
-    gap: 0.35rem;
-    font-size: 0.78rem;
-  }
-
   .hero-layout {
     min-height: 0;
     grid-template-columns: 1fr;
@@ -604,10 +626,6 @@ a:focus-visible {
 
   .hero-screen {
     width: min(82%, 21rem);
-  }
-
-  .screen-artwork {
-    height: clamp(27rem, 110vw, 34rem);
   }
 
   .frame-layout,
@@ -641,8 +659,7 @@ a:focus-visible {
   }
 
   .screen-stage {
-    width: min(100%, 23rem);
-    height: clamp(29rem, 125vw, 37rem);
+    width: min(100%, 21rem);
   }
 
   .timeline-list li {
@@ -657,7 +674,7 @@ a:focus-visible {
 
 @media (max-width: 380px) {
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 
   .project-facts {

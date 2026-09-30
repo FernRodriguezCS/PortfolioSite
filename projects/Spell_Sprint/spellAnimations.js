@@ -1,96 +1,78 @@
+/* Optional, one-time frame entrances. Nothing is hidden while awaiting a reveal. */
 (() => {
   const motionPreference = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-  let revealItems = [];
+  const revealItems = [...document.querySelectorAll(".hero-copy, .cover-art, .game-shot")];
+  const seenItems = new WeakSet();
   let revealObserver = null;
   let lenis = null;
-
-  function showEverything() {
-    document.body.classList.remove("spell-motion-ready");
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-  }
 
   function stopMotion() {
     revealObserver?.disconnect();
     revealObserver = null;
-    lenis?.destroy();
+    document.body.classList.remove("spell-motion-ready");
+    revealItems.forEach((item) => item.classList.remove("is-visible"));
+
+    // Clear our reference even if the optional CDN library fails during cleanup.
+    const previousLenis = lenis;
     lenis = null;
-    showEverything();
+    try {
+      previousLenis?.destroy();
+    } catch {
+      // Native scrolling and visible page content remain the fallback.
+    }
   }
 
   function startMotion() {
-    revealItems = [...document.querySelectorAll(".spell-reveal")];
+    stopMotion();
+    if (motionPreference?.matches) return;
 
-    if (motionPreference?.matches) {
-      stopMotion();
-      return;
-    }
-
-    // Lenis is optional: missing or failing CDN code must not affect the page.
     if (typeof window.Lenis === "function") {
       try {
-        lenis = new window.Lenis({ autoRaf: true });
-      } catch (error) {
+        lenis = new window.Lenis({ autoRaf: true, anchors: true });
+      } catch {
+        // A blocked CDN or failed initialization must not affect the page.
         lenis = null;
       }
     }
 
-    if (!revealItems.length || !("IntersectionObserver" in window)) {
-      showEverything();
-      return;
-    }
+    if (!("IntersectionObserver" in window)) return;
 
     try {
-      revealItems.forEach((item) => item.classList.remove("is-visible"));
-      revealObserver = new IntersectionObserver(
-        (entries, activeObserver) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("is-visible");
-            activeObserver.unobserve(entry.target);
-          });
-        },
-        {
-          threshold: 0.12,
-          rootMargin: "0px 0px -4% 0px",
-        }
-      );
+      revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting || seenItems.has(entry.target)) return;
+          seenItems.add(entry.target);
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        // A tall image should animate when its first edge appears, on any screen.
+        threshold: 0,
+        rootMargin: "0px 0px -24px 0px",
+      });
 
-      revealItems.forEach((item) => revealObserver.observe(item));
-      // CSS only hides reveal targets after the observer is ready to show them.
+      revealItems.forEach((item) => {
+        if (!seenItems.has(item)) revealObserver.observe(item);
+      });
       document.body.classList.add("spell-motion-ready");
-    } catch (error) {
+    } catch {
       revealObserver?.disconnect();
       revealObserver = null;
-      showEverything();
+      document.body.classList.remove("spell-motion-ready");
     }
   }
 
-  function handleMotionPreferenceChange(event) {
-    if (event.matches) {
-      stopMotion();
-    } else {
-      startMotion();
-    }
-  }
-
-  function initialize() {
-    startMotion();
-
-    if (motionPreference?.addEventListener) {
-      motionPreference.addEventListener("change", handleMotionPreferenceChange);
-    } else {
-      motionPreference?.addListener?.(handleMotionPreferenceChange);
-    }
-
-    window.addEventListener("pagehide", stopMotion, { once: true });
-    window.addEventListener("pageshow", (event) => {
-      if (event.persisted) startMotion();
-    });
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initialize, { once: true });
+  if (motionPreference?.addEventListener) {
+    motionPreference.addEventListener("change", startMotion);
   } else {
-    initialize();
+    motionPreference?.addListener?.(startMotion);
   }
+
+  window.addEventListener("pagehide", stopMotion);
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) startMotion();
+  });
+
+  // Each HTML page loads this file with defer, after its content exists.
+  startMotion();
 })();

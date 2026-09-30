@@ -1,56 +1,78 @@
+/* Optional, one-time frame entrances. Nothing is hidden while awaiting a reveal. */
 (() => {
   const motionPreference = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-  const revealItems = [...document.querySelectorAll(".budget-reveal")];
-  let lenis = null;
+  const revealItems = [...document.querySelectorAll(".hero-copy, .hero-preview, .feature-list, .screen")];
+  const seenItems = new WeakSet();
   let revealObserver = null;
+  let lenis = null;
 
-  // Keep the page fully visible and still when motion is reduced.
-  if (!motionPreference?.matches) {
-    // Lenis is optional. The page remains functional if its CDN script is absent.
-    if (typeof window.Lenis === "function") {
-      try {
-        lenis = new window.Lenis({ autoRaf: true });
-        window.addEventListener("pagehide", () => {
-          lenis?.destroy();
-          lenis = null;
-        }, { once: true });
-      } catch (error) {
-        // A Lenis load or initialization issue should not affect page content.
-      }
-    }
+  function stopMotion() {
+    revealObserver?.disconnect();
+    revealObserver = null;
+    document.body.classList.remove("budget-motion-ready");
+    revealItems.forEach((item) => item.classList.remove("is-visible"));
 
-    if (revealItems.length && "IntersectionObserver" in window) {
-      try {
-        revealObserver = new IntersectionObserver(
-          (entries, activeObserver) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
-              entry.target.classList.add("is-visible");
-              activeObserver.unobserve(entry.target);
-            });
-          },
-          {
-            threshold: 0.12,
-            rootMargin: "0px 0px -4% 0px",
-          }
-        );
-
-        revealItems.forEach((item) => revealObserver.observe(item));
-        // CSS hides reveal targets only after the observer is ready to reveal them.
-        document.body.classList.add("budget-motion-ready");
-      } catch (error) {
-        // Without a working observer, the page stays visible with no reveal styling.
-      }
+    // Clear our reference even if the optional CDN library fails during cleanup.
+    const previousLenis = lenis;
+    lenis = null;
+    try {
+      previousLenis?.destroy();
+    } catch {
+      // Native scrolling and visible page content remain the fallback.
     }
   }
 
-  motionPreference?.addEventListener?.("change", (event) => {
-    if (!event.matches) return;
+  function startMotion() {
+    stopMotion();
+    if (motionPreference?.matches) return;
 
-    revealObserver?.disconnect();
-    lenis?.destroy();
-    lenis = null;
-    document.body.classList.remove("budget-motion-ready");
-    revealItems.forEach((item) => item.classList.add("is-visible"));
+    if (typeof window.Lenis === "function") {
+      try {
+        lenis = new window.Lenis({ autoRaf: true, anchors: true });
+      } catch {
+        // A blocked CDN or failed initialization must not affect the page.
+        lenis = null;
+      }
+    }
+
+    if (!("IntersectionObserver" in window)) return;
+
+    try {
+      revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting || seenItems.has(entry.target)) return;
+          seenItems.add(entry.target);
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        // A tall image should animate when its first edge appears, on any screen.
+        threshold: 0,
+        rootMargin: "0px 0px -24px 0px",
+      });
+
+      revealItems.forEach((item) => {
+        if (!seenItems.has(item)) revealObserver.observe(item);
+      });
+      document.body.classList.add("budget-motion-ready");
+    } catch {
+      revealObserver?.disconnect();
+      revealObserver = null;
+      document.body.classList.remove("budget-motion-ready");
+    }
+  }
+
+  if (motionPreference?.addEventListener) {
+    motionPreference.addEventListener("change", startMotion);
+  } else {
+    motionPreference?.addListener?.(startMotion);
+  }
+
+  window.addEventListener("pagehide", stopMotion);
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) startMotion();
   });
+
+  // Each HTML page loads this file with defer, after its content exists.
+  startMotion();
 })();
