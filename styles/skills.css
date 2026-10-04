@@ -121,3 +121,28 @@
   .item16{
     animation-delay: calc(30s / 16 * (16 - 16) * -1);
   }
+
+@media (prefers-reduced-motion: reduce) {
+  #skills .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  #skills .wrapper .item {
+    position: static;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    margin: 0;
+    animation: none !important;
+  }
+}

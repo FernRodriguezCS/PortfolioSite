@@ -16,35 +16,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 0.5s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/** Used for inital hero section load: ->./script.js*/
-@keyframes fadeIn {
-  0% {
-    gap: 50px;
-    opacity: 0;
-  }
-
-  100% {
-    gap: 0;
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation: fadeIn 1s ease-out forwards;
-  /** forwards keeps elements in final state*/
-}
-
 footer{
   width: 100%;
   height: auto;

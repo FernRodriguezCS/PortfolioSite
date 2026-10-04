@@ -5,6 +5,7 @@ const filePath = "../index.html";
 const content = Entries[0];
 
 const BlogPost = {
+  id: content.id,
   pubDate: content.published_at,
   title: content.title,
   desc: content["cover-description"],
@@ -14,7 +15,7 @@ const LatestBlogCard = `<article class="blogCard">
   <p>${BlogPost.pubDate}</p>
   <p>${BlogPost.title}</p>
   <p>${BlogPost.desc}</p>
-  <a href="./blog/blog.html">Click Here to Read More...</a>
+  <a href="./blog/blog.html?post=${encodeURIComponent(BlogPost.id)}">Click Here to Read More...</a>
 </article>`;
 
 async function writeLatestPost() {

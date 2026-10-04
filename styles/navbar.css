@@ -52,6 +52,23 @@
     left: 0;
 }
 
+#navBar a:focus-visible{
+    outline: 3px solid #111;
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 841px){
+    #extraInfo,
+    #skills,
+    #projectSection,
+        #experienceSection,
+        #blogSection,
+        #contactMe{
+        scroll-margin-top: calc(75px + 3rem);
+    }
+}
+
 @media screen and (max-width: 840px){
     #navBar{
         display: none;

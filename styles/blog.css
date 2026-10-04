@@ -94,6 +94,11 @@
     left: 0;
 }
 
+#blogSection a:focus-visible{
+    outline: 3px solid cornflowerblue;
+    outline-offset: 5px;
+}
+
 @media (max-width: 700px){
     #blogSection{
         min-height: auto;

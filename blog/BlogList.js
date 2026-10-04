@@ -34,9 +34,11 @@ for(let i = 0; i < Entries.length; i++){
     if(!content.id || !content.title) continue;
 
     BlogCard = `<li class="CardListItem" data-post-id="${content.id}">
+        <a class="CardListLink" href="?post=${content.id}">
         <p>${content.published_at}</p>
         <p>${content.title}</p>
         <p>${content["cover-description"]}</p>
+        </a>
     </li>
     <!--NEXT_LIST_ITEM_HERE-->`;
 
@@ -44,6 +46,5 @@ for(let i = 0; i < Entries.length; i++){
 
     await writeNextListItem();
 }
-
 
 

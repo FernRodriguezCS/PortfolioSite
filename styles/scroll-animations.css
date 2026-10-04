@@ -1,173 +1,167 @@
-:root{
+:root {
   --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-snap: cubic-bezier(0.2, 0.85, 0.22, 1);
-  --section-distance: 72px;
-  --card-distance: 46px;
-  --motion-blur: 14px;
+  --section-distance: 42px;
+  --card-distance: 28px;
 }
 
-.reveal{
-  opacity: 0;
-  transform: translate3d(0, var(--section-distance), 0) scale(0.985);
-  filter: blur(var(--motion-blur));
-  transition:
-    opacity 900ms var(--motion-ease),
-    transform 1000ms var(--motion-ease),
-    filter 900ms var(--motion-ease);
-  will-change: opacity, transform, filter;
-}
-
-.reveal.active{
+.reveal,
+.textReveal {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
-  filter: blur(0);
+  transform: none;
+  transition: none;
 }
 
-#extraInfo #aboutMe-text,
-#extraInfo #aboutMe-images,
-#skills h2,
-#skills .wrapper,
-#projectSection .projectPost,
-#experienceSection h2,
-#experienceSection .timelineItem,
-#blogSection h2,
-#blogSection .blogCard,
-#contactMe h2,
-#contactMe #contactContainer{
+html.motion-ready .reveal {
   opacity: 0;
-  filter: blur(12px);
+  transform: translate3d(0, var(--section-distance), 0);
   transition:
-    opacity 820ms var(--motion-ease),
-    transform 920ms var(--motion-ease),
-    filter 820ms var(--motion-ease);
-  will-change: opacity, transform, filter;
+    opacity 760ms var(--motion-ease),
+    transform 820ms var(--motion-ease);
+  will-change: opacity, transform;
 }
 
-#extraInfo #aboutMe-text,
-#skills h2,
-#experienceSection h2,
-#blogSection h2,
-#contactMe h2{
-  transform: translate3d(-56px, 18px, 0);
-}
-
-#extraInfo #aboutMe-images{
-  transform: translate3d(56px, 18px, 0) scale(0.96);
-}
-
-#skills .wrapper,
-#blogSection .blogCard,
-#contactMe #contactContainer{
-  transform: translate3d(0, var(--card-distance), 0) scale(0.965);
-}
-
-#projectSection .projectPost:nth-child(odd){
-  transform: translate3d(-64px, var(--card-distance), 0) scale(0.96);
-}
-
-#projectSection .projectPost:nth-child(even){
-  transform: translate3d(64px, var(--card-distance), 0) scale(0.96);
-}
-
-#experienceSection .timelineItem:nth-child(odd){
-  transform: translate3d(-54px, 34px, 0);
-}
-
-#experienceSection .timelineItem:nth-child(even){
-  transform: translate3d(54px, 34px, 0);
-}
-
-#extraInfo.active #aboutMe-text,
-#extraInfo.active #aboutMe-images,
-#skills.active h2,
-#skills.active .wrapper,
-#projectSection.active .projectPost,
-#experienceSection.active h2,
-#experienceSection.active .timelineItem,
-#blogSection.active h2,
-#blogSection.active .blogCard,
-#contactMe.active h2,
-#contactMe.active #contactContainer{
+html.motion-ready .reveal.active {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
-  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
 }
 
-#extraInfo.active #aboutMe-images,
-#skills.active .wrapper,
-#blogSection.active .blogCard,
-#contactMe.active #contactContainer{
-  transition-delay: 140ms;
+html.motion-ready #extraInfo #aboutMe-images,
+html.motion-ready #skills h2,
+html.motion-ready #skills .wrapper,
+html.motion-ready #projectSection .projectPost,
+html.motion-ready #experienceSection h2,
+html.motion-ready #experienceSection .timelineItem,
+html.motion-ready #blogSection h2,
+html.motion-ready #blogSection .blogCard,
+html.motion-ready #contactMe h2,
+html.motion-ready #contactMe #contactContainer {
+  opacity: 0;
+  transition:
+    opacity 700ms var(--motion-ease),
+    transform 780ms var(--motion-ease);
+  will-change: opacity, transform;
 }
 
-#projectSection.active .projectPost:nth-child(1),
-#experienceSection.active .timelineItem:nth-child(1){
+html.motion-ready #skills h2,
+html.motion-ready #experienceSection h2,
+html.motion-ready #blogSection h2,
+html.motion-ready #contactMe h2 {
+  transform: translate3d(-24px, 12px, 0);
+}
+
+html.motion-ready #extraInfo #aboutMe-images {
+  transform: translate3d(24px, 12px, 0);
+}
+
+html.motion-ready #skills .wrapper,
+html.motion-ready #blogSection .blogCard,
+html.motion-ready #contactMe #contactContainer {
+  transform: translate3d(0, var(--card-distance), 0);
+}
+
+html.motion-ready #projectSection .projectPost:nth-child(odd) {
+  transform: translate3d(-24px, var(--card-distance), 0);
+}
+
+html.motion-ready #projectSection .projectPost:nth-child(even) {
+  transform: translate3d(24px, var(--card-distance), 0);
+}
+
+html.motion-ready #experienceSection .timelineItem:nth-child(odd) {
+  transform: translate3d(-24px, 20px, 0);
+}
+
+html.motion-ready #experienceSection .timelineItem:nth-child(even) {
+  transform: translate3d(24px, 20px, 0);
+}
+
+html.motion-ready #extraInfo.active #aboutMe-images,
+html.motion-ready #skills.active h2,
+html.motion-ready #skills.active .wrapper,
+html.motion-ready #projectSection.active .projectPost,
+html.motion-ready #experienceSection.active h2,
+html.motion-ready #experienceSection.active .timelineItem,
+html.motion-ready #blogSection.active h2,
+html.motion-ready #blogSection.active .blogCard,
+html.motion-ready #contactMe.active h2,
+html.motion-ready #contactMe.active #contactContainer {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+html.motion-ready #extraInfo.active #aboutMe-images,
+html.motion-ready #skills.active .wrapper,
+html.motion-ready #blogSection.active .blogCard,
+html.motion-ready #contactMe.active #contactContainer {
+  transition-delay: 180ms;
+}
+
+html.motion-ready #projectSection.active .projectPost:nth-child(1),
+html.motion-ready #experienceSection.active .timelineItem:nth-child(1) {
   transition-delay: 0ms;
 }
 
-#projectSection.active .projectPost:nth-child(2),
-#experienceSection.active .timelineItem:nth-child(2){
-  transition-delay: 110ms;
+html.motion-ready #projectSection.active .projectPost:nth-child(2),
+html.motion-ready #experienceSection.active .timelineItem:nth-child(2) {
+  transition-delay: 90ms;
 }
 
-#projectSection.active .projectPost:nth-child(3),
-#experienceSection.active .timelineItem:nth-child(3){
-  transition-delay: 220ms;
+html.motion-ready #projectSection.active .projectPost:nth-child(3),
+html.motion-ready #experienceSection.active .timelineItem:nth-child(3) {
+  transition-delay: 180ms;
 }
 
-#projectSection.active .projectPost:nth-child(4),
-#experienceSection.active .timelineItem:nth-child(4){
-  transition-delay: 330ms;
+html.motion-ready #projectSection.active .projectPost:nth-child(4),
+html.motion-ready #experienceSection.active .timelineItem:nth-child(4) {
+  transition-delay: 270ms;
 }
 
-#projectSection.active .projectPost:nth-child(5),
-#experienceSection.active .timelineItem:nth-child(5){
-  transition-delay: 440ms;
+html.motion-ready #projectSection.active .projectPost:nth-child(5),
+html.motion-ready #experienceSection.active .timelineItem:nth-child(5) {
+  transition-delay: 360ms;
 }
 
-#projectSection .left,
-#aboutMe-imageGrid img,
-#aboutMe-imageGrid video,
-.jobPic{
-  transform: scale(1.08);
-  filter: saturate(0.84) contrast(0.96);
-  transition:
-    transform 1200ms var(--motion-snap),
-    filter 1000ms var(--motion-ease);
+html.motion-ready #projectSection .left picture,
+html.motion-ready #aboutMe-imageGrid img,
+html.motion-ready #aboutMe-imageGrid video,
+html.motion-ready .jobPic {
+  transform: scale(1.025);
+  transition: transform 900ms var(--motion-snap);
 }
 
-#projectSection.active .left,
-#extraInfo.active #aboutMe-imageGrid img,
-#extraInfo.active #aboutMe-imageGrid video,
-#experienceSection.active .jobPic{
+html.motion-ready #projectSection.active .left picture,
+html.motion-ready #extraInfo.active #aboutMe-imageGrid img,
+html.motion-ready #extraInfo.active #aboutMe-imageGrid video,
+html.motion-ready #experienceSection.active .jobPic {
   transform: scale(1);
-  filter: saturate(1) contrast(1);
 }
 
-@media screen and (max-width: 700px){
-  :root{
-    --section-distance: 42px;
-    --card-distance: 30px;
-    --motion-blur: 8px;
+@media screen and (max-width: 700px) {
+  :root {
+    --section-distance: 28px;
+    --card-distance: 22px;
   }
 
-  #projectSection .projectPost:nth-child(odd),
-  #projectSection .projectPost:nth-child(even),
-  #experienceSection .timelineItem:nth-child(odd),
-  #experienceSection .timelineItem:nth-child(even){
-    transform: translate3d(0, var(--card-distance), 0) scale(0.98);
+  html.motion-ready #projectSection .projectPost:nth-child(odd),
+  html.motion-ready #projectSection .projectPost:nth-child(even),
+  html.motion-ready #experienceSection .timelineItem:nth-child(odd),
+  html.motion-ready #experienceSection .timelineItem:nth-child(even) {
+    transform: translate3d(0, var(--card-distance), 0);
   }
 
-  #projectSection.active .projectPost,
-  #experienceSection.active .timelineItem{
-    transform: translate3d(0, 0, 0) scale(1);
+  html.motion-ready #projectSection.active .projectPost,
+  html.motion-ready #experienceSection.active .timelineItem {
+    transform: translate3d(0, 0, 0);
   }
 }
 
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
-  *::after{
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
@@ -175,24 +169,32 @@
     transition-delay: 0ms !important;
   }
 
-  .reveal,
-  #extraInfo #aboutMe-text,
-  #extraInfo #aboutMe-images,
-  #skills h2,
-  #skills .wrapper,
-  #projectSection .projectPost,
-  #experienceSection h2,
-  #experienceSection .timelineItem,
-  #blogSection h2,
-  #blogSection .blogCard,
-  #contactMe h2,
-  #contactMe #contactContainer,
-  #projectSection .left,
-  #aboutMe-imageGrid img,
-  #aboutMe-imageGrid video,
-  .jobPic{
+  html.motion-ready .reveal,
+  html.about-text-ready #extraInfo .about-word,
+  html.motion-ready #extraInfo #aboutMe-images,
+  html.motion-ready #skills h2,
+  html.motion-ready #skills .wrapper,
+  html.motion-ready #projectSection .projectPost,
+  html.motion-ready #experienceSection h2,
+  html.motion-ready #experienceSection .timelineItem,
+  html.motion-ready #blogSection h2,
+  html.motion-ready #blogSection .blogCard,
+  html.motion-ready #contactMe h2,
+  html.motion-ready #contactMe #contactContainer,
+  html.motion-ready #projectSection .left picture,
+  html.motion-ready #aboutMe-imageGrid img,
+  html.motion-ready #aboutMe-imageGrid video,
+  html.motion-ready .jobPic {
     opacity: 1;
+    clip-path: none;
     transform: none;
     filter: none;
+    will-change: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.about-text-ready #extraInfo .about-word {
+    opacity: 1 !important;
   }
 }

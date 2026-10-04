@@ -1,80 +1,134 @@
 #extraInfo {
-    width: 100%;
-    min-height: 100svh;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  min-height: 100svh;
+  height: auto;
+  box-sizing: border-box;
+  padding: clamp(6rem, 12svh, 9rem) 0 clamp(3rem, 8svh, 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#aboutMe-container{
-  width: 90%;
-  min-height: 75svh;
+#extraInfo > h2 {
+  margin: 0 0 clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  line-height: 1.05;
+  text-align: center;
+}
+
+#aboutMe-container {
+  width: min(90%, 1440px);
   height: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: clamp(1.5rem, 4vw, 4rem);
 }
 
-#aboutMe-text{
+#aboutMe-text {
+  flex: 1 1 50%;
+  width: auto;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-size: clamp(0.90rem, 2vw, 1.75rem);
-  padding: 3%;
-  width: 50%;
+  align-items: flex-start;
+  gap: clamp(1.25rem, 2vw, 2.25rem);
+  padding: 0;
+  font-size: clamp(1.3rem, calc(1.05rem + 1.35vw), 2.25rem);
+  line-height: 1.48;
 }
 
-#aboutMe-images{
-  width: 50%;
-  height: auto;
+.about-copy {
+  width: 100%;
+  max-width: 65ch;
+  margin: 0;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.about-word {
+  opacity: 1;
+  transition: opacity 90ms linear;
+}
+
+html.about-text-ready .about-word {
+  opacity: var(--word-opacity, 0.42);
+}
+
+.about-copy a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+
+#aboutMe-images {
+  flex: 1 1 50%;
+  width: auto;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#aboutMe-imageGrid{
-  width: 95%;
-  min-height: 70svh;
+#aboutMe-imageGrid {
+  width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.35rem, 0.8vw, 0.75rem);
 }
 
 #aboutMe-imageGrid img,
-#aboutMe-imageGrid video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#aboutMe-imageGrid video {
   display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: rgba(0, 0, 0, 0.06);
+  border: 0;
   border-radius: 6px;
   min-width: 0;
   min-height: 0;
 }
 
-#extraInfo h3 {
-  font-size: 40px;
+#aboutMe-imageGrid video {
+  color-scheme: dark;
 }
 
-@media screen and (max-width: 840px) {
-  #extraInfo{
+@media screen and (max-width: 1100px) {
+  #extraInfo {
     min-height: auto;
-    padding: 8% 0;
+    padding: clamp(6rem, 12vw, 8rem) 0 clamp(3rem, 9vw, 5rem);
   }
 
-  #aboutMe-container{
-    min-height: auto;
+  #aboutMe-container {
+    width: min(90%, 42rem);
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(2rem, 6vw, 3.5rem);
   }
 
-  #aboutMe-imageGrid video{
-    display: none;
+  #aboutMe-text,
+  #aboutMe-images {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #extraInfo > h2 {
+    font-size: clamp(2.35rem, 10vw, 3.25rem);
   }
 
-  #aboutMe-imageGrid{
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 42svh;
+  #aboutMe-text {
+    font-size: clamp(1.15rem, calc(1rem + 1vw), 1.35rem);
+  }
+
+  #aboutMe-imageGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
   }
 }

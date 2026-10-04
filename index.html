@@ -112,56 +112,77 @@
   <!-------------------------->
   <!---About Me. SECTION--->
   <!-------------------------->
-  <section id="extraInfo" class="reveal">
+  <section id="extraInfo" class="textReveal">
     <h2>About Me</h2>
     <div id="aboutMe-container">
       <section id="aboutMe-text">
-        <article>
-          My name is Fernando Rodriguez, I am currently a software developer with a passion for building and scaling solutions. I will never turn down an opportunity to learn something new in order to improve my skills.</article>
-        <br>
-        <article>
-          Outside of work I love to play chess and the idea of careful and meaningful preparation before each move; I love to go ice skating, where small improvements each session compound; and reading to settle my mind at the end of a busy day.</article>
-        <br>
-        <article>
-          Thank you for stopping by my portfolio! If you wish to see more, <a href="#blogSection">click here to view my blog</a>, where I discuss my life in tech.</article>
+        <p class="about-copy">
+          My name is Fernando Rodriguez, I am currently a software developer with a passion for building and scaling solutions. I will never turn down an opportunity to learn something new in order to improve my skills.
+        </p>
+        <p class="about-copy">
+          Outside of work I love to play chess and the idea of careful and meaningful preparation before each move; I love to go ice skating, where small improvements each session compound; and reading to settle my mind at the end of a busy day.
+        </p>
+        <p class="about-copy">
+          Thank you for stopping by my portfolio! If you wish to see more, <a href="#blogSection">click here to view my blog</a>, where I discuss my life in tech.
+        </p>
       </section>
 
       <section id="aboutMe-images">
         <div id="aboutMe-imageGrid">
-          <img src="./assets/about-me-grid/IMG_3093-3.webp" alt="personal photo at code ninjas chess club" decoding="async">
+          <img src="./assets/about-me-grid/IMG_3093-3.webp" alt="Fernando at a Code Ninjas chess club" width="900" height="1200" loading="lazy" decoding="async">
 
           <video 
             src="./assets/about-me-grid/IMG_4044-2.webm"
+            poster="./assets/about-me-grid/IMG_4044-2-poster.webp"
             muted
             loop
-            autoplay
+            playsinline
+            preload="none"
+            width="720"
+            height="1280"
+            aria-label="Video of Fernando playing hockey"
           ></video>
 
-          <img src="./assets/about-me-grid/IMG_3341-2.webp" alt="personal photo of me fallen at the ice rink" decoding="async">
+          <img src="./assets/about-me-grid/IMG_3341-2.webp" alt="Fernando after falling at the ice rink" width="900" height="1200" loading="lazy" decoding="async">
 
           <video 
             src="./assets/about-me-grid/IMG_4200-2.webm"
+            poster="./assets/about-me-grid/IMG_4200-2-poster.webp"
             muted
             loop
-            autoplay
+            playsinline
+            preload="none"
+            width="720"
+            height="1280"
+            aria-label="Video of Fernando in a suit"
           ></video>
 
-          <img src="./assets/about-me-grid/IMG_1507-2.webp" alt="personal photo of me playing chess during the last day of highschool" decoding="async">
+          <img src="./assets/about-me-grid/IMG_1507-2.webp" alt="Fernando playing chess on the last day of high school" width="900" height="1200" loading="lazy" decoding="async">
 
           <video 
             src="./assets/about-me-grid/IMG_2396-2.webm"
+            poster="./assets/about-me-grid/IMG_2396-2-poster.webp"
             muted
             loop
-            autoplay
+            playsinline
+            preload="none"
+            width="720"
+            height="1280"
+            aria-label="Video of Fernando working at a laptop"
           ></video>
           
-          <img src="./assets/about-me-grid/IMG_0564-2.webp" alt="personal photo of me playing a game of chess with my dog" decoding="async">
+          <img src="./assets/about-me-grid/IMG_0564-2.webp" alt="Fernando playing chess with his dog" width="900" height="1200" loading="lazy" decoding="async">
           
           <video 
             src="./assets/about-me-grid/IMG_3470-2.webm"
+            poster="./assets/about-me-grid/IMG_3470-2-poster.webp"
             muted
             loop
-            autoplay
+            playsinline
+            preload="none"
+            width="960"
+            height="1280"
+            aria-label="Video of Fernando ice skating"
           ></video>
         </div>
       </section>
@@ -195,9 +216,12 @@
 
   <section id="projectSection" class="reveal">
 
-    <div class="projectPost">
+    <a class="projectPost" href="./projects/Ratthew/rat.html">
       <div class="left">
-        <img src="./assets/images/Ratthew.png" alt="Portfolio project image">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/Ratthew-192.webp 192w, ./assets/images/responsive/Ratthew-384.webp 384w, ./assets/images/responsive/Ratthew-640.webp 640w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img src="./assets/images/Ratthew.png" alt="Ratthew rendered in X11 Graphics" width="876" height="886" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>2D Ratthew Render</p>
@@ -210,13 +234,16 @@
           <li>GitHub</li>
           <li>Git</li>
         </ul>
-        <a href="./projects/Ratthew/rat.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
-    <div class="projectPost">
+    <a class="projectPost" href="./construction.html">
       <div class="left">
-        <img src="./assets/images/portfoliopost.png" alt="Portfolio project image">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/portfoliopost-192.webp 192w, ./assets/images/responsive/portfoliopost-384.webp 384w, ./assets/images/responsive/portfoliopost-612.webp 612w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img src="./assets/images/portfoliopost.png" alt="Preview image for the portfolio site" width="612" height="612" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>Portfolio Site</p>
@@ -228,13 +255,16 @@
           <li>GitHub</li>
           <li>Git</li>
         </ul>
-        <a href="./construction.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
-    <div class="projectPost">
+    <a class="projectPost" href="./projects/Commerce/commerce.html">
       <div class="left">
-        <img src="./assets/images/fwd.png" alt="CommerceNexus Project Post Cover">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/fwd-192.webp 192w, ./assets/images/responsive/fwd-384.webp 384w, ./assets/images/responsive/fwd-476.webp 476w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img src="./assets/images/fwd.png" alt="CommerceNexus project cover" width="476" height="460" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>CommerceNexus</p>
@@ -248,13 +278,16 @@
           <li>Github</li>
           <li>Git</li>
         </ul>
-        <a href="./projects/Commerce/commerce.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
-    <div class="projectPost">
+    <a class="projectPost" href="./construction.html">
       <div class="left">
-        <img src="./assets/images/codeNinjas.png" alt="CodePath Project Post Cover">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/codeNinjas-128.webp 128w, ./assets/images/responsive/codeNinjas-192.webp 192w, ./assets/images/responsive/codeNinjas-254.webp 254w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img class="CodePathProjectCover" src="./assets/images/codeNinjas.png" alt="CodePath project cover" width="254" height="264" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>CodePath</p>
@@ -267,13 +300,16 @@
           <li>Express</li>
           <li>J.W.T</li>
         </ul>
-        <a href="./construction.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
-    <div class="projectPost">
+    <a class="projectPost" href="./construction.html">
       <div class="left">
-        <img src="./assets/images/lunarispost.png" alt="Lunaris Project Post Cover">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/lunarispost-192.webp 192w, ./assets/images/responsive/lunarispost-384.webp 384w, ./assets/images/responsive/lunarispost-640.webp 640w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img src="./assets/images/lunarispost.png" alt="Lunaris project cover" width="1024" height="1024" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>Lunaris</p>
@@ -288,13 +324,16 @@
           <li>GitHub</li>
           <li>Git</li>
         </ul>
-        <a href="./construction.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
-    <div class="projectPost">
+    <a class="projectPost" href="./projects/Fern_Budget/budget.html">
       <div class="left">
-        <img src="./assets/images/fernbudget-post.png" alt="FernBudget Project Post Cover">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/fernbudget-post-192.webp 192w, ./assets/images/responsive/fernbudget-post-384.webp 384w, ./assets/images/responsive/fernbudget-post-512.webp 512w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img src="./assets/images/fernbudget-post.png" alt="FernBudget project cover" width="512" height="512" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>FernBudget</p>
@@ -308,13 +347,16 @@
           <li>GitHub</li>
           <li>PostgreSQL</li>
         </ul>
-        <a href="./projects/Fern_Budget/budget.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
-    <div class="projectPost">
+    <a class="projectPost" href="./projects/Spell_Sprint/sprint.html">
       <div class="left">
-        <img src="./assets/images/spellsprintpost.png" alt="Spell Sprint Project Post Cover" class="LargerImagePostCover">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/spellsprintpost-192.webp 192w, ./assets/images/responsive/spellsprintpost-384.webp 384w, ./assets/images/responsive/spellsprintpost-640.webp 640w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img src="./assets/images/spellsprintpost.png" alt="Spell Sprint project artwork" class="LargerImagePostCover" width="1024" height="1024" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>Spell Sprint</p>
@@ -322,13 +364,16 @@
         <ul class="techStack">
           <li>Godot</li>
         </ul>
-        <a href="./projects/Spell_Sprint/sprint.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
-    <div class="projectPost">
+    <a class="projectPost" href="./projects/Bloody_Rails/bloody.html">
       <div class="left">
-        <img src="./assets/images/Bloody_rails-Post.png" alt="BloodyRails Project Post" class="LargerImagePostCover">
+        <picture>
+          <source type="image/webp" srcset="./assets/images/responsive/Bloody_rails-Post-256.webp 256w, ./assets/images/responsive/Bloody_rails-Post-512.webp 512w, ./assets/images/responsive/Bloody_rails-Post-768.webp 768w" sizes="(max-width: 480px) 92vw, (max-width: 760px) 33vw, (max-width: 840px) 17vw, min(16vw, 212px)">
+          <img src="./assets/images/Bloody_rails-Post.png" alt="Bloody Rails project artwork" class="LargerImagePostCover" width="1280" height="1034" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="right">
         <p>Bloody Rails</p>
@@ -336,9 +381,9 @@
         <ul class="techStack">
           <li>Godot</li>
         </ul>
-        <a href="./projects/Bloody_Rails/bloody.html">Learn More</a>
+        <span class="projectCardAction">Learn More</span>
       </div>
-    </div>
+    </a>
 
   </section>
 
@@ -429,7 +474,7 @@
   <p>2026-09-21</p>
   <p>If you are reading this please go to bed</p>
   <p>Sometimes, the most productive thing you can do is get some rest.</p>
-  <a href="./blog/blog.html">Click Here to Read More...</a>
+  <a href="./blog/blog.html?post=1">Click Here to Read More...</a>
 </article>
 <!-- BLOG_CARDS_END -->
     </div>
@@ -443,16 +488,16 @@
     <div id="contactContainer">
       <form  method="POST" id="contactForm" action="https://formspree.io/f/xppzjvjw">
         <label for="firstName">First Name *</label>
-        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
 
         <label for="lastName">Last Name *</label>
-        <input type="text" name="lastName" placeholder="last Name" required>
+        <input type="text" id="lastName" name="lastName" placeholder="last Name" required>
 
         <label for="email">Email *</label>
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
 
         <label for="message">Message *</label>
-        <textarea name="message" placeholder="Enter Message Here" maxlength="2000" required></textarea>
+        <textarea id="message" name="message" placeholder="Enter Message Here" maxlength="2000" required></textarea>
 
         <button type="submit" id="contactSubmitBtn">Submit</button>
       </form>
