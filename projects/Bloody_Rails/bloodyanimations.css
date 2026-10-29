@@ -2,6 +2,19 @@
 :root { --image-ring: #b87a40; }
 
 @media (prefers-reduced-motion: no-preference) {
+  .play-button,
+  .play-button__icon {
+    transition: transform 180ms ease;
+  }
+
+  .play-button:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .play-button:focus-visible .play-button__icon {
+    transform: translateX(2px);
+  }
+
   .br-motion-ready .hero-copy.is-visible {
     animation: br-copy-arrive 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
@@ -77,6 +90,14 @@
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .play-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .play-button:hover .play-button__icon {
+    transform: translateX(2px);
+  }
+
   .home-button:hover {
     transform: translateY(-2px);
   }

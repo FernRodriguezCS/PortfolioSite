@@ -262,6 +262,57 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.5rem;
+  margin-top: 1.15rem;
+}
+
+.hero-actions .text-link {
+  margin-top: 0;
+}
+
+.play-action {
+  display: grid;
+  justify-items: start;
+  gap: 0.35rem;
+}
+
+.play-button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.05rem;
+  border: 1px solid var(--signal-amber);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--signal-amber);
+  font: 750 0.95rem/1.2 var(--page-font);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.play-button:focus-visible {
+  outline: 3px solid var(--paper);
+  outline-offset: 4px;
+}
+
+.play-button__icon {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.play-hint {
+  padding-left: 0.15rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.2;
+}
+
 .text-link span {
   color: var(--rail-red);
 }
