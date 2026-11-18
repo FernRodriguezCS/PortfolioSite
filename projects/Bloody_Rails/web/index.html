@@ -90,9 +90,7 @@ body {
 	z-index: 1;
 }
 		</style>
-		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
-<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
-<link rel="manifest" href="index.manifest.json">
+		<link rel="manifest" href="index.manifest.json">
 
 	</head>
 	<body>
@@ -112,7 +110,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":6,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":66115300,"index.wasm":37003942},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":6,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":66309412,"index.wasm":37003942},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = true;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -163,42 +161,81 @@ const engine = new Engine(GODOT_CONFIG);
 		initializing = false;
 	}
 
+	const isolationReloadKey = `godot-isolation-reload:${location.pathname}`;
 	const missing = Engine.getMissingFeatures({
 		threads: GODOT_THREADS_ENABLED,
 	});
 
 	if (missing.length !== 0) {
 		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
-			let serviceWorkerRegistrationPromise;
-			try {
-				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
-			} catch (err) {
-				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
-			}
-			// There's a chance that installing the service worker would fix the issue
-			Promise.race([
-				serviceWorkerRegistrationPromise.then((registration) => {
-					if (registration != null) {
-						return Promise.reject(new Error('Service worker already exists.'));
+			if (sessionStorage.getItem(isolationReloadKey) === '1') {
+				sessionStorage.removeItem(isolationReloadKey);
+				displayFailureNotice('The browser still lacks the cross-origin isolation needed for threaded WebAssembly. Try reloading this page.');
+			} else {
+				sessionStorage.setItem(isolationReloadKey, '1');
+				const setupServiceWorker = async () => {
+					const registration = await navigator.serviceWorker.register(GODOT_CONFIG['serviceWorker']);
+					await registration.update();
+					const pendingWorker = registration.installing || registration.waiting;
+					if (pendingWorker) {
+						pendingWorker.postMessage('claim');
+						if (pendingWorker.state !== 'activated') {
+							await new Promise((resolve, reject) => {
+								const onStateChange = () => {
+									if (pendingWorker.state === 'activated') {
+										pendingWorker.removeEventListener('statechange', onStateChange);
+										resolve();
+									} else if (pendingWorker.state === 'redundant') {
+										pendingWorker.removeEventListener('statechange', onStateChange);
+										reject(new Error('The service worker update was replaced before activation.'));
+									}
+								};
+								pendingWorker.addEventListener('statechange', onStateChange);
+								onStateChange();
+							});
+						}
 					}
-					return registration;
-				}).then(() => engine.installServiceWorker()),
-				// For some reason, `getRegistration()` can stall
-				new Promise((resolve) => {
-					setTimeout(() => resolve(), 2000);
-				}),
-			]).then(() => {
-				// Reload if there was no error.
-				window.location.reload();
-			}).catch((err) => {
-				console.error('Error while registering service worker:', err);
-			});
+					if (registration.active) {
+						registration.active.postMessage('claim');
+					}
+					await navigator.serviceWorker.ready;
+					if (!navigator.serviceWorker.controller) {
+						await new Promise((resolve, reject) => {
+							const onControllerChange = () => {
+								navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
+								resolve();
+							};
+							navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
+							if (navigator.serviceWorker.controller) {
+								onControllerChange();
+							} else {
+								setTimeout(() => {
+									navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
+									reject(new Error('Timed out while waiting for the service worker to control this page.'));
+								}, 20000);
+							}
+						});
+					}
+				};
+				let setupTimeout;
+				const setupTimeoutPromise = new Promise((resolve, reject) => {
+					setupTimeout = setTimeout(() => reject(new Error('Timed out while preparing the threaded WebAssembly runtime.')), 25000);
+				});
+				Promise.race([setupServiceWorker(), setupTimeoutPromise]).then(() => {
+					clearTimeout(setupTimeout);
+					window.location.reload();
+				}).catch((err) => {
+					sessionStorage.removeItem(isolationReloadKey);
+					displayFailureNotice(err);
+				});
+			}
 		} else {
 			// Display the message as usual
 			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
 			displayFailureNotice(missingMsg + missing.join('\n'));
 		}
 	} else {
+		sessionStorage.removeItem(isolationReloadKey);
 		setStatusMode('progress');
 		engine.startGame({
 			'onProgress': function (current, total) {
